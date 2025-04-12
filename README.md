@@ -1,23 +1,37 @@
 <!-- The superlink doesn't support uppercases -->
 
+# PostDoc position in LAMP group
+
+We are looking for postdocs to join [LAMP group](https://groups.google.com/g/ml-news/c/penSOI3751Y?pli=1) working on Diffusion Models.
+
 # Awesome Diffusion Categorized
 
 ## Contents
 
 - [Accelerate](#accelerate)
+    - [Trainig-Free](#train-free)
+    - [AR model](#ar-model)
 - [Image Restoration](#image-restoration)
-- [Colorization](#colorization)
-- [Face Restoration](#face-restoration)
+    - [Colorization](#colorization)
+    - [Face Restoration](#face-restoration)
+    - [Image Compression](#image-compression)
+    - [Super Resolution](#super-resolution)
+    - [Personalized Restoration](#personalized-restoration)
+- [Visual Illusion](#illusion)
 - [Storytelling](#storytelling)
 - [Virtual Try On](#try-on)
 - [Drag Edit](#drag-edit)
-- [Diffusion Inversion](#diffusion-models-inversion)
 - [Text-Guided Editing](#text-guided-image-editing)
+    - [Diffusion Inversion](#diffusion-models-inversion)
 - [Continual Learning](#continual-learning)
 - [Remove Concept](#remove-concept)
 - [New Concept Learning](#new-concept-learning)
+    - [Multi-Concept](#mutiple-concepts)
+    - [Decompostion](#decomposition)
+    - [ID Encoder](#id-encoder)
+    - [General Personalization](#general-concept)
 - [T2I augmentation](#t2i-diffusion-model-augmentation)
-- [Spatial Control](#spatial-control)
+    - [Spatial Control](#spatial-control)
 - [Image Translation](#i2i-translation)
 - [Seg & Detect & Track](#segmentation-detection-tracking)
 - [Adding Conditions](#additional-conditions)
@@ -25,12 +39,11 @@
 - [Inpainting](#sd-inpaint)
 - [Layout](#layout-generation)
 - [Text Generation](#text-generation)
-- [Super Resolution](#super-resolution)
 - [Video Generation](#video-generation)
 - [Video Editing](#video-editing)
 
 
-## Accelerate
+# Accelerate
 
 **PIXART-δ: Fast and Controllable Image Generation with Latent Consistency Models** \
 [[ICLR 2024 Spotlight](https://arxiv.org/abs/2401.05252)]
@@ -85,6 +98,11 @@
 [[Code](https://github.com/devrimcavusoglu/dmd)]
 
 
+**Consistency Models** \
+[[ICML 2023](https://proceedings.mlr.press/v202/song23a.html)]
+[[Diffusers](https://huggingface.co/docs/diffusers/main/en/api/pipelines/consistency_models)]
+[[Code](https://github.com/openai/consistency_models)]
+
 **SwiftBrush: One-Step Text-to-Image Diffusion Model with Variational Score Distillation** \
 [[CVPR 2024](https://arxiv.org/abs/2312.05239)]
 [[Project](https://vinairesearch.github.io/SwiftBrush/)]
@@ -115,6 +133,16 @@
 [[Project](https://youngwanlee.github.io/KOALA/)]
 [[Code](https://github.com/youngwanLEE/sdxl-koala)]
 
+**Random Conditioning with Distillation for Data-Efficient Diffusion Model Compression** \
+[[CVPR 2025](https://arxiv.org/abs/2504.02011)]
+[[Project](https://dohyun-as.github.io/Random-Conditioning/)]
+[[Code](https://github.com/dohyun-as/Random-Conditioning)]
+
+**DIMO:Distilling Masked Diffusion Models into One-step Generator** \
+[[Website](https://arxiv.org/abs/2503.15457)]
+[[Project](https://yuanzhi-zhu.github.io/DiMO/)]
+[[Code](https://github.com/yuanzhi-zhu/DiMO)]
+
 **Flash Diffusion: Accelerating Any Conditional Diffusion Model for Few Steps Image Generation** \
 [[Website](https://arxiv.org/abs/2406.02347)]
 [[Project](https://gojasper.github.io/flash-diffusion-project/)]
@@ -125,6 +153,26 @@
 [[Project](https://liewfeng.github.io/TeaCache/)]
 [[Code](https://github.com/LiewFeng/TeaCache)]
 
+**You Only Sample Once: Taming One-Step Text-to-Image Synthesis by Self-Cooperative Diffusion GANs** \
+[[Website](https://arxiv.org/abs/2403.12931)]
+[[Project](https://yoso-t2i.github.io/)]
+[[Code](https://github.com/Luo-Yihong/YOSO)]
+
+**PeRFlow: Piecewise Rectified Flow as Universal Plug-and-Play Accelerator** \
+[[Website](https://arxiv.org/abs/2405.07510)]
+[[Project](https://piecewise-rectified-flow.github.io/)]
+[[Code](https://github.com/magic-research/piecewise-rectified-flow)]
+
+**Scale-wise Distillation of Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.16397)]
+[[Project](https://yandex-research.github.io/swd/)]
+[[Code](https://github.com/yandex-research/swd)]
+
+**Simplifying, Stabilizing and Scaling Continuous-Time Consistency Models** \
+[[Website](https://doi.org/10.48550/arXiv.2410.11081)]
+[[Project](https://openai.com/index/simplifying-stabilizing-and-scaling-continuous-time-consistency-models/)]
+[[Code](https://github.com/xandergos/sCM-mnist)]
+
 **Adaptive Caching for Faster Video Generation with Diffusion Transformers** \
 [[Website](https://arxiv.org/abs/2411.02397)]
 [[Project](https://adacache-dit.github.io/)]
@@ -134,6 +182,11 @@
 [[Website](https://arxiv.org/abs/2410.19355)]
 [[Project](https://vchitect.github.io/FasterCache/)]
 [[Code](https://github.com/Vchitect/FasterCache)]
+
+**Learning Few-Step Diffusion Models by Trajectory Distribution Matching** \
+[[Website](https://arxiv.org/abs/2503.06674)]
+[[Project](https://tdm-t2x.github.io/)]
+[[Code](https://github.com/Luo-Yihong/TDM)]
 
 **SDXS: Real-Time One-Step Latent Diffusion Models with Image Conditions** \
 [[Website](https://arxiv.org/abs/2403.16627)]
@@ -149,6 +202,16 @@
 [[Website](https://arxiv.org/abs/2402.14167)]
 [[Project](https://t-stitch.github.io/)]
 [[Code](https://github.com/NVlabs/T-Stitch)]
+
+**Accelerating Diffusion Sampling via Exploiting Local Transition Coherence** \
+[[Website](https://arxiv.org/abs/2503.09675)]
+[[Project](https://zhushangwen.github.io/LTC-accel.io/)]
+[[Code](https://github.com/zhushangwen/LTC-Accel)]
+
+**AccVideo: Accelerating Video Diffusion Model with Synthetic Dataset** \
+[[Website](https://arxiv.org/abs/2503.19462)]
+[[Project](https://aejion.github.io/accvideo/)]
+[[Code](https://github.com/aejion/AccVideo/)]
 
 **Relational Diffusion Distillation for Efficient Image Generation** \
 [[ACM MM 2024 (Oral)](https://arxiv.org/abs/2410.07679)]
@@ -186,10 +249,29 @@
 [[ICLR 2024](https://arxiv.org/abs/2309.06380)]
 [[Code](https://github.com/gnobitab/instaflow)]
 
+**Improved Training Technique for Latent Consistency Models** \
+[[ICLR 2025](https://arxiv.org/abs/2502.01441)]
+[[Code](https://github.com/quandao10/sLCT/)]
+
+**CacheQuant: Comprehensively Accelerated Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2503.01323)]
+[[Code](https://github.com/BienLuky/CacheQuant)]
+
 **Accelerating Vision Diffusion Transformers with Skip Branches** \
 [[Website](https://arxiv.org/abs/2411.17616)]
 [[Code](https://github.com/OpenSparseLLMs/Skip-DiT)]
 
+**Accelerating Diffusion Transformers with Dual Feature Caching** \
+[[Website](https://arxiv.org/abs/2412.18911)]
+[[Code](https://github.com/shenyi-z/duca)]
+
+**From Reusing to Forecasting: Accelerating Diffusion Models with TaylorSeers** \
+[[Website](https://arxiv.org/abs/2503.06923)]
+[[Code](https://github.com/Shenyi-Z/TaylorSeer)]
+
+**Exposure Bias Reduction for Enhancing Diffusion Transformer Feature Caching** \
+[[Website](https://arxiv.org/abs/2503.07120)]
+[[Code](https://github.com/aSleepyTree/EB-Cache)]
 
 **One Step Diffusion via Shortcut Models** \
 [[Website](https://arxiv.org/abs/2410.12557)]
@@ -198,6 +280,8 @@
 **DuoDiff: Accelerating Diffusion Models with a Dual-Backbone Approach** \
 [[Website](https://arxiv.org/abs/2410.09633)]
 [[Code](https://github.com/razvanmatisan/duodiff)]
+
+
 
 **A Closer Look at Time Steps is Worthy of Triple Speed-Up for Diffusion Model Training** \
 [[Website](https://arxiv.org/abs/2405.17403)]
@@ -215,6 +299,10 @@
 [[Website](https://arxiv.org/abs/2406.01733)]
 [[Code](https://github.com/horseee/learning-to-cache)]
 
+**SDXL-Lightning: Progressive Adversarial Diffusion Distillation** \
+[[Website](https://arxiv.org/abs/2402.13929)]
+[[Code](https://huggingface.co/ByteDance/SDXL-Lightning)]
+
 **Distribution Backtracking Builds A Faster Convergence Trajectory for Diffusion Distillation** \
 [[Website](https://arxiv.org/abs/2408.15991)]
 [[Code](https://github.com/SYZhang0805/DisBack)]
@@ -226,6 +314,14 @@
 **Diffusion Models Are Innate One-Step Generators** \
 [[Website](https://arxiv.org/abs/2405.20750)]
 [[Code](https://github.com/Zyriix/GDD)]
+
+**Optimal Stepsize for Diffusion Sampling** \
+[[Website](https://arxiv.org/abs/2503.21774)]
+[[Code](https://github.com/bebebe666/OptimalSteps)]
+
+**Model Reveals What to Cache: Profiling-Based Feature Reuse for Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2504.03140)]
+[[Code](https://github.com/GeekGuru123/ProfilingDiT/tree/main)]
 
 **Distilling Diffusion Models into Conditional GANs** \
 [[ECCV 2024](https://arxiv.org/abs/2405.05967)]
@@ -243,6 +339,18 @@
 **SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds** \
 [[NeurIPS 2023](https://arxiv.org/abs/2306.00980)]
 [[Project](https://snap-research.github.io/SnapFusion/)]
+
+**One-step Diffusion Models with f-Divergence Distribution Matching** \
+[[Website](https://arxiv.org/abs/2502.15681)]
+[[Project](https://research.nvidia.com/labs/genair/f-distill/)]
+
+**MagicDistillation: Weak-to-Strong Video Distillation for Large-Scale Portrait Few-Step Synthesis** \
+[[Website](https://arxiv.org/abs/2503.13319)]
+[[Project](https://w2svd.github.io/W2SVD/)]
+
+**Diffusion Adversarial Post-Training for One-Step Video Generation** \
+[[Website](https://arxiv.org/abs/2501.08316)]
+[[Project](https://seaweed-apt.com/)]
 
 **SNOOPI: Supercharged One-step Diffusion Distillation with Proper Guidance** \
 [[Website](https://arxiv.org/abs/2412.02687)]
@@ -264,11 +372,49 @@
 [[Website](https://arxiv.org/abs/2412.02852)]
 [[Project](https://yangzhang-v5.github.io/EcoDiff/)]
 
+**SnapGen: Taming High-Resolution Text-to-Image Models for Mobile Devices with Efficient Architectures and Training** \
+[[Website](https://arxiv.org/abs/2412.09619)]
+[[Project](https://snap-research.github.io/snapgen/)]
+
+**SnapGen-V: Generating a Five-Second Video within Five Seconds on a Mobile Device** \
+[[Website](https://arxiv.org/abs/2412.10494)]
+[[Project](https://snap-research.github.io/snapgen-v/)]
+
 **FasterDiT: Towards Faster Diffusion Transformers Training without Architecture Modification** \
 [[NeurIPS 2024](https://arxiv.org/abs/2410.10356)]
 
 **One-Step Diffusion Distillation through Score Implicit Matching** \
 [[NeurIPS 2024](https://arxiv.org/abs/2410.16794)]
+
+**Self-Corrected Flow Distillation for Consistent One-Step and Few-Step Text-to-Image Generation** \
+[[AAAI 2025](https://arxiv.org/abs/2412.16906)]
+
+**BlockDance: Reuse Structurally Similar Spatio-Temporal Features to Accelerate Diffusion Transformers** \
+[[CVPR 2025](https://arxiv.org/abs/2503.15927)]
+
+**PCM : Picard Consistency Model for Fast Parallel Sampling of Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2503.19731)]
+
+**MVPortrait: Text-Guided Motion and Emotion Control for Multi-view Vivid Portrait Animation** \
+[[CVPR 2025](https://arxiv.org/abs/2503.19383)]
+
+**Accelerate High-Quality Diffusion Models with Inner Loop Feedback** \
+[[Website](https://arxiv.org/abs/2501.13107)]
+
+**Accelerating Diffusion Transformer via Error-Optimized Cache** \
+[[Website](https://arxiv.org/abs/2501.19243)]
+
+**DICE: Distilling Classifier-Free Guidance into Text Embeddings** \
+[[Website](https://arxiv.org/abs/2502.03726)]
+
+**ProReflow: Progressive Reflow with Decomposed Velocity** \
+[[Website](https://arxiv.org/abs/2503.04824)]
+
+**Inference-Time Diffusion Model Distillation** \
+[[Website](https://arxiv.org/abs/2412.08871)]
+
+**Token Pruning for Caching Better: 9 Times Acceleration on Stable Diffusion for Free** \
+[[Website](https://arxiv.org/abs/2501.00375)]
 
 **HarmoniCa: Harmonizing Training and Inference for Better Feature Cache in Diffusion Transformer Acceleration** \
 [[Website](https://arxiv.org/abs/2410.01723)]
@@ -282,8 +428,11 @@
 **EM Distillation for One-step Diffusion Models** \
 [[Website](https://arxiv.org/abs/2405.16852)]
 
-**LANTERN: Accelerating Visual Autoregressive Models with Relaxed Speculative Decoding** \
-[[Website](https://arxiv.org/abs/2410.03355)]
+**AsymRnR: Video Diffusion Transformers Acceleration with Asymmetric Reduction and Restoration** \
+[[Website](https://arxiv.org/abs/2412.11706)]
+
+**Score-of-Mixture Training: Training One-Step Generative Models Made Simple** \
+[[Website](https://arxiv.org/abs/2502.09609)]
 
 **Partially Conditioned Patch Parallelism for Accelerated Diffusion Model Inference** \
 [[Website](https://arxiv.org/abs/2412.02962)]
@@ -318,6 +467,9 @@
 **DiP-GO: A Diffusion Pruner via Few-step Gradient Optimization** \
 [[Website](https://arxiv.org/abs/2410.16942)]
 
+**LazyDiT: Lazy Learning for the Acceleration of Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2412.12444)]
+
 **Flow Generator Matching** \
 [[Website](https://arxiv.org/abs/2410.19310)]
 
@@ -336,8 +488,8 @@
 **SCott: Accelerating Diffusion Models with Stochastic Consistency Distillation** \
 [[Website](https://arxiv.org/abs/2403.01505)]
 
-**SDXL-Lightning: Progressive Adversarial Diffusion Distillation** \
-[[Website](https://arxiv.org/abs/2402.13929)]
+**Ditto: Accelerating Diffusion Model via Temporal Value Similarity** \
+[[Website](https://arxiv.org/abs/2501.11211)]
 
 **Adaptive Non-Uniform Timestep Sampling for Diffusion Model Training** \
 [[Website](https://arxiv.org/abs/2411.09998)]
@@ -345,7 +497,27 @@
 **TSD-SR: One-Step Diffusion with Target Score Distillation for Real-World Image Super-Resolution** \
 [[Website](https://arxiv.org/abs/2411.18263)]
 
-### Train-Free
+**Sparse VideoGen: Accelerating Video Diffusion Transformers with Spatial-Temporal Sparsity** \
+[[Website](https://arxiv.org/abs/2502.01776)]
+
+**Efficient Distillation of Classifier-Free Guidance using Adapters** \
+[[Website](https://arxiv.org/abs/2503.07274)]
+
+**Denoising Score Distillation: From Noisy Diffusion Pretraining to One-Step High-Quality Generation** \
+[[Website](https://arxiv.org/abs/2503.07578)]
+
+**Inductive Moment Matching** \
+[[Website](https://arxiv.org/abs/2503.07565)]
+
+**High Quality Diffusion Distillation on a Single GPU with Relative and Absolute Position Matching** \
+[[Website](https://arxiv.org/abs/2503.20744)]
+
+**DiTFastAttnV2: Head-wise Attention Compression for Multi-Modality Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2503.22796)]
+
+
+
+## Train-Free
 
 
 **AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising** \
@@ -416,6 +588,10 @@
 [[CVPR 2024](https://arxiv.org/abs/2405.05252)]
 [[Project](https://atedm.github.io/)]
 
+**Training-free Diffusion Acceleration with Bottleneck Sampling** \
+[[Website](https://arxiv.org/abs/2503.18940)]
+[[Project](https://tyfeld.github.io/BottleneckSampling.github.io/)]
+
 **Cache Me if You Can: Accelerating Diffusion Models through Block Caching** \
 [[Website](https://arxiv.org/abs/2312.03209)]
 [[Project](https://github.com/Shenyi-Z/ToCa)]
@@ -423,8 +599,6 @@
 **Token Fusion: Bridging the Gap between Token Pruning and Token Merging** \
 [[WACV 2024](https://arxiv.org/abs/2312.01026)]
 
-**Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding** \
-[[Website](https://fwmb.github.io/blockcaching/)]
 
 **PFDiff: Training-free Acceleration of Diffusion Models through the Gradient Guidance of Past and Future** \
 [[Website](https://arxiv.org/abs/2408.08822)]
@@ -442,9 +616,35 @@
 [[Website](https://arxiv.org/abs/2410.18804)]
 
 
+## AR model
+
+**Distilled Decoding 1: One-step Sampling of Image Auto-regressive Models with Flow Matching** \
+[[Website](https://arxiv.org/abs/2412.17153)]
+[[Project](https://imagination-research.github.io/distilled-decoding/)]
+[[Code](https://github.com/imagination-research/distilled-decoding)]
+
+**Show-o Turbo: Towards Accelerated Unified Multimodal Understanding and Generation** \
+[[Website](https://arxiv.org/abs/2502.05415)]
+[[Code](https://github.com/zhijie-group/Show-o-Turbo)]
+
+**Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding** \
+[[Website](https://arxiv.org/abs/2410.01699)]
+[[Code](https://github.com/tyshiwo1/Accelerating-T2I-AR-with-SJD)]
+
+**LANTERN: Accelerating Visual Autoregressive Models with Relaxed Speculative Decoding** \
+[[Website](https://arxiv.org/abs/2410.03355)]
 
 
-## Image Restoration
+
+
+# Image Restoration
+
+
+**Diffusion Prior-Based Amortized Variational Inference for Noisy Inverse Problems** \
+[[ECCV 2024 Oral](https://arxiv.org/abs/2407.16125)]
+[[Project](https://mlvlab.github.io/DAVI-project/)]
+[[Code](https://github.com/mlvlab/DAVI)]
+
 
 **Zero-Shot Image Restoration Using Denoising Diffusion Null-Space Model** \
 [[ICLR 2023 oral](https://arxiv.org/abs/2212.00490)]
@@ -506,6 +706,16 @@
 [[Project](https://daps-inverse-problem.github.io/)]
 [[Code](https://github.com/zhangbingliang2019/DAPS)]
 
+**SVFR: A Unified Framework for Generalized Video Face Restoration** \
+[[Website](https://arxiv.org/abs/2501.01235)]
+[[Project](https://wangzhiyaoo.github.io/SVFR/)]
+[[Code](https://github.com/wangzhiyaoo/SVFR)]
+
+**DiffIR2VR-Zero: Zero-Shot Video Restoration with Diffusion-based Image Restoration Models** \
+[[Website](https://arxiv.org/abs/2407.01519)]
+[[Project](https://jimmycv07.github.io/DiffIR2VR_web/)]
+[[Code](https://github.com/jimmycv07/DiffIR2VR-Zero)]
+
 **Solving Video Inverse Problems Using Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2409.02574)]
 [[Project](https://solving-video-inverse.github.io/main/)]
@@ -516,10 +726,20 @@
 [[Project](https://zhu-zhiyu.github.io/FLUX-IR/)]
 [[Code](https://github.com/ZHU-Zhiyu/FLUX-IR)]
 
+**GenDR: Lightning Generative Detail Restorator** \
+[[Website](https://arxiv.org/abs/2503.06790)]
+[[Project](https://icandle.github.io/gendr_page/)]
+[[Code](https://github.com/icandle/GenDR)]
+
 **AutoDIR: Automatic All-in-One Image Restoration with Latent Diffusion** \
 [[Website](https://arxiv.org/abs/2310.10123)]
 [[Project](https://jiangyitong.github.io/AutoDIR_webpage/)]
 [[Code](https://github.com/jiangyitong/AutoDIR)]
+
+**DiffIR: Efficient Diffusion Model for Image Restoration**\
+[[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Xia_DiffIR_Efficient_Diffusion_Model_for_Image_Restoration_ICCV_2023_paper.pdf)]
+[[Website](https://arxiv.org/abs/2303.09472)] 
+[[Code](https://github.com/Zj-BinXia/DiffIR)]
 
 **FlowIE: Efficient Image Enhancement via Rectified Flow** \
 [[CVPR 2024 oral](https://arxiv.org/abs/2406.00508)]
@@ -533,6 +753,7 @@
 [[ICML 2023 oral](https://arxiv.org/abs/2301.12686)]
 [[Code](https://github.com/sony/gibbsddrm)]
 
+
 **Diffusion Priors for Variational Likelihood Estimation and Image Denoising** \
 [[NeurIPS 2024 Spotlight](https://arxiv.org/abs/2410.17521)]
 [[Code](https://github.com/HUST-Tan/DiffusionVI)]
@@ -541,9 +762,7 @@
 [[CVPR 2024](https://arxiv.org/abs/2312.16519)]
 [[Code](https://github.com/tirer-lab/DDPG)]
 
-**DiffIR: Efficient Diffusion Model for Image Restoration** \
-[[ICCV 2023](https://arxiv.org/abs/2303.09472)]
-[[Code](https://github.com/Zj-BinXia/DiffIR)]
+
 
 **LightenDiffusion: Unsupervised Low-Light Image Enhancement with Latent-Retinex Diffusion Models** \
 [[ECCV 2024](https://arxiv.org/abs/2407.08939)]
@@ -569,9 +788,17 @@
 [[CVPR 2024](https://arxiv.org/abs/2403.00644)]
 [[Code](https://github.com/yuhaoliu7456/Diff-Plugin)]
 
+**Learning Hazing to Dehazing: Towards Realistic Haze Generation for Real-World Image Dehazing** \
+[[CVPR 2025](https://arxiv.org/abs/2503.19262)]
+[[Code](https://github.com/ruiyi-w/Learning-Hazing-to-Dehazing)]
+
 **Deep Equilibrium Diffusion Restoration with Parallel Sampling** \
 [[CVPR 2024](https://arxiv.org/abs/2311.11600)]
 [[Code](https://github.com/caojiezhang/deqir)]
+
+**An Expectation-Maximization Algorithm for Training Clean Diffusion Models from Corrupted Observations** \
+[[NeurIPS 2024](https://arxiv.org/abs/2407.01014)]
+[[Code](https://github.com/weiminbai/EMDiffusion)]
 
 **ReFIR: Grounding Large Restoration Models with Retrieval Augmentation** \
 [[NeurIPS 2024](https://arxiv.org/abs/2410.05601)]
@@ -581,14 +808,17 @@
 [[NeurIPS 2024](https://arxiv.org/abs/2410.18666)]
 [[Code](https://github.com/shallowdream204/DreamClear)]
 
-**Zero-Shot Adaptation for Approximate Posterior Sampling of Diffusion Models in Inverse Problems** \
-[[Website](https://arxiv.org/abs/2407.11288)]
-[[Code](https://github.com/ualcalar17/ZAPS)]
+**Reconciling Stochastic and Deterministic Strategies for Zero-shot Image Restoration using Diffusion Model in Dual** \
+[[CVPR 2025](https://arxiv.org/abs/2503.01288)]
+[[Code](https://github.com/ChongWang1024/RDMD)]
 
-**UniProcessor: A Text-induced Unified Low-level Image Processor** \
-[[Website](https://arxiv.org/abs/2407.20928)]
-[[Code](https://github.com/IntMeGroup/UniProcessor)]
+**Exploiting Diffusion Prior for Real-World Image Dehazing with Unpaired Training** \
+[[AAAI 2025](https://arxiv.org/abs/2503.15017)]
+[[Code](https://github.com/ywxjm/Diff-Dehazer)]
 
+**Genuine Knowledge from Practice: Diffusion Test-Time Adaptation for Video Adverse Weather Removal** \
+[[CVPR 2024](https://arxiv.org/abs/2403.07684)]
+[[Code](https://github.com/scott-yjyang/DiffTTA)]
 
 **Refusion: Enabling Large-Size Realistic Image Restoration with Latent-Space Diffusion Models** \
 [[CVPR 2023 Workshop NTIRE](https://arxiv.org/abs/2304.08291)]
@@ -598,9 +828,69 @@
 [[CVPR 2024 Workshop NTIRE](https://arxiv.org/abs/2404.09735)]
 [[Code](https://github.com/shermanlian/spatial-entropy-loss)]
 
+**JPEG Artifact Correction using Denoising Diffusion Restoration Models** \
+[[NeurIPS 2022 Workshop](https://arxiv.org/abs/2209.11888)]
+[[Code](https://github.com/bahjat-kawar/ddrm-jpeg)]
+
+**FlowDPS: Flow-Driven Posterior Sampling for Inverse Problems** \
+[[Website](https://arxiv.org/abs/2503.08136)]
+[[Code](https://github.com/FlowDPS-Inverse/FlowDPS)]
+
+**InstructRestore: Region-Customized Image Restoration with Human Instructions** \
+[[Website](https://arxiv.org/abs/2503.24357)]
+[[Code](https://github.com/shuaizhengliu/InstructRestore)]
+
+**Decoupled Data Consistency with Diffusion Purification for Image Restoration** \
+[[Website](https://arxiv.org/abs/2403.06054)]
+[[Code](https://github.com/morefre/decoupled-data-consistency-with-diffusion-purification-for-image-restoration)]
+
+**Compression-Aware One-Step Diffusion Model for JPEG Artifact Removal** \
+[[Website](https://arxiv.org/abs/2502.09873)]
+[[Code](https://github.com/jp-guo/CODiff)]
+
+**One-Step Diffusion Model for Image Motion-Deblurring** \
+[[Website](https://arxiv.org/abs/2503.06537)]
+[[Code](https://github.com/xyLiu339/OSDD)]
+
+**Reversing the Damage: A QP-Aware Transformer-Diffusion Approach for 8K Video Restoration under Codec Compression** \
+[[Website](https://arxiv.org/abs/2412.08912)]
+[[Code](https://github.com/alimd94/DiQP)]
+
+**Zero-Shot Adaptation for Approximate Posterior Sampling of Diffusion Models in Inverse Problems** \
+[[Website](https://arxiv.org/abs/2407.11288)]
+[[Code](https://github.com/ualcalar17/ZAPS)]
+
+**Improving Diffusion-based Inverse Algorithms under Few-Step Constraint via Learnable Linear Extrapolation** \
+[[Website](https://arxiv.org/abs/2503.10103)]
+[[Code](https://github.com/weigerzan/LLE_inverse_problem)]
+
+**DeblurDiff: Real-World Image Deblurring with Generative Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.03810)]
+[[Code](https://github.com/kkkls/DeblurDiff)]
+
+**UniProcessor: A Text-induced Unified Low-level Image Processor** \
+[[Website](https://arxiv.org/abs/2407.20928)]
+[[Code](https://github.com/IntMeGroup/UniProcessor)]
+
+**Zero-Shot Image Restoration Using Few-Step Guidance of Consistency Models (and Beyond)** \
+[[Website](https://arxiv.org/abs/2412.20596)]
+[[Code](https://github.com/tirer-lab/CM4IR)]
+
+**Varformer: Adapting VAR's Generative Prior for Image Restoration** \
+[[Website](https://arxiv.org/abs/2412.21063)]
+[[Code](https://github.com/siywang541/Varformer)]
+
+**Low-Light Image Enhancement via Generative Perceptual Priors** \
+[[Website](https://arxiv.org/abs/2412.20916)]
+[[Code](https://github.com/LowLevelAI/GPP-LLIE)]
+
 **PnP-Flow: Plug-and-Play Image Restoration with Flow Matching** \
 [[Website](https://arxiv.org/abs/2410.02423)]
 [[Code](https://github.com/annegnx/PnP-Flow)]
+
+**VIIS: Visible and Infrared Information Synthesis for Severe Low-light Image Enhancement** \
+[[Website](https://arxiv.org/abs/2412.13655)]
+[[Code](https://github.com/Chenz418/VIIS)]
 
 **Deep Data Consistency: a Fast and Robust Diffusion Model-based Solver for Inverse Problems** \
 [[Website](https://arxiv.org/abs/2405.10748)]
@@ -609,6 +899,10 @@
 **Learning A Coarse-to-Fine Diffusion Transformer for Image Restoration** \
 [[Website](https://arxiv.org/abs/2308.08730)]
 [[Code](https://github.com/wlydlut/C2F-DFT)]
+
+**ExpRDiff: Short-exposure Guided Diffusion Model for Realistic Local Motion Deblurring** \
+[[Website](https://arxiv.org/abs/2412.09193)]
+[[Code](https://github.com/yzb1997/ExpRDiff)]
 
 **Stimulating the Diffusion Model for Image Denoising via Adaptive Embedding and Ensembling** \
 [[Website](https://arxiv.org/abs/2307.03992)]
@@ -654,6 +948,10 @@
 [[Website](https://arxiv.org/abs/2403.11423)]
 [[Code](https://github.com/AlphacatPlus/VmambaIR)]
 
+**InvFussion: Bridging Supervised and Zero-shot Diffusion for Inverse Problems** \
+[[Website](https://arxiv.org/abs/2504.01689)]
+[[Code](https://github.com/noamelata/InvFussion)]
+
 **Using diffusion model as constraint: Empower Image Restoration Network Training with Diffusion Model** \
 [[Website](https://arxiv.org/abs/2406.19030)]
 [[Code](https://github.com/JosephTiTan/DiffLoss)]
@@ -661,6 +959,14 @@
 **Super-resolving Real-world Image Illumination Enhancement: A New Dataset and A Conditional Diffusion Model** \
 [[Website](https://arxiv.org/abs/2410.12961)]
 [[Code](https://github.com/Yaofang-Liu/Super-Resolving)]
+
+**BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning** \
+[[Website](https://arxiv.org/abs/2502.01522)]
+[[Code](https://github.com/donahowe/BD-Diff)]
+
+**Toward Generalized Image Quality Assessment: Relaxing the Perfect Reference Quality Assumption** \
+[[CVPR 2025](https://arxiv.org/abs/2503.11221)]
+[[Project](https://tianhewu.github.io/A-FINE-page.github.io/)]
 
 **TIP: Text-Driven Image Processing with Semantic and Restoration Instructions** \
 [[ECCV 2024](https://arxiv.org/abs/2312.11595)]
@@ -678,6 +984,28 @@
 [[Website](https://arxiv.org/abs/2412.00156)]
 [[Project](https://vision-xl.github.io/)]
 
+**SeedVR: Seeding Infinity in Diffusion Transformer Towards Generic Video Restoration** \
+[[Website](https://arxiv.org/abs/2501.01320)]
+[[Project](https://iceclear.github.io/projects/seedvr/)]
+
+**SILO: Solving Inverse Problems with Latent Operators** \
+[[Website](https://arxiv.org/abs/2501.11746)]
+[[Project](https://ronraphaeli.github.io/SILO-website/)]
+
+**Proxies for Distortion and Consistency with Applications for Real-World Image Restoration** \
+[[Website](https://arxiv.org/abs/2501.12102)]
+[[Project](https://man-sean.github.io/elad-website/)]
+
+**UniCoRN: Latent Diffusion-based Unified Controllable Image Restoration Network across Multiple Degradations** \
+[[Website](https://arxiv.org/abs/2503.15868)]
+[[Project](https://codejaeger.github.io/unicorn-gh/)]
+
+**Lumina-OmniLV: A Unified Multimodal Framework for General Low-Level Vision** \
+[[Website](https://arxiv.org/abs/2504.04903)]
+[[Project](https://andrew0613.github.io/OmniLV_page/)]
+
+**DREAMCLEAN: RESTORING CLEAN IMAGE USING DEEP DIFFUSION PRIOR** \
+[[ICLR 2025](https://openreview.net/forum?id=6ALuy19mPa)]
 
 **Diff-Retinex: Rethinking Low-light Image Enhancement with A Generative Diffusion Model** \
 [[ICCV 2023](https://arxiv.org/abs/2308.13164)]
@@ -688,8 +1016,20 @@
 **Boosting Image Restoration via Priors from Pre-trained Models** \
 [[CVPR 2024](https://arxiv.org/abs/2403.06793)]
 
+**Seeing Beyond Haze: Generative Nighttime Image Dehazing** \
+[[Website](https://arxiv.org/abs/2503.08073)]
+
+**Inverse Problem Sampling in Latent Space Using Sequential Monte Carlo** \
+[[Website](https://arxiv.org/abs/2502.05908)]
+
+**Human Body Restoration with One-Step Diffusion Model and A New Benchmark** \
+[[Website](https://arxiv.org/abs/2502.01411)]
+
 **A Modular Conditional Diffusion Framework for Image Reconstruction** \
 [[Website](https://arxiv.org/abs/2411.05993)]
+
+**Solving Inverse Problems using Diffusion with Fast Iterative Renoising** \
+[[Website](https://arxiv.org/abs/2501.17468)]
 
 **Unpaired Photo-realistic Image Deraining with Energy-informed Diffusion Model** \
 [[Website](https://arxiv.org/abs/2407.17193)]
@@ -724,9 +1064,14 @@
 **Efficient Image Restoration through Low-Rank Adaptation and Stable Diffusion XL** \
 [[Website](https://arxiv.org/abs/2408.17060)]
 
+**TDM: Temporally-Consistent Diffusion Model for All-in-One Real-World Video Restoration** \
+[[Website](https://arxiv.org/abs/2501.02269)]
+
 **Empirical Bayesian image restoration by Langevin sampling with a denoising diffusion implicit prior** \
 [[Website](https://arxiv.org/abs/2409.04384)]
 
+**Enhancing Diffusion Models for Inverse Problems with Covariance-Aware Posterior Sampling** \
+[[Website](https://arxiv.org/abs/2412.20045)]
 
 **Data-free Distillation with Degradation-prompt Diffusion for Multi-weather Image Restoration** \
 [[Website](https://arxiv.org/abs/2409.03455)]
@@ -767,8 +1112,57 @@
 **Enhancing and Accelerating Diffusion-Based Inverse Problem Solving through Measurements Optimization** \
 [[Website](https://arxiv.org/abs/2412.03941)]
 
+**Are Conditional Latent Diffusion Models Effective for Image Restoration?** \
+[[Website](https://arxiv.org/abs/2412.09324)]
+
+**Consistent Diffusion: Denoising Diffusion Model with Data-Consistent Training for Image Restoration** \
+[[Website](https://arxiv.org/abs/2412.12550)]
+
+**DiffStereo: High-Frequency Aware Diffusion Model for Stereo Image Restoration** \
+[[Website](https://arxiv.org/abs/2501.10325)]
+
+**Diffusion Restoration Adapter for Real-World Image Restoration** \
+[[Website](https://arxiv.org/abs/2502.20679)]
+
+**Noise Synthesis for Low-Light Image Denoising with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.11262)]
+
+**A Simple Combination of Diffusion Models for Better Quality Trade-Offs in Image Denoising** \
+[[Website](https://arxiv.org/abs/2503.14654)]
+
+**Temporal-Consistent Video Restoration with Pre-trained Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.14863)]
+
+**Diffusion Image Prior** \
+[[Website](https://arxiv.org/abs/2503.21410)]
+
+**Invert2Restore: Zero-Shot Degradation-Blind Image Restoration** \
+[[Website](https://arxiv.org/abs/2503.21486)]
+
+**Blind Inversion using Latent Diffusion Priors** \
+[[Website](https://arxiv.org/abs/2407.01027)]
+
+**CDI: Blind Image Restoration Fidelity Evaluation based on Consistency with Degraded Image** \
+[[Website](https://arxiv.org/abs/2501.14264)]
+
+
 
 ## Colorization
+
+**LVCD: Reference-based Lineart Video Colorization with Diffusion Models** \
+[[SIGGRAPH Asia 2024](https://arxiv.org/abs/2409.12960)]
+[[Project](https://luckyhzt.github.io/lvcd)]
+[[Code](https://github.com/luckyhzt/LVCD)]
+
+**MagicColor: Multi-Instance Sketch Colorization** \
+[[Website](https://arxiv.org/abs/2503.16948)]
+[[Project](https://yinhan-zhang.github.io/color/)]
+[[Code](https://github.com/YinHan-Zhang/MagicColor)]
+
+**ColorFlow: Retrieval-Augmented Image Sequence Colorization** \
+[[Website](https://arxiv.org/abs/2412.11815)]
+[[Project](https://zhuang2002.github.io/ColorFlow/)]
+[[Code](https://github.com/TencentARC/ColorFlow)]
 
 **Control Color: Multimodal Diffusion-based Interactive Image Colorization** \
 [[Website](https://arxiv.org/abs/2402.10855)]
@@ -780,13 +1174,44 @@
 [[Project](https://servuskk.github.io/ColorDiff-Image/)]
 [[Code](https://github.com/servuskk/ColorDiff-Image)]
 
+**MangaNinja: Line Art Colorization with Precise Reference Following** \
+[[Website](https://arxiv.org/abs/2501.08332)]
+[[Project](https://johanan528.github.io/MangaNinjia/)]
+[[Code](https://github.com/ali-vilab/MangaNinjia)]
+
+**Multimodal Semantic-Aware Automatic Colorization with Diffusion Prior** \
+[[Website](https://arxiv.org/abs/2404.16678)]
+[[Project](https://servuskk.github.io/ColorDiff-Image/)]
+[[Code](https://github.com/servuskk/ColorDiff-Image)]
+
+**VanGogh: A Unified Multimodal Diffusion-based Framework for Video Colorization** \
+[[Website](https://arxiv.org/abs/2501.09499)]
+[[Project](https://becauseimbatman0.github.io/VanGogh)]
+[[Code](https://github.com/BecauseImBatman0/VanGogh)]
+
+**L-CAD: Language-based Colorization with Any-level Descriptions using Diffusion Priors** \
+[[Website](https://arxiv.org/abs/2305.15217)]
+[[Code](https://github.com/changzheng123/L-CAD)]
+
+**Image Referenced Sketch Colorization Based on Animation Creation Workflow** \
+[[Website](https://arxiv.org/abs/2502.19937)]
+[[Code](https://github.com/tellurion-kanata/colorizeDiffusion)]
+
 **ColorizeDiffusion: Adjustable Sketch Colorization with Reference Image and Text** \
 [[Website](https://arxiv.org/abs/2401.01456)]
+[[Code](https://github.com/tellurion-kanata/colorizeDiffusion)]
+
+**ColorizeDiffusion v2: Enhancing Reference-based Sketch Colorization Through Separating Utilities** \
+[[Website](https://arxiv.org/abs/2504.06895)]
 [[Code](https://github.com/tellurion-kanata/colorizeDiffusion)]
 
 **Diffusing Colors: Image Colorization with Text Guided Diffusion** \
 [[SIGGRAPH Asia 2023](https://arxiv.org/abs/2312.04145)]
 [[Project](https://pub.res.lightricks.com/diffusing-colors/)]
+
+**VanGogh: A Unified Multimodal Diffusion-based Framework for Video Colorization** \
+[[Website](https://arxiv.org/abs/2501.09499)]
+[[Project](https://becauseimbatman0.github.io/VanGogh)]
 
 **Enhancing Diffusion Posterior Sampling for Inverse Problems by Integrating Crafted Measurements** \
 [[Website](https://arxiv.org/abs/2411.09850)]
@@ -794,8 +1219,25 @@
 **DiffColor: Toward High Fidelity Text-Guided Image Colorization with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2308.01655)]
 
+**Consistent Video Colorization via Palette Guidance** \
+[[Website](https://arxiv.org/abs/2501.19331)]
+
+**L-C4: Language-Based Video Colorization for Creative and Consistent Color** \
+[[Website](https://arxiv.org/abs/2410.04972)]
+
+**LatentColorization: Latent Diffusion-Based Speaker Video Colorization** \
+[[Website](https://arxiv.org/abs/2405.05707)]
+
+
 
 ## Face Restoration
+
+⭐⭐**InterLCM: Low-Quality Images as Intermediate States of Latent Consistency Models for Effective Blind Face Restoration** \
+[[ICLR 2025](https://openreview.net/forum?id=rUxr9Ll5FQ)]
+[[Website](https://arxiv.org/abs/2502.02215)]
+[[Project](https://sen-mao.github.io/InterLCM-Page/)]
+[[Code](https://github.com/sen-mao/InterLCM)]
+[[Demo](https://2lq8im394062.vicp.fun/)]
 
 **DiffBIR: Towards Blind Image Restoration with Generative Diffusion Prior** \
 [[Website](https://arxiv.org/abs/2308.15070)]
@@ -807,16 +1249,6 @@
 [[Project](https://jkwang28.github.io/OSDFace-web/)]
 [[Code](https://github.com/jkwang28/OSDFace)]
 
-**ReF-LDM: A Latent Diffusion Model for Reference-based Face Image Restoration** \
-[[Website](https://arxiv.org/abs/2412.05043)]
-[[Project](https://chiweihsiao.github.io/refldm.github.io/)]
-[[Code](https://github.com/ChiWeiHsiao/ref-ldm)]
-
-**InstantRestore: Single-Step Personalized Face Restoration with Shared-Image Attention** \
-[[Website](https://arxiv.org/abs/2412.06753)]
-[[Project](https://snap-research.github.io/InstantRestore/)]
-[[Code](https://github.com/snap-research/InstantRestore)]
-
 **DR2: Diffusion-based Robust Degradation Remover for Blind Face Restoration** \
 [[CVPR 2023](https://arxiv.org/abs/2303.06885)]
 [[Code](https://github.com/Kaldwin0106/DR2_Drgradation_Remover)]
@@ -824,6 +1256,14 @@
 **PGDiff: Guiding Diffusion Models for Versatile Face Restoration via Partial Guidance** \
 [[NeurIPS 2023](https://arxiv.org/abs/2309.10810)]
 [[Code](https://github.com/pq-yang/pgdiff)]
+
+**AT-DDPM: Restoring Faces degraded by Atmospheric Turbulence using Denoising Diffusion Probabilistic Models** \
+[[WACV 2023](https://arxiv.org/abs/2208.11284)]
+[[Code](https://github.com/Nithin-GK/AT-DDPM)]
+
+**FLAIR: A Conditional Diffusion Framework with Applications to Face Video Restoration** \
+[[WACV 2025](https://arxiv.org/abs/2311.15445)]
+[[Code](https://github.com/wustl-cig/FLAIR)]
 
 **DifFace: Blind Face Restoration with Diffused Error Contraction** \
 [[Website](https://arxiv.org/abs/2312.15736)]
@@ -833,10 +1273,6 @@
 [[Website](https://arxiv.org/abs/2410.09864)]
 [[Code](https://github.com/EthanLiang99/AuthFace)]
 
-**RestorerID: Towards Tuning-Free Face Restoration with ID Preservation** \
-[[Website](https://arxiv.org/abs/2411.14125)]
-[[Code](https://github.com/YingJiacheng/RestorerID)]
-
 **Towards Real-World Blind Face Restoration with Generative Diffusion Prior** \
 [[Website](https://arxiv.org/abs/2312.15736)]
 [[Code](https://github.com/chenxx89/BFRffusion)]
@@ -844,6 +1280,9 @@
 **Towards Unsupervised Blind Face Restoration using Diffusion Prior** \
 [[Website](https://arxiv.org/abs/2410.04618)]
 [[Project](https://dt-bfr.github.io/)]
+
+**InfoBFR: Real-World Blind Face Restoration via Information Bottleneck** \
+[[Website](https://arxiv.org/abs/2501.15443)]
 
 **DiffBFR: Bootstrapping Diffusion Model Towards Blind Face Restoration** \
 [[Website](https://arxiv.org/abs/2305.04517)]
@@ -863,8 +1302,470 @@
 **DR-BFR: Degradation Representation with Diffusion Models for Blind Face Restoration** \
 [[Website](https://arxiv.org/abs/2411.10508)]
 
+**Face2Face: Label-driven Facial Retouching Restoration** \
+[[Website](https://arxiv.org/abs/2404.14177)]
 
-## Storytelling
+**WaveFace: Authentic Face Restoration with Efficient Frequency Recovery** \
+[[Website](https://arxiv.org/abs/2403.12760)]
+
+
+
+## Image Compression
+
+**Towards Extreme Image Compression with Latent Feature Guidance and Diffusion Prior** \
+[[IEE TCSVT 2024](https://arxiv.org/abs/2404.18820)] 
+[[Code](https://github.com/huai-chang/DiffEIC)] 
+
+**Taming Large Multimodal Agents for Ultra-low Bitrate Semantically Disentangled Image Compression** \
+[[CVPR 2025](https://arxiv.org/abs/2503.00399)] 
+[[Code](https://github.com/yang-xidian/SEDIC)] 
+
+**Using Powerful Prior Knowledge of Diffusion Model in Deep Unfolding Networks for Image Compressive Sensing** \
+[[CVPR 2025](https://arxiv.org/abs/2503.08429)] 
+[[Code](https://github.com/FengodChen/DMP-DUN-CVPR2025)] 
+
+**PerCoV2: Improved Ultra-Low Bit-Rate Perceptual Image Compression with Implicit Hierarchical Masked Image Modeling** \
+[[Website](https://arxiv.org/abs/2503.09368)] 
+[[Code](https://github.com/Nikolai10/PerCoV2)] 
+
+**Diffusion-based Extreme Image Compression with Compressed Feature Initialization** \
+[[Website](https://arxiv.org/abs/2410.02640)] 
+[[Code](https://github.com/huai-chang/RDEIC)] 
+
+**Lossy Compression with Pretrained Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.09815)] 
+[[Code](https://github.com/jeremyiv/diffc)] 
+
+**Compressed Image Generation with Denoising Diffusion Codebook Models** \
+[[Website](https://arxiv.org/abs/2502.01189)] 
+[[Project](https://ddcm-2025.github.io/)] 
+
+**Controllable Distortion-Perception Tradeoff Through Latent Diffusion for Neural Image Compression** \
+[[AAAI 2025](https://arxiv.org/abs/2412.11379)]
+
+**Invertible Diffusion Models for Compressed Sensing** \
+[[TPAMI 2025](https://arxiv.org/abs/2403.17006)]
+
+**Diffusion-based Perceptual Neural Video Compression with Temporal Diffusion Information Reuse** \
+[[Website](https://arxiv.org/abs/2501.13528)]
+
+**Stable Diffusion is a Natural Cross-Modal Decoder for Layered AI-generated Image Compression** \
+[[Website](https://arxiv.org/abs/2412.12982)]
+
+**Leveraging Diffusion Knowledge for Generative Image Compression with Fractal Frequency-Aware Band Learning** \
+[[Website](https://arxiv.org/abs/2503.11321)]
+
+
+## Super Resolution
+
+**ResShift: Efficient Diffusion Model for Image Super-resolution by Residual Shifting** \
+[[NeurIPS 2023 spotlight](https://nips.cc/virtual/2023/poster/71244)] 
+[[Website](https://arxiv.org/abs/2307.12348)] 
+[[Project](https://zsyoaoa.github.io/projects/resshift/)] 
+[[Code](https://github.com/zsyoaoa/resshift)] 
+
+**Image Super-Resolution via Iterative Refinement** \
+[[TPAMI](https://ieeexplore.ieee.org/document/9887996)] 
+[[Website](https://arxiv.org/abs/2104.07636)] 
+[[Project](https://iterative-refinement.github.io/)] 
+[[Code](https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement)] 
+
+
+**Kalman-Inspired Feature Propagation for Video Face Super-Resolution** \
+[[ECCV 2024](https://arxiv.org/abs/2408.05205)] 
+[[Project](https://jnjaby.github.io/projects/KEEP/)] 
+[[Code](https://github.com/jnjaby/KEEP)] 
+
+**HoliSDiP: Image Super-Resolution via Holistic Semantics and Diffusion Prior** \
+[[Website](https://arxiv.org/abs/2411.18662)] 
+[[Project](https://liyuantsao.github.io/HoliSDiP/)] 
+[[Code](https://github.com/liyuantsao/HoliSDiP)] 
+
+**MatchDiffusion: Training-free Generation of Match-cuts** \
+[[Website](https://arxiv.org/abs/2411.18677)] 
+[[Project](https://matchdiffusion.github.io/)] 
+[[Code](https://github.com/PardoAlejo/MatchDiffusion)] 
+
+**Spatiotemporal Skip Guidance for Enhanced Video Diffusion Sampling** \
+[[Website](https://arxiv.org/abs/2411.18664)] 
+[[Project](https://junhahyung.github.io/STGuidance/)] 
+[[Code](https://github.com/junhahyung/STGuidance)] 
+
+**STAR: Spatial-Temporal Augmentation with Text-to-Video Models for Real-World Video Super-Resolution** \
+[[Website](https://arxiv.org/abs/2501.02976)]
+[[Project](https://nju-pcalab.github.io/projects/STAR/)]
+[[Code](https://github.com/NJU-PCALab/STAR)]
+
+**AddSR: Accelerating Diffusion-based Blind Super-Resolution with Adversarial Diffusion Distillation** \
+[[Website](https://arxiv.org/abs/2404.01717)] 
+[[Project](https://nju-pcalab.github.io/projects/AddSR/)] 
+[[Code](https://github.com/NJU-PCALab/AddSR)] 
+
+**FaithDiff: Unleashing Diffusion Priors for Faithful Image Super-resolution** \
+[[Website](https://arxiv.org/abs/2411.18824)] 
+[[Project](https://jychen9811.github.io/FaithDiff_page/)] 
+[[Code](https://github.com/JyChen9811/FaithDiff/)] 
+
+**Exploiting Diffusion Prior for Real-World Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2305.07015)] 
+[[Project](https://iceclear.github.io/projects/stablesr/)] 
+[[Code](https://github.com/IceClear/StableSR)] 
+
+**SinSR: Diffusion-Based Image Super-Resolution in a Single Step** \
+[[CVPR 2024](https://arxiv.org/abs/2311.14760)] 
+[[Code](https://github.com/wyf0912/SinSR)] 
+
+**CDFormer:When Degradation Prediction Embraces Diffusion Model for Blind Image Super-Resolution** \
+[[CVPR 2024](https://arxiv.org/abs/2405.07648)] 
+[[Code](https://github.com/I2-Multimedia-Lab/CDFormer)] 
+
+**Taming Diffusion Prior for Image Super-Resolution with Domain Shift SDEs** \
+[[NeurIPS 2024](https://arxiv.org/abs/2409.17778)] 
+[[Code](https://github.com/QinpengCui/DoSSR)] 
+
+**SeeClear: Semantic Distillation Enhances Pixel Condensation for Video Super-Resolution** \
+[[NeurIPS 2024](https://arxiv.org/abs/2410.05799)] 
+[[Code](https://github.com/Tang1705/SeeClear-NeurIPS24)] 
+
+**Iterative Token Evaluation and Refinement for Real-World Super-Resolution** \
+[[AAAI 2024](https://arxiv.org/abs/2312.05616)] 
+[[Code](https://github.com/chaofengc/ITER)] 
+
+**MegaSR: Mining Customized Semantics and Expressive Guidance for Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2503.08096)] 
+[[Code](https://github.com/striveAgain/MegaSR)] 
+
+**One Diffusion Step to Real-World Super-Resolution via Flow Trajectory Distillation** \
+[[Website](https://arxiv.org/abs/2502.01993)] 
+[[Code](https://github.com/JianzeLi-114/FluxSR)] 
+
+**Boosting Diffusion Guidance via Learning Degradation-Aware Models for Blind Super Resolution** \
+[[Website](https://arxiv.org/abs/2501.08819)] 
+[[Code](https://github.com/ryanlu2240/Boosting-Diffusion-Guidance-via-Learning-Degradation-Aware-Models-for-Blind-Super-Resolution)] 
+
+**PassionSR: Post-Training Quantization with Adaptive Scale in One-Step Diffusion based Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2411.17106)] 
+[[Code](https://github.com/libozhu03/PassionSR)] 
+
+**Distillation-Free One-Step Diffusion for Real-World Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2410.04224)] 
+[[Code](https://github.com/JianzeLi-114/DFOSD)] 
+
+**Degradation-Guided One-Step Image Super-Resolution with Diffusion Priors** \
+[[Website](https://arxiv.org/abs/2409.17058)] 
+[[Code](https://github.com/ArcticHare105/S3Diff)] 
+
+**One Step Diffusion-based Super-Resolution with Time-Aware Distillation** \
+[[Website](https://arxiv.org/abs/2408.07476)] 
+[[Code](https://github.com/LearningHx/TAD-SR)] 
+
+**Diffusion Prior Interpolation for Flexibility Real-World Face Super-Resolution** \
+[[Website](https://arxiv.org/abs/2412.16552)] 
+[[Code](https://github.com/JerryYann/DPI)] 
+
+**Visual Autoregressive Modeling for Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2501.18993)] 
+[[Code](https://github.com/qyp2000/VARSR)] 
+
+**StructSR: Refuse Spurious Details in Real-World Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2501.05777)] 
+[[Code](https://github.com/LYCEXE/StructSR)] 
+
+**Hero-SR: One-Step Diffusion for Super-Resolution with Human Perception Priors** \
+[[Website](https://arxiv.org/abs/2412.07152)] 
+[[Code](https://github.com/W-JG/Hero-SR)] 
+
+**RAP-SR: RestorAtion Prior Enhancement in Diffusion Models for Realistic Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2412.07149)] 
+[[Code](https://github.com/W-JG/RAP-SR)] 
+
+**Uncertainty-guided Perturbation for Image Super-Resolution Diffusion Model** \
+[[Website](https://arxiv.org/abs/2503.18512)] 
+[[Code](https://github.com/LabShuHangGU/UPSR)] 
+
+**One-Step Effective Diffusion Network for Real-World Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2406.08177)] 
+[[Code](https://github.com/cswry/OSEDiff)] 
+
+**Binarized Diffusion Model for Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2406.05723)] 
+[[Code](https://github.com/zhengchen1999/BI-DiffSR)] 
+
+**Does Diffusion Beat GAN in Image Super Resolution?** \
+[[Website](https://arxiv.org/abs/2405.17261)] 
+[[Code](https://github.com/yandex-research/gan_vs_diff_sr)] 
+
+**PatchScaler: An Efficient Patch-independent Diffusion Model for Super-Resolution** \
+[[Website](https://arxiv.org/abs/2405.17158)] 
+[[Code](https://github.com/yongliuy/PatchScaler)] 
+
+**DeeDSR: Towards Real-World Image Super-Resolution via Degradation-Aware Stable Diffusion** \
+[[Website](https://arxiv.org/abs/2404.00661)] 
+[[Code](https://github.com/bichunyang419/DeeDSR)] 
+
+**Image Super-resolution Via Latent Diffusion: A Sampling-space Mixture Of Experts And Frequency-augmented Decoder Approach** \
+[[Website](https://arxiv.org/abs/2310.12004)] 
+[[Code](https://github.com/amandaluof/moe_sr)] 
+
+**OFTSR: One-Step Flow for Image Super-Resolution with Tunable Fidelity-Realism Trade-offs** \
+[[Website](https://arxiv.org/abs/2412.09465)] 
+[[Code](https://github.com/yuanzhi-zhu/OFTSR)] 
+
+**Arbitrary-steps Image Super-resolution via Diffusion Inversion** \
+[[Website](https://arxiv.org/abs/2412.09013)] 
+[[Code](https://github.com/zsyOAOA/InvSR)] 
+
+**Pixel-Aware Stable Diffusion for Realistic Image Super-resolution and Personalized Stylization** \
+[[Website](https://arxiv.org/abs/2308.14469)] 
+[[Code](https://github.com/yangxy/PASD)] 
+
+**DSR-Diff: Depth Map Super-Resolution with Diffusion Model** \
+[[Website](https://arxiv.org/abs/2311.09919)] 
+[[Code](https://github.com/shiyuan7/DSR-Diff)] 
+
+**Pixel-level and Semantic-level Adjustable Super-resolution: A Dual-LoRA Approach** \
+[[Website](https://arxiv.org/abs/2412.03017)]
+[[Code](https://github.com/csslc/PiSA-SR)] 
+
+**BiMaCoSR: Binary One-Step Diffusion Model Leveraging Flexible Matrix Compression for Real Super-Resolution** \
+[[Website](https://arxiv.org/abs/2502.00333)] 
+[[Code](https://github.com/Kai-Liu001/BiMaCoSR)] 
+
+**RFSR: Improving ISR Diffusion Models via Reward Feedback Learning** \
+[[Website](https://arxiv.org/abs/2412.03268)] 
+[[Code](https://github.com/sxpro/RFSR)] 
+
+**SAM-DiffSR: Structure-Modulated Diffusion Model for Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2402.17133)] 
+[[Code](https://github.com/lose4578/SAM-DiffSR)] 
+
+**XPSR: Cross-modal Priors for Diffusion-based Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2403.05049)] 
+[[Code](https://github.com/qyp2000/XPSR)] 
+
+**QDM: Quadtree-Based Region-Adaptive Sparse Diffusion Models for Efficient Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2503.12015)] 
+[[Code](https://github.com/linYDTHU/QDM)] 
+
+**Self-Adaptive Reality-Guided Diffusion for Artifact-Free Super-Resolution** \
+[[Website](https://arxiv.org/abs/2403.16643)] 
+[[Code](https://github.com/ProAirVerse/Self-Adaptive-Guidance-Diffusion)] 
+
+**BlindDiff: Empowering Degradation Modelling in Diffusion Models for Blind Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2403.10211)] 
+[[Code](https://github.com/lifengcs/BlindDiff)] 
+
+**Consistency Trajectory Matching for One-Step Generative Super-Resolution** \
+[[Website](https://arxiv.org/abs/2503.20349)] 
+[[Code](https://github.com/LabShuHangGU/CTMSR)] 
+
+**TASR: Timestep-Aware Diffusion Model for Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2412.03355)] 
+[[Code](https://github.com/SleepyLin/TASR)] 
+
+**Perceive, Understand and Restore: Real-World Image Super-Resolution with Autoregressive Multimodal Generative Models** \
+[[Website](https://arxiv.org/abs/2503.11073)] 
+[[Code](https://github.com/nonwhy/PURE)] 
+
+**The Power of Context: How Multimodality Improves Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2503.14503)] 
+[[Project](https://mmsr.kfmei.com/)] 
+
+**DiT4SR: Taming Diffusion Transformer for Real-World Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2503.23580)] 
+[[Project](https://adam-duan.github.io/projects/dit4sr/)] 
+
+**DiffVSR: Enhancing Real-World Video Super-Resolution with Diffusion Models for Advanced Visual Quality and Temporal Consistency** \
+[[Website](https://arxiv.org/abs/2501.10110)] 
+[[Project](https://xh9998.github.io/DiffVSR-project/)] 
+
+**HSR-Diff: Hyperspectral Image Super-Resolution via Conditional Diffusion Models**\
+[[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Wu_HSR-Diff_Hyperspectral_Image_Super-Resolution_via_Conditional_Diffusion_Models_ICCV_2023_paper.pdf)]
+[[Website](https://arxiv.org/abs/2306.12085)] 
+
+**Text-guided Explorable Image Super-resolution** \
+[[CVPR 2024](https://arxiv.org/abs/2403.01124)] 
+
+**Arbitrary-Scale Image Generation and Upsampling using Latent Diffusion Model and Implicit Neural Decoder** \
+[[CVPR 2024](https://arxiv.org/abs/2403.10255)] 
+
+**AdaDiffSR: Adaptive Region-aware Dynamic Acceleration Diffusion Model for Real-World Image Super-Resolution** \
+[[CVPR 2024](https://arxiv.org/abs/2410.17752)] 
+
+**Enhancing Hyperspectral Images via Diffusion Model and Group-Autoencoder Super-resolution Network** \
+[[AAAI 2024](https://arxiv.org/abs/2402.17285)] 
+
+**BUFF: Bayesian Uncertainty Guided Diffusion Probabilistic Model for Single Image Super-Resolution** \
+[[AAAI 2025](https://arxiv.org/abs/2504.03490)] 
+
+**Detail-Enhancing Framework for Reference-Based Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2405.00431)] 
+
+**You Only Need One Step: Fast Super-Resolution with Stable Diffusion via Scale Distillation** \
+[[Website](https://arxiv.org/abs/2401.17258)] 
+
+**Solving Diffusion ODEs with Optimal Boundary Conditions for Better Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2305.15357)] 
+
+**Dissecting Arbitrary-scale Super-resolution Capability from Pre-trained Diffusion Generative Models** \
+[[Website](https://arxiv.org/abs/2306.00714)] 
+
+**Edge-SD-SR: Low Latency and Parameter Efficient On-device Super-Resolution with Stable Diffusion via Bidirectional Conditioning** \
+[[Website](https://arxiv.org/abs/2412.06978)]
+
+**Boosting Diffusion-Based Text Image Super-Resolution Model Towards Generalized Real-World Scenarios** \
+[[Website](https://arxiv.org/abs/2503.07232)]
+
+**YODA: You Only Diffuse Areas. An Area-Masked Diffusion Approach For Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2308.07977)]
+
+**Domain Transfer in Latent Space (DTLS) Wins on Image Super-Resolution -- a Non-Denoising Model** \
+[[Website](https://arxiv.org/abs/2311.02358)]
+
+**TDDSR: Single-Step Diffusion with Two Discriminators for Super Resolution** \
+[[Website](https://arxiv.org/abs/2410.07663)]
+
+**QArtSR: Quantization via Reverse-Module and Timestep-Retraining in One-Step Diffusion based Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2503.05584)]
+
+**ConsisSR: Delving Deep into Consistency in Diffusion-based Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2410.13807)]
+
+**Image Super-Resolution with Text Prompt Diffusio** \
+[[Website](https://arxiv.org/abs/2311.14282)]
+
+**DifAugGAN: A Practical Diffusion-style Data Augmentation for GAN-based Single Image Super-resolution** \
+[[Website](https://arxiv.org/abs/2311.18508)]
+
+**DREAM: Diffusion Rectification and Estimation-Adaptive Models** \
+[[Website](https://arxiv.org/abs/2312.00210)]
+
+**Inflation with Diffusion: Efficient Temporal Adaptation for Text-to-Video Super-Resolution** \
+[[Website](https://arxiv.org/abs/2401.10404)]
+
+**Adaptive Multi-modal Fusion of Spatially Variant Kernel Refinement with Diffusion Model for Blind Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2403.05808)]
+
+**CasSR: Activating Image Power for Real-World Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2403.11451)]
+
+**Learning Spatial Adaptation and Temporal Coherence in Diffusion Models for Video Super-Resolution** \
+[[Website](https://arxiv.org/abs/2403.17000)]
+
+**Frequency-Domain Refinement with Multiscale Diffusion for Super Resolution** \
+[[Website](https://arxiv.org/abs/2405.10014)]
+
+**ClearSR: Latent Low-Resolution Image Embeddings Help Diffusion-Based Real-World Super Resolution Models See Clearer** \
+[[Website](https://arxiv.org/abs/2410.14279)]
+
+**Zoomed In, Diffused Out: Towards Local Degradation-Aware Multi-Diffusion for Extreme Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2411.12072)]
+
+**Adversarial Diffusion Compression for Real-World Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2411.13383)]
+
+**HF-Diff: High-Frequency Perceptual Loss and Distribution Matching for One-Step Diffusion-Based Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2411.13548)]
+
+**Semantic Segmentation Prior for Diffusion-Based Real-World Super-Resolution** \
+[[Website](https://arxiv.org/abs/2412.02960)]
+
+**RealOSR: Latent Unfolding Boosting Diffusion-based Real-world Omnidirectional Image Super-Resolution** \
+[[Website](https://arxiv.org/abs/2412.09646)]
+
+**CLIP-SR: Collaborative Linguistic and Image Processing for Super-Resolution** \
+[[Website](https://arxiv.org/abs/2412.11609)]
+
+**Spatial Degradation-Aware and Temporal Consistent Diffusion Model for Compressed Video Super-Resolution** \
+[[Website](https://arxiv.org/abs/2502.07381)]
+
+**AdaptSR: Low-Rank Adaptation for Efficient and Scalable Real-World Super-Resolution** \
+[[Website](https://arxiv.org/abs/2503.07748)]
+
+**One-Step Residual Shifting Diffusion for Image Super-Resolution via Distillation** \
+[[Website](https://arxiv.org/abs/2503.13358)]
+
+**KernelFusion: Assumption-Free Blind Super-Resolution via Patch Diffusion** \
+[[Website](https://arxiv.org/abs/2503.21907)]
+
+
+## Personalized Restoration
+
+**Restoration by Generation with Constrained Priors** \
+[[CVPR 2024 Highlight](https://arxiv.org/abs/2312.17161)]
+[[Project](https://gen2res.github.io/)]
+[[Code](https://github.com/adobe-research/gen2res)] 
+
+**ReF-LDM: A Latent Diffusion Model for Reference-based Face Image Restoration** \
+[[Website](https://arxiv.org/abs/2412.05043)]
+[[Project](https://chiweihsiao.github.io/refldm.github.io/)]
+[[Code](https://github.com/ChiWeiHsiao/ref-ldm)]
+
+**InstantRestore: Single-Step Personalized Face Restoration with Shared-Image Attention** \
+[[Website](https://arxiv.org/abs/2412.06753)]
+[[Project](https://snap-research.github.io/InstantRestore/)]
+[[Code](https://github.com/snap-research/InstantRestore)]
+
+**Personalized Restoration via Dual-Pivot Tuning** \
+[[Website](https://arxiv.org/abs/2312.17234)]
+[[Project](https://personalized-restoration.github.io/)]
+[[Code](https://github.com/personalized-restoration/personalized-restoration)]
+
+**RestorerID: Towards Tuning-Free Face Restoration with ID Preservation** \
+[[Website](https://arxiv.org/abs/2411.14125)]
+[[Code](https://github.com/YingJiacheng/RestorerID)]
+
+**FaceMe: Robust Blind Face Restoration with Personal Identification** \
+[[AAAI 2025](https://arxiv.org/abs/2501.05177)]
+
+**PFStorer: Personalized Face Restoration and Super-Resolution** \
+[[CVPR 2024](https://arxiv.org/abs/2403.08436)]
+
+
+# Illusion 
+
+**Visual Anagrams: Generating Multi-View Optical Illusions with Diffusion Models** \
+[[CVPR 2024](https://arxiv.org/abs/2311.17919)]
+[[Project](https://dangeng.github.io/visual_anagrams/)]
+[[Code](https://github.com/dangeng/visual_anagrams)] 
+
+**The Art of Deception: Color Visual Illusions and Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2412.10122)]
+[[Project](https://alviur.github.io/color-illusion-diffusion/)] 
+
+**Diffusion-based Visual Anagram as Multi-task Learning** \
+[[WACV 2025](https://arxiv.org/abs/2412.02693)]
+[[Code](https://github.com/Pixtella/Anagram-MTL)] 
+
+
+**Evaluating Model Perception of Color Illusions in Photorealistic Scenes** \
+[[Website](https://arxiv.org/abs/2412.06184)]
+[[Code](https://github.com/mao1207/RCID)] 
+
+
+**Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors** \
+[[Website](https://arxiv.org/abs/2412.09625)]
+[[Project](https://3d-multiview-illusion.github.io/)] 
+
+
+**Factorized Diffusion: Perceptual Illusions by Noise Decomposition** \
+[[ECCV 2024](https://arxiv.org/abs/2404.11615)]
+
+**PTDiffusion: Free Lunch for Generating Optical Illusion Hidden Pictures with Phase-Transferred Diffusion Model** \
+[[CVPR 2025](https://arxiv.org/abs/2503.06186)]
+
+**Diffusion Illusions: Hiding Images in Plain Sight** \
+[[Website](https://arxiv.org/abs/2312.03817)]
+
+
+# Storytelling
+
+⭐⭐**One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt** \
+[[ICLR 2025](https://openreview.net/forum?id=cD1kl2QKv1)]
+[[Website](https://arxiv.org/abs/2501.13554)]
+[[Project](https://byliutao.github.io/1Prompt1Story.github.io/)]
+[[Code](https://github.com/byliutao/1Prompt1Story)] 
+
 
 ⭐⭐**Intelligent Grimm -- Open-ended Visual Storytelling via Latent Diffusion Models** \
 [[CVPR 2024](https://arxiv.org/abs/2306.00973)]
@@ -881,6 +1782,11 @@
 [[Project](https://omriavrahami.com/the-chosen-one/)] 
 [[Code](https://github.com/ZichengDuan/TheChosenOne)]
 
+**OneActor: Consistent Character Generation via Cluster-Conditioned Guidance** \
+[[NeurIPS 2024](https://arxiv.org/abs/2404.10267)] 
+[[Project](https://johnneywang.github.io/OneActor-webpage/)] 
+[[Code](https://github.com/JoHnneyWang/OneActor)] 
+
 **DiffSensei: Bridging Multi-Modal LLMs and Diffusion Models for Customized Manga Generation** \
 [[Website](https://arxiv.org/abs/2412.07589)]
 [[Project](https://jianzongwu.github.io/projects/diffsensei/)]
@@ -890,6 +1796,11 @@
 [[Website](https://arxiv.org/abs/2406.01388)]
 [[Project](https://howe183.github.io/AutoStudio.io/)]
 [[Code](https://github.com/donahowe/AutoStudio)]
+
+**Consistent Subject Generation via Contrastive Instantiated Concepts** \
+[[Website](https://arxiv.org/abs/2503.24387)]
+[[Project](https://contrastive-concept-instantiation.github.io/)]
+[[Code](https://github.com/contrastive-concept-instantiation/cocoins)]
 
 **StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation** \
 [[Website](https://arxiv.org/abs/2405.01434)]
@@ -925,6 +1836,12 @@
 [[Website](https://arxiv.org/abs/2412.01987)]
 [[Project](https://soczech.github.io/showhowto/)]
 [[Code](https://github.com/soCzech/showhowto)] 
+
+**Manga Generation via Layout-controllable Diffusion** \
+[[Website](https://arxiv.org/abs/2412.19303)]
+[[Project](https://siyuch-fdu.github.io/MangaDiffusion/)]
+[[Code](https://github.com/siyuch-fdu/MangaDiffusion)] 
+
 
 **StoryImager: A Unified and Efficient Framework for Coherent Story Visualization and Completion** \
 [[ECCV 2024](https://arxiv.org/abs/2404.05979)]
@@ -978,6 +1895,9 @@
 **Causal-Story: Local Causal Attention Utilizing Parameter-Efficient Tuning For Visual Story Synthesis** \
 [[ICASSP 2024](https://arxiv.org/abs/2309.09553)]
 
+**Bringing Characters to New Stories: Training-Free Theme-Specific Image Generation via Dynamic Visual Prompting** \
+[[Website](https://arxiv.org/abs/2501.15641)]
+
 **CogCartoon: Towards Practical Story Visualization** \
 [[Website](https://arxiv.org/abs/2312.10718)]
 
@@ -1008,7 +1928,14 @@
 **Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention** \
 [[Website](https://arxiv.org/abs/2411.19261)]
 
-## Try On
+**Text2Story: Advancing Video Storytelling with Text Guidance** \
+[[Website](https://arxiv.org/abs/2503.06310)]
+
+**Storybooth: Training-free Multi-Subject Consistency for Improved Visual Storytelling** \
+[[Website](https://arxiv.org/abs/2504.05800)]
+
+
+# Try On
 
 **TryOnDiffusion: A Tale of Two UNets** \
 [[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_TryOnDiffusion_A_Tale_of_Two_UNets_CVPR_2023_paper.html)]
@@ -1016,6 +1943,11 @@
 [[Project](https://tryondiffusion.github.io/)]
 [[Official Code](https://github.com/tryonlabs/tryondiffusion)] 
 [[Unofficial Code](https://github.com/fashn-AI/tryondiffusion)] 
+
+**ITA-MDT: Image-Timestep-Adaptive Masked Diffusion Transformer Framework for Image-Based Virtual Try-On** \
+[[CVPR 2025](https://arxiv.org/abs/2503.20418)]
+[[Project](https://jiwoohong93.github.io/ita-mdt/)]
+[[Code](https://github.com/jiwoohong93/ita-mdt_code)] 
 
 **StableVITON: Learning Semantic Correspondence with Latent Diffusion Model for Virtual Try-On** \
 [[CVPR 2024](https://arxiv.org/abs/2312.01725)]
@@ -1047,6 +1979,11 @@
 [[Project](https://becauseimbatman0.github.io/ViViD)]
 [[Code](https://github.com/BecauseImBatman0/ViViD)] 
 
+**FashionComposer: Compositional Fashion Image Generation** \
+[[Website](https://arxiv.org/abs/2412.14168)]
+[[Project](https://sihuiji.github.io/FashionComposer-Page/)]
+[[Code](https://github.com/SihuiJi/FashionComposer)] 
+
 **GaussianVTON: 3D Human Virtual Try-ON via Multi-Stage Gaussian Splatting Editing with Image Prompting** \
 [[Website](https://arxiv.org/abs/2405.07472)]
 [[Project](https://haroldchen19.github.io/gsvton/)]
@@ -1077,6 +2014,11 @@
 [[Project](https://idm-vton.github.io/)] 
 [[Code](https://github.com/yisol/IDM-VTON)]
 
+**MF-VITON: High-Fidelity Mask-Free Virtual Try-On with Minimal Input** \
+[[Website](https://arxiv.org/abs/2503.08650)]
+[[Project](https://zhenchenwan.github.io/MF-VITON/)] 
+[[Code](https://github.com/ZhenchenWan/MF-VITON-High-Fidelity-Mask-Free-Virtual-Try-On-with-Minimal-Input)]
+
 **D4-VTON: Dynamic Semantics Disentangling for Differential Diffusion based Virtual Try-On** \
 [[ECCV 2024](https://arxiv.org/abs/2407.15111)]
 [[Code](https://github.com/Jerome-Young/D4-VTON)]
@@ -1097,6 +2039,10 @@
 [[ACM MM 2023](https://arxiv.org/abs/2305.13501)]
 [[Code](https://github.com/miccunifi/ladi-vton)] 
 
+**CatV2TON: Taming Diffusion Transformers for Vision-Based Virtual Try-On with Temporal Concatenation** \
+[[Website](https://arxiv.org/abs/2501.11325)]
+[[Code](https://github.com/Zheng-Chong/CatV2TON)] 
+
 **OOTDiffusion: Outfitting Fusion based Latent Diffusion for Controllable Virtual Try-on** \
 [[Website](https://arxiv.org/abs/2403.01779)]
 [[Code](https://github.com/levihsu/OOTDiffusion)] 
@@ -1105,6 +2051,9 @@
 [[Website](https://arxiv.org/abs/2407.15886)]
 [[Code](https://github.com/Zheng-Chong/CatVTON)] 
 
+**Learning Flow Fields in Attention for Controllable Person Image Generation** \
+[[Website](https://arxiv.org/abs/2412.08486)]
+[[Code](https://github.com/franciszzj/Leffa)] 
 
 **DreamPaint: Few-Shot Inpainting of E-Commerce Items for Virtual Try-On without 3D Modeling** \
 [[Website](https://arxiv.org/abs/2305.01257)]
@@ -1114,9 +2063,17 @@
 [[Website](https://arxiv.org/abs/2311.18405)]
 [[Code](https://github.com/zengjianhao/cat-dm)] 
 
+**Consistent Human Image and Video Generation with Spatially Conditioned Diffusion** \
+[[Website](https://arxiv.org/abs/2412.14531)]
+[[Code](https://github.com/ljzycmd/scd)] 
+
 **MV-VTON: Multi-View Virtual Try-On with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2404.17364)]
 [[Code](https://github.com/hywang2002/MV-VTON)]
+
+**PromptDresser: Improving the Quality and Controllability of Virtual Try-On via Generative Textual Prompt and Prompt-aware Mask** \
+[[Website](https://arxiv.org/abs/2412.16978)]
+[[Code](https://github.com/rlawjdghek/PromptDresser)]
 
 **M&M VTO: Multi-Garment Virtual Try-On and Editing** \
 [[CVPR 2024 Highlight](https://arxiv.org/abs/2406.04542)]
@@ -1158,8 +2115,15 @@
 [[Website](https://arxiv.org/abs/2405.18172)]
 [[Project](https://colorful-liyu.github.io/anyfit-page/)]
 
+**Dynamic Try-On: Taming Video Virtual Try-on with Dynamic Attention Mechanism** \
+[[Website](https://arxiv.org/abs/2412.09822)]
+[[Project](https://zhengjun-ai.github.io/dynamic-tryon-page/)]
+
 **FLDM-VTON: Faithful Latent Diffusion Model for Virtual Try-on** \
 [[IJCAI 2024](https://arxiv.org/abs/2404.14162)]
+
+**Fine-Grained Controllable Apparel Showcase Image Generation via Garment-Centric Outpainting** \
+[[Website](https://arxiv.org/abs/2503.01294)]
 
 **GraVITON: Graph based garment warping with attention guided inversion for Virtual-tryon** \
 [[Website](https://arxiv.org/abs/2406.02184)]
@@ -1197,9 +2161,41 @@
 **RAGDiffusion: Faithful Cloth Generation via External Knowledge Assimilation** \
 [[Website](https://arxiv.org/abs/2411.19528)]
 
+**SwiftTry: Fast and Consistent Video Virtual Try-On with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2412.10178)]
+
+**IGR: Improving Diffusion Model for Garment Restoration from Person Image** \
+[[Website](https://arxiv.org/abs/2412.11513)]
+
+**DiffusionTrend: A Minimalist Approach to Virtual Fashion Try-On** \
+[[Website](https://arxiv.org/abs/2412.14465)]
+
+**DreamFit: Garment-Centric Human Generation via a Lightweight Anything-Dressing Encoder** \
+[[Website](https://arxiv.org/abs/2412.17644)]
+
+**Fashionability-Enhancing Outfit Image Editing with Conditional Diffusion Models** \
+[[Website](https://arxiv.org/abs/2412.18421)]
+
+**MC-VTON: Minimal Control Virtual Try-On Diffusion Transformer** \
+[[Website](https://arxiv.org/abs/2501.03630)]
+
+**EfficientVITON: An Efficient Virtual Try-On Model using Optimized Diffusion Process** \
+[[Website](https://arxiv.org/abs/2501.11776)]
+
+**Training-Free Consistency Pipeline for Fashion Repose** \
+[[Website](https://arxiv.org/abs/2501.13692)]
+
+**IPVTON: Image-based 3D Virtual Try-on with Image Prompt Adapter** \
+[[Website](https://arxiv.org/abs/2501.15616)]
+
+**MFP-VTON: Enhancing Mask-Free Person-to-Person Virtual Try-On via Diffusion Transformer** \
+[[Website](https://arxiv.org/abs/2502.01626)]
+
+**Shining Yourself: High-Fidelity Ornaments Virtual Try-on with Diffusion Model** \
+[[Website](https://arxiv.org/abs/2503.16065)]
 
 
-## Drag Edit
+# Drag Edit
 
 **DragonDiffusion: Enabling Drag-style Manipulation on Diffusion Models** \
 [[ICLR 2024](https://openreview.net/forum?id=OEL4FJMg1b)] 
@@ -1227,6 +2223,11 @@
 [[CVPR 2024](https://arxiv.org/abs/2306.14435)] 
 [[Project](https://yujun-shi.github.io/projects/dragdiffusion.html)] 
 [[Code](https://github.com/Yujun-Shi/DragDiffusion)]
+
+**PoseTraj: Pose-Aware Trajectory Control in Video Diffusion** \
+[[CVPR 2025](https://arxiv.org/abs/2503.16068)] 
+[[Project](https://robingg1.github.io/Pose-Traj/)] 
+[[Code](https://github.com/robingg1/PoseTraj)]
 
 **InstaDrag: Lightning Fast and Accurate Drag-based Image Editing Emerging from Videos** \
 [[Website](https://arxiv.org/abs/2405.13722)] 
@@ -1287,6 +2288,10 @@
 [[Website](https://arxiv.org/abs/2407.17843)] 
 [[Project](https://micv-yonsei.github.io/dragtext2025/)] 
 
+**OmniDrag: Enabling Motion Control for Omnidirectional Image-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2412.09623)] 
+[[Project](https://lwq20020127.github.io/OmniDrag/)] 
+
 **FastDrag: Manipulate Anything in One Step** \
 [[Website](https://arxiv.org/abs/2405.15769)] 
 [[Project](https://fastdrag-site.github.io/)] 
@@ -1315,172 +2320,13 @@
 **AdaptiveDrag: Semantic-Driven Dragging on Diffusion-Based Image Editing** \
 [[Website](https://arxiv.org/abs/2410.12696)] 
 
-
-## Diffusion Models Inversion
-
-⭐⭐⭐**Null-text Inversion for Editing Real Images using Guided Diffusion Models** \
-[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Mokady_NULL-Text_Inversion_for_Editing_Real_Images_Using_Guided_Diffusion_Models_CVPR_2023_paper.html)] 
-[[Website](https://arxiv.org/abs/2211.09794)] 
-[[Project](https://null-text-inversion.github.io/)] 
-[[Code](https://github.com/google/prompt-to-prompt/#null-text-inversion-for-editing-real-images)]
-
-⭐⭐**Direct Inversion: Boosting Diffusion-based Editing with 3 Lines of Code** \
-[[ICLR 2024](https://openreview.net/forum?id=FoMZ4ljhVw)] 
-[[Website](https://arxiv.org/abs/2310.01506)] 
-[[Project](https://cure-lab.github.io/PnPInversion/)] 
-[[Code](https://github.com/cure-lab/DirectInversion/tree/main)] 
-
-⭐**Inversion-Based Creativity Transfer with Diffusion Models** \
-[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_Inversion-Based_Style_Transfer_With_Diffusion_Models_CVPR_2023_paper.html)] 
-[[Website](https://arxiv.org/abs/2211.13203)] 
-[[Code](https://github.com/zyxElsa/InST)] 
-
-⭐**EDICT: Exact Diffusion Inversion via Coupled Transformations** \
-[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Wallace_EDICT_Exact_Diffusion_Inversion_via_Coupled_Transformations_CVPR_2023_paper.html)] 
-[[Website](https://arxiv.org/abs/2211.12446)] 
-[[Code](https://github.com/salesforce/edict)] 
-
-⭐**Improving Negative-Prompt Inversion via Proximal Guidance** \
-[[Website](https://arxiv.org/abs/2306.05414)] 
-[[Code](https://github.com/phymhan/prompt-to-prompt)] 
+**A Diffusion-Based Framework for Occluded Object Movement** \
+[[Website](https://arxiv.org/abs/2504.01873)] 
 
 
 
-**An Edit Friendly DDPM Noise Space: Inversion and Manipulations** \
-[[CVPR 2024](https://arxiv.org/abs/2304.06140)] 
-[[Project](https://inbarhub.github.io/DDPM_inversion/)] 
-[[Code](https://github.com/inbarhub/DDPM_inversion)]
-[[Demo](https://huggingface.co/spaces/LinoyTsaban/edit_friendly_ddpm_inversion)]
 
-**Dynamic Prompt Learning: Addressing Cross-Attention Leakage for Text-Based Image Editing** \
-[[NeurIPS 2023](https://neurips.cc/virtual/2023/poster/72801)] 
-[[Website](https://arxiv.org/abs/2309.15664)] 
-[[Code](https://github.com/wangkai930418/DPL)] 
-<!-- [[NeurIPS 2023](https://openreview.net/forum?id=5UXXhVI08r)]  -->
-
-**Inversion-Free Image Editing with Natural Language** \
-[[CVPR 2024](https://arxiv.org/abs/2312.04965)] 
-[[Project](https://sled-group.github.io/InfEdit/index.html)] 
-[[Code](https://github.com/sled-group/InfEdit)] 
-
-**LEDITS++: Limitless Image Editing using Text-to-Image Models** \
-[[CVPR 2024](https://arxiv.org/abs/2311.16711)]
-[[Project](https://leditsplusplus-project.static.hf.space/index.html)] 
-[[Code](https://github.com/huggingface/diffusers/tree/main/src/diffusers/pipelines/ledits_pp)] 
-
-**Noise Map Guidance: Inversion with Spatial Context for Real Image Editing** \
-[[ICLR 2024](https://openreview.net/forum?id=mhgm0IXtHw)] 
-[[Website](https://arxiv.org/abs/2402.04625)] 
-[[Code](https://github.com/hansam95/nmg)] 
-
-
-**ReNoise: Real Image Inversion Through Iterative Noising** \
-[[ECCV 2024](https://arxiv.org/abs/2403.14602)] 
-[[Project](https://garibida.github.io/ReNoise-Inversion/)] 
-[[Code](https://github.com/garibida/ReNoise-Inversion)] 
-
-**IterInv: Iterative Inversion for Pixel-Level T2I Models** \
-[[NeurIPS-W 2023](https://neurips.cc/virtual/2023/74859)] 
-[[Openreview](https://openreview.net/forum?id=mSGmzVo0aS)] 
-[[NeuripsW](https://neurips.cc/virtual/2023/workshop/66539#wse-detail-74859)]
-[[Website](https://arxiv.org/abs/2310.19540)] 
-[[Code](https://github.com/Tchuanm/IterInv)] 
-
-**DICE: Discrete Inversion Enabling Controllable Editing for Multinomial Diffusion and Masked Generative Models** \
-[[Website](https://arxiv.org/abs/2410.08207)] 
-[[Project](https://hexiaoxiao-cs.github.io/DICE/)] 
-[[Code](https://github.com/hexiaoxiao-cs/DICE)] 
-
-**Object-aware Inversion and Reassembly for Image Editing** \
-[[Website](https://arxiv.org/abs/2310.12149)] 
-[[Project](https://aim-uofa.github.io/OIR-Diffusion/)] 
-[[Code](https://github.com/aim-uofa/OIR)] 
-
-**A Latent Space of Stochastic Diffusion Models for Zero-Shot Image Editing and Guidance** \
-[[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Wu_A_Latent_Space_of_Stochastic_Diffusion_Models_for_Zero-Shot_Image_ICCV_2023_paper.pdf)] 
-[[Code](https://github.com/humansensinglab/cycle-diffusion)] 
-
-**Source Prompt Disentangled Inversion for Boosting Image Editability with Diffusion Models** \
-[[ECCV 2024](https://arxiv.org/abs/2403.11105)] 
-[[Code](https://github.com/leeruibin/SPDInv)] 
-
-**LocInv: Localization-aware Inversion for Text-Guided Image Editing** \
-[[CVPR 2024 AI4CC workshop](https://arxiv.org/abs/2405.01496)] 
-[[Code](https://github.com/wangkai930418/DPL)] 
-
-**Accelerating Diffusion Models for Inverse Problems through Shortcut Sampling** \
-[[IJCAI 2024](https://arxiv.org/abs/2305.16965)] 
-[[Code](https://github.com/gongyeliu/ssd)] 
-
-**StyleDiffusion: Prompt-Embedding Inversion for Text-Based Editing** \
-[[Website](https://arxiv.org/abs/2303.15649)] 
-[[Code](https://github.com/sen-mao/StyleDiffusion)] 
-
-**Generating Non-Stationary Textures using Self-Rectification** \
-[[Website](https://arxiv.org/abs/2401.02847)] 
-[[Code](https://github.com/xiaorongjun000/Self-Rectification)] 
-
-**Exact Diffusion Inversion via Bi-directional Integration Approximation** \
-[[Website](https://arxiv.org/abs/2307.10829)] 
-[[Code](https://github.com/guoqiang-zhang-x/BDIA)] 
-
-**IQA-Adapter: Exploring Knowledge Transfer from Image Quality Assessment to Diffusion-based Generative Models** \
-[[Website](https://arxiv.org/abs/2412.01794)] 
-[[Code](https://github.com/X1716/IQA-Adapter)] 
-
-**Fixed-point Inversion for Text-to-image diffusion models** \
-[[Website](https://arxiv.org/abs/2312.12540)] 
-[[Code](https://github.com/dvirsamuel/FPI)] 
-
-**Eta Inversion: Designing an Optimal Eta Function for Diffusion-based Real Image Editing** \
-[[Website](https://arxiv.org/abs/2403.09468)] 
-[[Code](https://github.com/furiosa-ai/eta-inversion)] 
-
-**Effective Real Image Editing with Accelerated Iterative Diffusion Inversion** \
-[[ICCV 2023 Oral](https://openaccess.thecvf.com/content/ICCV2023/html/Pan_Effective_Real_Image_Editing_with_Accelerated_Iterative_Diffusion_Inversion_ICCV_2023_paper.html)]
-[[Website](https://arxiv.org/abs/2309.04907)]
-
-**BELM: Bidirectional Explicit Linear Multi-step Sampler for Exact Inversion in Diffusion Models** \
-[[NeurIPS 2024](https://arxiv.org/abs/2410.07273)] 
-
-**Schedule Your Edit: A Simple yet Effective Diffusion Noise Schedule for Image Editing** \
-[[NeurIPS 2024](https://arxiv.org/abs/2410.18756)] 
-
-**BARET : Balanced Attention based Real image Editing driven by Target-text Inversion** \
-[[WACV 2024](https://arxiv.org/abs/2312.05482)] 
-
-**Wavelet-Guided Acceleration of Text Inversion in Diffusion-Based Image Editing** \
-[[ICASSP 2024](https://arxiv.org/abs/2401.09794)]
-
-**Task-Oriented Diffusion Inversion for High-Fidelity Text-based Editing** \
-[[Website](https://arxiv.org/abs/2408.13395)] 
-
-**Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations** \
-[[Website](https://arxiv.org/abs/2410.10792)] 
-
-**Negative-prompt Inversion: Fast Image Inversion for Editing with Text-guided Diffusion Models** \
-[[Website](https://arxiv.org/abs/2305.16807)] 
-
-**Direct Inversion: Optimization-Free Text-Driven Real Image Editing with Diffusion Models** \
-[[Website](https://arxiv.org/abs/2211.07825)] 
-
-**SimInversion: A Simple Framework for Inversion-Based Text-to-Image Editing** \
-[[Website](https://arxiv.org/abs/2409.10476)]
-
-**Prompt Tuning Inversion for Text-Driven Image Editing Using Diffusion Models** \
-[[Website](https://arxiv.org/abs/2305.04441)]
-
-**KV Inversion: KV Embeddings Learning for Text-Conditioned Real Image Action Editing** \
-[[Website](https://arxiv.org/abs/2309.16608)]
-
-**Tuning-Free Inversion-Enhanced Control for Consistent Image Editing** \
-[[Website](https://arxiv.org/abs/2312.14611)]
-
-**LEDITS: Real Image Editing with DDPM Inversion and Semantic Guidance** \
-[[Website](https://arxiv.org/abs/2307.00522)]
-
-
-## Text Guided Image Editing
+# Text Guided Image Editing
 ⭐⭐⭐**Prompt-to-Prompt Image Editing with Cross Attention Control** \
 [[ICLR 2023](https://openreview.net/forum?id=_CDixzkzeyb)] 
 [[Website](https://arxiv.org/abs/2211.09794)] 
@@ -1532,12 +2378,20 @@
 [[Code 1](https://github.com/geekyutao/Inpaint-Anything)] 
 [[Code 2](https://github.com/sail-sg/EditAnything)] 
 
+
+
 **MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing** \
 [[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Cao_MasaCtrl_Tuning-Free_Mutual_Self-Attention_Control_for_Consistent_Image_Synthesis_and_ICCV_2023_paper.html)] 
 [[Website](https://arxiv.org/abs/2304.08465)] 
 [[Project](https://ljzycmd.github.io/projects/MasaCtrl/)] 
 [[Code](https://github.com/TencentARC/MasaCtrl)] 
 [[Demo](https://huggingface.co/spaces/TencentARC/MasaCtrl)]
+
+**SINE: SINgle Image Editing with Text-to-Image Diffusion Models** \
+[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_SINE_SINgle_Image_Editing_With_Text-to-Image_Diffusion_Models_CVPR_2023_paper.html)] 
+[[Website](https://arxiv.org/abs/2212.04489)] 
+[[Project](https://zhang-zx.github.io/SINE/)] 
+[[Code](https://github.com/zhang-zx/SINE)] 
 
 **Collaborative Score Distillation for Consistent Visual Synthesis** \
 [[NeurIPS 2023](https://nips.cc/virtual/2023/poster/73044)] 
@@ -1597,7 +2451,6 @@
 [[Project](https://dangeng.github.io/motion_guidance/)] 
 [[Code](https://github.com/dangeng/motion_guidance/)] 
 
-
 **TurboEdit: Text-Based Image Editing Using Few-Step Diffusion Models** \
 [[SIGGRAPH Asia 2024](https://arxiv.org/abs/2408.00735)]
 [[Project](https://turboedit-paper.github.io/)] 
@@ -1607,6 +2460,16 @@
 [[NeurIPS 2024](https://arxiv.org/abs/2406.14539)] 
 [[Project](https://yandex-research.github.io/invertible-cd/)] 
 [[Code](https://github.com/yandex-research/invertible-cd)] 
+
+**ILLUME+: Illuminating Unified MLLM with Dual Visual Tokenization and Diffusion Refinement** \
+[[Website](https://arxiv.org/abs/2504.01934)] 
+[[Project](https://illume-unified-mllm.github.io/)] 
+[[Code](https://github.com/illume-unified-mllm/ILLUME_plus)] 
+
+**FreeFlux: Understanding and Exploiting Layer-Specific Roles in RoPE-Based MMDiT for Versatile Image Editing** \
+[[Website](https://arxiv.org/abs/2503.16153)] 
+[[Project](https://wtybest.github.io/projects/FreeFlux/)] 
+[[Code](https://github.com/wtybest/FreeFlux)] 
 
 **Zero-shot Image Editing with Reference Imitation** \
 [[Website](https://arxiv.org/abs/2406.07547)] 
@@ -1627,6 +2490,11 @@
 [[Website](https://arxiv.org/abs/2404.14007)] 
 [[Project](https://zwl666666.github.io/infusion/)] 
 [[Code](https://github.com/zwl666666/infusion)] 
+
+**EEdit : Rethinking the Spatial and Temporal Redundancy for Efficient Image Editing** \
+[[Website](https://arxiv.org/abs/2503.10270)] 
+[[Project](https://eff-edit.github.io/)] 
+[[Code](https://github.com/yuriYanZeXuan/EEdit)] 
 
 **StyleBooth: Image Style Editing with Multimodal Instruction** \
 [[Website](https://arxiv.org/abs/2404.12154)] 
@@ -1668,6 +2536,11 @@
 [[Project](https://icoz69.github.io/facestudio/)] 
 [[Code](https://github.com/xyynafc/FaceStudio)] 
 
+**Edicho: Consistent Image Editing in the Wild** \
+[[Website](https://arxiv.org/abs/2412.21079)] 
+[[Project](https://ezioby.github.io/edicho/)] 
+[[Code](https://github.com/EzioBy/edicho)] 
+
 **Towards Small Object Editing: A Benchmark Dataset and A Training-Free Approach** \
 [[Website](https://arxiv.org/abs/2411.01545)] 
 [[Project](https://soebench.github.io/)] 
@@ -1678,6 +2551,11 @@
 [[Project](https://shi-labs.github.io/Smooth-Diffusion/)] 
 [[Code](https://github.com/SHI-Labs/Smooth-Diffusion)] 
 
+**EditCLIP: Representation Learning for Image Editing** \
+[[Website](https://arxiv.org/abs/2503.20318)] 
+[[Project](https://qianwangx.github.io/EditCLIP/)] 
+[[Code](https://github.com/QianWangX/EditCLIP)] 
+
 **FreeEdit: Mask-free Reference-based Image Editing with Multi-modal Instruction** \
 [[Website](https://arxiv.org/abs/2409.18071)] 
 [[Project](https://github.com/hrz2000/FreeEdit)] 
@@ -1687,6 +2565,11 @@
 [[Website](https://arxiv.org/abs/2312.11396)] 
 [[Project](https://mag-edit.github.io/)] 
 [[Code](https://github.com/HelenMao/MAG-Edit)] 
+
+**Edit Transfer: Learning Image Editing via Vision In-Context Relations** \
+[[Website](https://arxiv.org/abs/2503.13327)]
+[[Project](https://cuc-mipg.github.io/EditTransfer.github.io/)] 
+[[Code](https://github.com/CUC-MIPG/Edit-Transfer)] 
 
 **LIME: Localized Image Editing via Attention Regularization in Diffusion Models** \
 [[Website](https://arxiv.org/abs/2312.09256)]
@@ -1713,6 +2596,11 @@
 [[Project](https://faceadapter.github.io/face-adapter.github.io/)] 
 [[Code](https://github.com/FaceAdapter/Face-Adapter)] 
 
+**FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models** \
+[[Website](https://arxiv.org/abs/2412.08629)]
+[[Project](https://matankleiner.github.io/flowedit/)] 
+[[Code](https://github.com/fallenshock/FlowEdit)] 
+
 **FastEdit: Fast Text-Guided Single-Image Editing via Semantic-Aware Diffusion Fine-Tuning** \
 [[Website](https://arxiv.org/abs/2408.03355)]
 [[Project](https://fastedit-sd.github.io/)] 
@@ -1733,6 +2621,20 @@
 [[Project](https://instantswap.github.io/)] 
 [[Code](https://github.com/chenyangzhu1/InstantSwap)] 
 
+**KV-Edit: Training-Free Image Editing for Precise Background Preservation** \
+[[Website](https://arxiv.org/abs/2502.17363)] 
+[[Project](https://xilluill.github.io/projectpages/KV-Edit/)] 
+[[Code](https://github.com/Xilluill/KV-Edit)] 
+
+**FreSca: Unveiling the Scaling Space in Diffusion Models** \
+[[Website](https://arxiv.org/abs/2504.02154)] 
+[[Project](https://wikichao.github.io/FreSca/)] 
+[[Code](https://github.com/WikiChao/FreSca)] 
+
+**Concept Lancet: Image Editing with Compositional Representation Transplant** \
+[[Website](https://arxiv.org/abs/2504.02828)] 
+[[Project](https://peterljq.github.io/project/colan/)] 
+[[Code](https://github.com/peterljq/Concept-Lancet)] 
 
 **UniTune: Text-Driven Image Editing by Fine Tuning an Image Generation Model on a Single Image** \
 [[SIGGRAPH 2023](https://arxiv.org/abs/2210.09477)] 
@@ -1741,6 +2643,10 @@
 **Learning to Follow Object-Centric Image Editing Instructions Faithfully** \
 [[EMNLP 2023](https://arxiv.org/abs/2310.19145)] 
 [[Code](https://github.com/tuhinjubcse/faithfuledits_emnlp2023)] 
+
+**Instruct-CLIP: Improving Instruction-Guided Image Editing with Automated Data Refinement Using Contrastive Learning** \
+[[CVPR 2025](https://arxiv.org/abs/2503.18406)] 
+[[Code](https://github.com/SherryXTChen/Instruct-CLIP)] 
 
 **GroupDiff: Diffusion-based Group Portrait Editing** \
 [[ECCV 2024](https://arxiv.org/abs/2409.14379)] 
@@ -1783,9 +2689,17 @@
 [[BMVC 2023](https://arxiv.org/abs/2309.11321)]
 [[Code](https://github.com/MunchkinChen/FADING)] 
 
+**GoT: Unleashing Reasoning Capability of Multimodal Large Language Model for Visual Generation and Editing** \
+[[Website](https://arxiv.org/abs/2503.10639v1)] 
+[[Code](https://github.com/rongyaofang/GoT)] 
+
 **Uniform Attention Maps: Boosting Image Fidelity in Reconstruction and Editing** \
 [[Website](https://arxiv.org/abs/2411.19652)] 
 [[Code](https://github.com/Mowenyii/Uniform-Attention-Maps)] 
+
+**MoEdit: On Learning Quantity Perception for Multi-object Image Editing** \
+[[Website](https://arxiv.org/abs/2503.10112)] 
+[[Code](https://github.com/Tear-kitty/MoEdit)] 
 
 **FlexEdit: Marrying Free-Shape Masks to VLLM for Flexible Image Editing** \
 [[Website](https://arxiv.org/abs/2408.12429)] 
@@ -1803,6 +2717,10 @@
 [[Website](https://arxiv.org/abs/2411.03286)] 
 [[Code](https://github.com/fkyyyy/DiT4Edit)] 
 
+**FramePainter: Endowing Interactive Image Editing with Video Diffusion Priors** \
+[[Website](https://arxiv.org/abs/2501.08225)] 
+[[Code](https://github.com/YBYBZhang/FramePainter)] 
+
 **Move and Act: Enhanced Object Manipulation and Background Integrity for Image Editing** \
 [[Website](https://arxiv.org/abs/2405.14785)] 
 [[Code](https://github.com/YangLing0818/EditWorld)] 
@@ -1819,11 +2737,21 @@
 [[Website](https://arxiv.org/abs/2306.00950)] 
 [[Code](https://github.com/exx8/differential-diffusion)] 
 
+**Tuning-Free Image Editing with Fidelity and Editability via Unified Latent Diffusion Model** \
+[[Website](https://arxiv.org/abs/2504.05594)]
+[[Code](https://github.com/CUC-MIPG/UnifyEdit)] 
+
+**MIGE: A Unified Framework for Multimodal Instruction-Based Image Generation and Editing** \
+[[Website](https://arxiv.org/abs/2502.21291)]
+[[Code](https://github.com/Eureka-Maggie/MIGE)] 
 
 **Ground-A-Score: Scaling Up the Score Distillation for Multi-Attribute Editing** \
 [[Website](https://arxiv.org/abs/2403.13551)]
 [[Code](https://github.com/ground-a-score/ground-a-score)] 
 
+**LOCATEdit: Graph Laplacian Optimized Cross Attention for Localized Text-Guided Image Editing** \
+[[Website](https://arxiv.org/abs/2503.21541)]
+[[Code](https://github.com/LOCATEdit/LOCATEdit/)] 
 
 **InstructDiffusion: A Generalist Modeling Interface for Vision Tasks** \
 [[Website](https://arxiv.org/abs/2309.03895)]
@@ -1869,6 +2797,9 @@
 [[Website](https://arxiv.org/abs/2408.00998)]
 [[Code](https://github.com/XiangGao1102/FBSDiff)] 
 
+**Single Image Iterative Subject-driven Generation and Editing** \
+[[Website](https://arxiv.org/abs/2503.16025)]
+[[Code](https://github.com/yairshp/SISO)] 
 
 **Conditional Score Guidance for Text-Driven Image-to-Image Translation** \
 [[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71103)] 
@@ -1895,6 +2826,18 @@
 [[NeurIPS 2024](https://arxiv.org/abs/2410.20823)]
 [[Project](https://xzr52.github.io/ATIH/)] 
 
+**Textualize Visual Prompt for Image Editing via Diffusion Bridge** \
+[[AAAI 2025](https://arxiv.org/abs/2501.03495)]
+[[Project](https://pengchengpcx.github.io/TextVDB/)] 
+
+**PartEdit: Fine-Grained Image Editing using Pre-Trained Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.04050)]
+[[Project](https://partedit.github.io/PartEdit/)] 
+
+**InteractEdit: Zero-Shot Editing of Human-Object Interactions in Images** \
+[[Website](https://arxiv.org/abs/2503.09130)]
+[[Project](https://jiuntian.github.io/interactedit/)] 
+
 **UniReal: Universal Image Generation and Editing via Learning Real-world Dynamics** \
 [[Website](https://arxiv.org/abs/2412.07774)]
 [[Project](https://xavierchen34.github.io/UniReal-Page/)] 
@@ -1907,9 +2850,25 @@
 [[Website](https://arxiv.org/abs/2406.00985)]
 [[Project](https://mingzhenhuang.com/projects/MultiEdits.html)] 
 
+**Object-level Visual Prompts for Compositional Image Generation** \
+[[Website](https://arxiv.org/abs/2501.01424)]
+[[Project](https://snap-research.github.io/visual-composer/)] 
+
+**Instruction-based Image Manipulation by Watching How Things Move** \
+[[Website](https://arxiv.org/abs/2412.12087)]
+[[Project](https://ljzycmd.github.io/projects/InstructMove/)] 
+
+**BrushEdit: All-In-One Image Inpainting and Editing** \
+[[Website](https://arxiv.org/abs/2412.10316)]
+[[Project](https://liyaowei-stu.github.io/project/BrushEdit/)] 
+
 **Add-it: Training-Free Object Insertion in Images With Pretrained Diffusion Models** \
 [[Website](https://arxiv.org/abs/2411.07232)]
 [[Project](https://research.nvidia.com/labs/par/addit/)] 
+
+**FluxSpace: Disentangled Semantic Editing in Rectified Flow Transformers** \
+[[Website](https://arxiv.org/abs/2412.09611)]
+[[Project](https://fluxspace.github.io/)] 
 
 **SeedEdit: Align Image Re-Generation to Image Editing** \
 [[Website](https://arxiv.org/abs/2411.06686)]
@@ -1939,6 +2898,10 @@
 [[Website](https://arxiv.org/abs/2305.04651)] 
 [[Project](https://yupeilin2388.github.io/publication/ReDiffuser)]
 
+**UIP2P: Unsupervised Instruction-based Image Editing via Cycle Edit Consistency** \
+[[Website](https://arxiv.org/abs/2412.15216)] 
+[[Project](https://enis.dev/uip2p/)]
+
 **GANTASTIC: GAN-based Transfer of Interpretable Directions for Disentangled Image Editing in Text-to-Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2403.19645)]
 [[Project](https://gantastic.github.io/)]
@@ -1966,6 +2929,21 @@
 **Stable Flow: Vital Layers for Training-Free Image Editing** \
 [[Website](https://arxiv.org/abs/2411.14430)]
 [[Project](https://omriavrahami.com/stable-flow/)]
+
+**FDS: Frequency-Aware Denoising Score for Text-Guided Latent Diffusion Image Editing** \
+[[Website](https://arxiv.org/abs/2503.19191)]
+[[Project](https://ivrl.github.io/fds-webpage/)]
+
+**FireEdit: Fine-grained Instruction-based Image Editing via Region-aware Vision Language Model** \
+[[Website](https://arxiv.org/abs/2503.19839)]
+[[Project](https://zjgans.github.io/fireedit.github.io/)]
+
+**CREA: A Collaborative Multi-Agent Framework for Creative Content Generation with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2504.05306)]
+[[Project](https://crea-diffusion.github.io/)]
+
+**h-Edit: Effective and Flexible Diffusion-Based Editing via Doob's h-Transform** \
+[[CVPR 2025](https://arxiv.org/abs/2503.02187)] 
 
 **Iterative Multi-granular Image Editing using Diffusion Models** \
 [[WACV 2024](https://arxiv.org/abs/2309.00613)] 
@@ -2054,6 +3032,8 @@
 **LIPE: Learning Personalized Identity Prior for Non-rigid Image Editing** \
 [[Website](https://arxiv.org/abs/2406.17236)]
 
+**Disentangling Instruction Influence in Diffusion Transformers for Parallel Multi-Instruction-Guided Image Editing** \
+[[Website](https://arxiv.org/abs/2504.04784)]
 
 **Achieving Complex Image Edits via Function Aggregation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2408.08495)]
@@ -2100,8 +3080,217 @@
 **Addressing Attribute Leakages in Diffusion-based Image Editing without Training** \
 [[Website](https://arxiv.org/abs/2412.04715)]
 
+**Prompt Augmentation for Self-supervised Text-guided Image Manipulation** \
+[[Website](https://arxiv.org/abs/2412.13081)]
 
-## Continual Learning
+**PixelMan: Consistent Object Editing with Diffusion Models via Pixel Manipulation and Generation** \
+[[Website](https://arxiv.org/abs/2412.14283)]
+
+**Diffusion-Based Conditional Image Editing through Optimized Inference with Guidance** \
+[[Website](https://arxiv.org/abs/2412.15798)]
+
+**PhotoDoodle: Learning Artistic Image Editing from Few-Shot Pairwise Data** \
+[[Website](https://arxiv.org/abs/2502.14397)]
+
+**DCEdit: Dual-Level Controlled Image Editing via Precisely Localized Semantics** \
+[[Website](https://arxiv.org/abs/2503.16795)]
+
+**Guidance Free Image Editing via Explicit Conditioning** \
+[[Website](https://arxiv.org/abs/2503.17593)]
+
+**Training-Free Text-Guided Image Editing with Visual Autoregressive Model** \
+[[Website](https://arxiv.org/abs/2503.23897)]
+
+
+## Diffusion Models Inversion
+
+⭐⭐⭐**Null-text Inversion for Editing Real Images using Guided Diffusion Models** \
+[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Mokady_NULL-Text_Inversion_for_Editing_Real_Images_Using_Guided_Diffusion_Models_CVPR_2023_paper.html)] 
+[[Website](https://arxiv.org/abs/2211.09794)] 
+[[Project](https://null-text-inversion.github.io/)] 
+[[Code](https://github.com/google/prompt-to-prompt/#null-text-inversion-for-editing-real-images)]
+
+⭐⭐**Direct Inversion: Boosting Diffusion-based Editing with 3 Lines of Code** \
+[[ICLR 2024](https://openreview.net/forum?id=FoMZ4ljhVw)] 
+[[Website](https://arxiv.org/abs/2310.01506)] 
+[[Project](https://cure-lab.github.io/PnPInversion/)] 
+[[Code](https://github.com/cure-lab/DirectInversion/tree/main)] 
+
+⭐**Inversion-Based Creativity Transfer with Diffusion Models** \
+[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_Inversion-Based_Style_Transfer_With_Diffusion_Models_CVPR_2023_paper.html)] 
+[[Website](https://arxiv.org/abs/2211.13203)] 
+[[Code](https://github.com/zyxElsa/InST)] 
+
+⭐**EDICT: Exact Diffusion Inversion via Coupled Transformations** \
+[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Wallace_EDICT_Exact_Diffusion_Inversion_via_Coupled_Transformations_CVPR_2023_paper.html)] 
+[[Website](https://arxiv.org/abs/2211.12446)] 
+[[Code](https://github.com/salesforce/edict)] 
+
+⭐**Improving Negative-Prompt Inversion via Proximal Guidance** \
+[[Website](https://arxiv.org/abs/2306.05414)] 
+[[Code](https://github.com/phymhan/prompt-to-prompt)] 
+
+
+
+**An Edit Friendly DDPM Noise Space: Inversion and Manipulations** \
+[[CVPR 2024](https://arxiv.org/abs/2304.06140)] 
+[[Project](https://inbarhub.github.io/DDPM_inversion/)] 
+[[Code](https://github.com/inbarhub/DDPM_inversion)]
+[[Demo](https://huggingface.co/spaces/LinoyTsaban/edit_friendly_ddpm_inversion)]
+
+**Dynamic Prompt Learning: Addressing Cross-Attention Leakage for Text-Based Image Editing** \
+[[NeurIPS 2023](https://neurips.cc/virtual/2023/poster/72801)] 
+[[Website](https://arxiv.org/abs/2309.15664)] 
+[[Code](https://github.com/wangkai930418/DPL)] 
+<!-- [[NeurIPS 2023](https://openreview.net/forum?id=5UXXhVI08r)]  -->
+
+**Inversion-Free Image Editing with Natural Language** \
+[[CVPR 2024](https://arxiv.org/abs/2312.04965)] 
+[[Project](https://sled-group.github.io/InfEdit/index.html)] 
+[[Code](https://github.com/sled-group/InfEdit)] 
+
+**LEDITS++: Limitless Image Editing using Text-to-Image Models** \
+[[CVPR 2024](https://arxiv.org/abs/2311.16711)]
+[[Project](https://leditsplusplus-project.static.hf.space/index.html)] 
+[[Code](https://github.com/huggingface/diffusers/tree/main/src/diffusers/pipelines/ledits_pp)] 
+
+**Noise Map Guidance: Inversion with Spatial Context for Real Image Editing** \
+[[ICLR 2024](https://openreview.net/forum?id=mhgm0IXtHw)] 
+[[Website](https://arxiv.org/abs/2402.04625)] 
+[[Code](https://github.com/hansam95/nmg)] 
+
+
+**ReNoise: Real Image Inversion Through Iterative Noising** \
+[[ECCV 2024](https://arxiv.org/abs/2403.14602)] 
+[[Project](https://garibida.github.io/ReNoise-Inversion/)] 
+[[Code](https://github.com/garibida/ReNoise-Inversion)] 
+
+**IterInv: Iterative Inversion for Pixel-Level T2I Models** \
+[[NeurIPS-W 2023](https://neurips.cc/virtual/2023/74859)] 
+[[Openreview](https://openreview.net/forum?id=mSGmzVo0aS)] 
+[[NeuripsW](https://neurips.cc/virtual/2023/workshop/66539#wse-detail-74859)]
+[[Website](https://arxiv.org/abs/2310.19540)] 
+[[Code](https://github.com/Tchuanm/IterInv)] 
+
+**DICE: Discrete Inversion Enabling Controllable Editing for Multinomial Diffusion and Masked Generative Models** \
+[[Website](https://arxiv.org/abs/2410.08207)] 
+[[Project](https://hexiaoxiao-cs.github.io/DICE/)] 
+[[Code](https://github.com/hexiaoxiao-cs/DICE)] 
+
+**Object-aware Inversion and Reassembly for Image Editing** \
+[[Website](https://arxiv.org/abs/2310.12149)] 
+[[Project](https://aim-uofa.github.io/OIR-Diffusion/)] 
+[[Code](https://github.com/aim-uofa/OIR)] 
+
+**Taming Rectified Flow for Inversion and Editing** \
+[[Website](https://arxiv.org/abs/2411.04746)] 
+[[Project](https://rf-solver-edit.github.io/)] 
+[[Code](https://github.com/wangjiangshan0725/RF-Solver-Edit)] 
+
+**A Latent Space of Stochastic Diffusion Models for Zero-Shot Image Editing and Guidance** \
+[[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Wu_A_Latent_Space_of_Stochastic_Diffusion_Models_for_Zero-Shot_Image_ICCV_2023_paper.pdf)] 
+[[Code](https://github.com/humansensinglab/cycle-diffusion)] 
+
+**Source Prompt Disentangled Inversion for Boosting Image Editability with Diffusion Models** \
+[[ECCV 2024](https://arxiv.org/abs/2403.11105)] 
+[[Code](https://github.com/leeruibin/SPDInv)] 
+
+**LocInv: Localization-aware Inversion for Text-Guided Image Editing** \
+[[CVPR 2024 AI4CC workshop](https://arxiv.org/abs/2405.01496)] 
+[[Code](https://github.com/wangkai930418/DPL)] 
+
+**Accelerating Diffusion Models for Inverse Problems through Shortcut Sampling** \
+[[IJCAI 2024](https://arxiv.org/abs/2305.16965)] 
+[[Code](https://github.com/gongyeliu/ssd)] 
+
+**StyleDiffusion: Prompt-Embedding Inversion for Text-Based Editing** \
+[[CVMJ](https://arxiv.org/abs/2303.15649)] 
+[[Code](https://github.com/sen-mao/StyleDiffusion)] 
+
+**Generating Non-Stationary Textures using Self-Rectification** \
+[[Website](https://arxiv.org/abs/2401.02847)] 
+[[Code](https://github.com/xiaorongjun000/Self-Rectification)] 
+
+**Exact Diffusion Inversion via Bi-directional Integration Approximation** \
+[[Website](https://arxiv.org/abs/2307.10829)] 
+[[Code](https://github.com/guoqiang-zhang-x/BDIA)] 
+
+**IQA-Adapter: Exploring Knowledge Transfer from Image Quality Assessment to Diffusion-based Generative Models** \
+[[Website](https://arxiv.org/abs/2412.01794)] 
+[[Code](https://github.com/X1716/IQA-Adapter)] 
+
+**Fixed-point Inversion for Text-to-image diffusion models** \
+[[Website](https://arxiv.org/abs/2312.12540)] 
+[[Code](https://github.com/dvirsamuel/FPI)] 
+
+**Eta Inversion: Designing an Optimal Eta Function for Diffusion-based Real Image Editing** \
+[[Website](https://arxiv.org/abs/2403.09468)] 
+[[Code](https://github.com/furiosa-ai/eta-inversion)] 
+
+**Tight Inversion: Image-Conditioned Inversion for Real Image Editing** \
+[[Website](https://arxiv.org/abs/2502.20376)] 
+[[Project](https://tight-inversion.github.io/)] 
+
+**Effective Real Image Editing with Accelerated Iterative Diffusion Inversion** \
+[[ICCV 2023 Oral](https://openaccess.thecvf.com/content/ICCV2023/html/Pan_Effective_Real_Image_Editing_with_Accelerated_Iterative_Diffusion_Inversion_ICCV_2023_paper.html)]
+[[Website](https://arxiv.org/abs/2309.04907)]
+
+**BELM: Bidirectional Explicit Linear Multi-step Sampler for Exact Inversion in Diffusion Models** \
+[[NeurIPS 2024](https://arxiv.org/abs/2410.07273)] 
+
+**Schedule Your Edit: A Simple yet Effective Diffusion Noise Schedule for Image Editing** \
+[[NeurIPS 2024](https://arxiv.org/abs/2410.18756)] 
+
+**BARET : Balanced Attention based Real image Editing driven by Target-text Inversion** \
+[[WACV 2024](https://arxiv.org/abs/2312.05482)] 
+
+**Wavelet-Guided Acceleration of Text Inversion in Diffusion-Based Image Editing** \
+[[ICASSP 2024](https://arxiv.org/abs/2401.09794)]
+
+**Task-Oriented Diffusion Inversion for High-Fidelity Text-based Editing** \
+[[Website](https://arxiv.org/abs/2408.13395)] 
+
+**Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations** \
+[[Website](https://arxiv.org/abs/2410.10792)] 
+
+**Negative-prompt Inversion: Fast Image Inversion for Editing with Text-guided Diffusion Models** \
+[[Website](https://arxiv.org/abs/2305.16807)] 
+
+**Direct Inversion: Optimization-Free Text-Driven Real Image Editing with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2211.07825)] 
+
+**SimInversion: A Simple Framework for Inversion-Based Text-to-Image Editing** \
+[[Website](https://arxiv.org/abs/2409.10476)]
+
+**Prompt Tuning Inversion for Text-Driven Image Editing Using Diffusion Models** \
+[[Website](https://arxiv.org/abs/2305.04441)]
+
+**KV Inversion: KV Embeddings Learning for Text-Conditioned Real Image Action Editing** \
+[[Website](https://arxiv.org/abs/2309.16608)]
+
+**Tuning-Free Inversion-Enhanced Control for Consistent Image Editing** \
+[[Website](https://arxiv.org/abs/2312.14611)]
+
+**LEDITS: Real Image Editing with DDPM Inversion and Semantic Guidance** \
+[[Website](https://arxiv.org/abs/2307.00522)]
+
+**Dual-Schedule Inversion: Training- and Tuning-Free Inversion for Real Image Editing** \
+[[Website](https://arxiv.org/abs/2412.11152)]
+
+**Exploring Optimal Latent Trajetory for Zero-shot Image Editing** \
+[[Website](https://arxiv.org/abs/2501.03631)]
+
+**Identity-preserving Distillation Sampling by Fixed-Point Iterator** \
+[[Website](https://arxiv.org/abs/2502.19930)]
+
+**LUSD: Localized Update Score Distillation for Text-Guided Image Editing** \
+[[Website](https://arxiv.org/abs/2503.11054)]
+
+**Adams Bashforth Moulton Solver for Inversion and Editing in Rectified Flow** \
+[[Website](https://arxiv.org/abs/2503.16522)]
+
+
+# Continual Learning
 
 **RGBD2: Generative Scene Synthesis via Incremental View Inpainting using RGBD Diffusion Models** \
 [[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/papers/Lei_RGBD2_Generative_Scene_Synthesis_via_Incremental_View_Inpainting_Using_RGBD_CVPR_2023_paper.pdf)] 
@@ -2141,6 +3330,9 @@
 [[Website](https://arxiv.org/abs/2410.14159)] 
 [[Project](https://hecoding.github.io/open-world-forgetting/)]
 
+**ConceptGuard: Continual Personalized Text-to-Image Generation with Forgetting and Confusion Mitigation** \
+[[CVPR 2025](https://arxiv.org/abs/2503.10358)] 
+
 **Class-Incremental Learning using Diffusion Model for Distillation and Replay** \
 [[ICCV 2023 VCL workshop best paper](https://arxiv.org/abs/2306.17560)] 
 
@@ -2177,9 +3369,14 @@
 **Towards Lifelong Few-Shot Customization of Text-to-Image Diffusion** \
 [[Website](https://arxiv.org/abs/2411.05544)] 
 
+**Diffusion Model Meets Non-Exemplar Class-Incremental Learning and Beyond** \
+[[Website](https://arxiv.org/abs/2408.02983)] 
+
+**Diffusion Meets Few-shot Class Incremental Learning** \
+[[Website](https://arxiv.org/abs/2503.23402)] 
 
 
-## Remove Concept
+# Remove Concept
 
 **Ablating Concepts in Text-to-Image Diffusion Models** \
 [[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Kumari_Ablating_Concepts_in_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html)] 
@@ -2218,6 +3415,32 @@
 [[Project](https://koushiksrivats.github.io/robust-concept-erasing/)] 
 [[Code](https://github.com/koushiksrivats/robust-concept-erasing)]
 
+**ACE++: Instruction-Based Image Creation and Editing via Context-Aware Content Filling** \
+[[Website](https://arxiv.org/abs/2501.02487)] 
+[[Project](https://ali-vilab.github.io/ACE_plus_page/)] 
+[[Code](https://github.com/ali-vilab/ACE_plus)]
+
+**ACE: All-round Creator and Editor Following Instructions via Diffusion Transformer** \
+[[Website](https://arxiv.org/abs/2410.00086)] 
+[[Project](https://ali-vilab.github.io/ace-page/)] 
+[[Code](https://github.com/ali-vilab/ACE/)]
+
+**ACE: Anti-Editing Concept Erasure in Text-to-Image Models** \
+[[Website](https://arxiv.org/abs/2501.01633)] 
+[[Code](https://github.com/120L020904/ACE)]
+
+**ACE: Concept Editing in Diffusion Models without Performance Degradation** \
+[[Website](https://arxiv.org/abs/2503.08116)] 
+[[Code](https://github.com/littlelittlenine/ACE-zero)]
+
+**Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models** \
+[[CVPR 2023](https://arxiv.org/abs/2211.05105)] 
+[[Code1](https://github.com/ml-research/safe-latent-diffusion)]
+[[Code2](https://github.com/ml-research/i2p)]
+
+**Six-CD: Benchmarking Concept Removals for Benign Text-to-image Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2406.14855)] 
+[[Code](https://github.com/Artanisax/Six-CD)]
 
 **Towards Safe Self-Distillation of Internet-Scale Text-to-Image Diffusion Models** \
 [[ICML 2023 workshop](https://arxiv.org/abs/2307.05977v1)] 
@@ -2243,10 +3466,29 @@
 [[Website](https://arxiv.org/abs/2412.07658)] 
 [[Code](https://github.com/anubhav1997/TraSCE/)]
 
-<!-- 
-**Anti-Reference: Universal and Immediate Defense Against Reference-Based Generation** \
-[[Website](https://arxiv.org/abs/2412.05980)] 
-[[Code](https://github.com/songyiren725/AntiReference)] -->
+**Fantastic Targets for Concept Erasure in Diffusion Models and Where To Find Them** \
+[[Website](https://arxiv.org/abs/2501.18950)] 
+[[Code](https://github.com/tuananhbui89/Adaptive-Guided-Erasure)]
+
+**On the Vulnerability of Concept Erasure in Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.17537)] 
+[[Code](https://github.com/LucasBeerens/RECORD)]
+
+**TRCE: Towards Reliable Malicious Concept Erasure in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.07389)] 
+[[Code](https://github.com/ddgoodgood/TRCE)]
+
+**SPEED: Scalable, Precise, and Efficient Concept Erasure for Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.07392)] 
+[[Code](https://github.com/Ouxiang-Li/SPEED)]
+
+**CASteer: Steering Diffusion Models for Controllable Generation** \
+[[Website](https://arxiv.org/abs/2503.09630)] 
+[[Code](https://github.com/Atmyre/CASteer)]
+
+**Concept Steerers: Leveraging K-Sparse Autoencoders for Controllable Generations** \
+[[Website](https://arxiv.org/abs/2501.19066)] 
+[[Code](https://github.com/kim-dahye/steerers)]
 
 **Meta-Unlearning on Diffusion Models: Preventing Relearning Unlearned Concepts** \
 [[Website](https://arxiv.org/abs/2410.12777)] 
@@ -2272,9 +3514,25 @@
 [[Website](https://arxiv.org/abs/2305.10120)] 
 [[Code](https://github.com/clear-nus/selective-amnesia)]
 
+**DuMo: Dual Encoder Modulation Network for Precise Concept Erasure** \
+[[Website](https://arxiv.org/abs/2501.01125)] 
+[[Code](https://github.com/Maplebb/DuMo)]
+
 **Add-SD: Rational Generation without Manual Reference** \
 [[Website](https://arxiv.org/abs/2407.21016)] 
 [[Code](https://github.com/ylingfeng/Add-SD)]
+
+**Anti-Reference: Universal and Immediate Defense Against Reference-Based Generation** \
+[[Website](https://arxiv.org/abs/2412.05980)] 
+[[Code](https://github.com/songyiren725/AntiReference)]
+
+**MUNBa: Machine Unlearning via Nash Bargaining** \
+[[Website](https://arxiv.org/abs/2411.15537)] 
+[[Code](https://github.com/JingWu321/MUNBa)]
+
+**Implicit Concept Removal of Diffusion Models** \
+[[ECCV 2024](https://arxiv.org/abs/2310.05873)] 
+[[Project](https://kaichen1998.github.io/projects/geom-erasing/)]
 
 **RealEra: Semantic-level Concept Erasure via Neighbor-Concept Mining** \
 [[Website](https://arxiv.org/abs/2410.09140)] 
@@ -2282,6 +3540,15 @@
 
 **MACE: Mass Concept Erasure in Diffusion Models** \
 [[CVPR 2024](https://arxiv.org/abs/2403.06135)] 
+
+**Localized Concept Erasure for Text-to-Image Diffusion Models Using Training-Free Gated Low-Rank Adaptation** \
+[[CVPR 2025](https://arxiv.org/abs/2503.12356)] 
+
+**Fine-Grained Erasure in Text-to-Image Diffusion-based Foundation Models** \
+[[CVPR 2025](https://arxiv.org/abs/2503.19783)] 
+
+**EraseAnything: Enabling Concept Erasure in Rectified Flow Transformers** \
+[[Website](https://arxiv.org/abs/2412.20413)] 
 
 **Continuous Concepts Removal in Text-to-image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2412.00580)] 
@@ -2325,6 +3592,9 @@
 **Pruning for Robust Concept Erasing in Diffusion Models** \
 [[Website](https://arxiv.org/abs/2405.16534)] 
 
+**Efficient Fine-Tuning and Concept Suppression for Pruned Diffusion Models** \
+[[Website](https://arxiv.org/abs/2412.15341)] 
+
 **Unlearning Concepts from Text-to-Video Diffusion Models** \
 [[Website](https://arxiv.org/abs/2407.14209)] 
 
@@ -2346,65 +3616,55 @@
 **Precise, Fast, and Low-cost Concept Erasure in Value Space: Orthogonal Complement Matters** \
 [[Website](https://arxiv.org/abs/2412.06143)] 
 
+**AdvAnchor: Enhancing Diffusion Model Unlearning with Adversarial Anchors** \
+[[Website](https://arxiv.org/abs/2501.00054)] 
 
-## New Concept Learning
+**EraseBench: Understanding The Ripple Effects of Concept Erasure Techniques** \
+[[Website](https://arxiv.org/abs/2501.09833)] 
 
-⭐⭐⭐**DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation** \
-[[CVPR 2023 Honorable Mention](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] 
-[[Website](https://arxiv.org/abs/2208.12242)] 
-[[Project](https://dreambooth.github.io/)] 
-[[Official Dataset](https://github.com/google/dreambooth)]
-[[Unofficial Code](https://github.com/XavierXiao/Dreambooth-Stable-Diffusion)]
-[[Diffusers Doc](https://huggingface.co/docs/diffusers/training/dreambooth)] 
-[[Diffusers Code](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth)] 
+**CE-SDWV: Effective and Efficient Concept Erasure for Text-to-Image Diffusion Models via a Semantic-Driven Word Vocabulary** \
+[[Website](https://arxiv.org/abs/2501.15562)] 
 
-⭐⭐⭐**An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion** \
-[[ICLR 2023 top-25%](https://openreview.net/forum?id=NAQvF08TcyG)] 
-[[Website](https://arxiv.org/abs/2208.01618)] 
-[[Diffusers Doc](https://huggingface.co/docs/diffusers/training/text_inversion)] 
-[[Diffusers Code](https://github.com/huggingface/diffusers/tree/main/examples/textual_inversion)] 
-[[Code](https://github.com/rinongal/textual_inversion)]
+**SAeUron: Interpretable Concept Unlearning in Diffusion Models with Sparse Autoencoders** \
+[[Website](https://arxiv.org/abs/2501.18052)] 
+
+**Erasing with Precision: Evaluating Specific Concept Erasure from Text-to-Image Generative Models** \
+[[Website](https://arxiv.org/abs/2502.13989)] 
+
+**Concept Corrector: Erase concepts on the fly for text-to-image diffusion models** \
+[[Website](https://arxiv.org/abs/2502.16368)] 
+
+**SafeText: Safe Text-to-image Models via Aligning the Text Encoder** \
+[[Website](https://arxiv.org/abs/2502.20623)] 
+
+**Sparse Autoencoder as a Zero-Shot Classifier for Concept Erasing in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.09446)] 
+
+**CRCE: Coreference-Retention Concept Erasure in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.14232)] 
+
+**Continual Unlearning for Foundational Text-to-Image Models without Generalization Erosion** \
+[[Website](https://arxiv.org/abs/2503.13769)] 
+
+**Detect-and-Guide: Self-regulation of Diffusion Models for Safe Text-to-Image Generation via Guideline Token Optimization** \
+[[Website](https://arxiv.org/abs/2503.15197)] 
+
+**Safe and Reliable Diffusion Models via Subspace Projection** \
+[[Website](https://arxiv.org/abs/2503.16835)] 
 
 
-⭐⭐**Custom Diffusion: Multi-Concept Customization of Text-to-Image Diffusion** \
-[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Kumari_Multi-Concept_Customization_of_Text-to-Image_Diffusion_CVPR_2023_paper.html)] 
-[[Website](https://arxiv.org/abs/2212.04488)] 
-[[Project](https://www.cs.cmu.edu/~custom-diffusion/)] 
-[[Diffusers Doc](https://huggingface.co/docs/diffusers/main/en/training/custom_diffusion)] 
-[[Diffusers Code](https://github.com/huggingface/diffusers/tree/main/examples/custom_diffusion)] 
-[[Code](https://github.com/adobe-research/custom-diffusion)]
 
-⭐⭐**ColorPeel: Color Prompt Learning with Diffusion Models via Color and Shape Disentanglement** \
+# New Concept Learning
+
+**ColorPeel: Color Prompt Learning with Diffusion Models via Color and Shape Disentanglement** \
 [[ECCV 2024](https://arxiv.org/abs/2407.07197)] 
 [[Project](https://moatifbutt.github.io/colorpeel/)]
 [[Code](https://github.com/moatifbutt/color-peel)]
 
-⭐⭐**ReVersion: Diffusion-Based Relation Inversion from Images** \
-[[Website](https://arxiv.org/abs/2303.13495)] 
+**ReVersion: Diffusion-Based Relation Inversion from Images** \
+[[SIGGRAPH Asia 2024](https://arxiv.org/abs/2303.13495)] 
 [[Project](https://ziqihuangg.github.io/projects/reversion.html)]
 [[Code](https://github.com/ziqihuangg/ReVersion)]
-
-⭐**SINE: SINgle Image Editing with Text-to-Image Diffusion Models** \
-[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_SINE_SINgle_Image_Editing_With_Text-to-Image_Diffusion_Models_CVPR_2023_paper.html)] 
-[[Website](https://arxiv.org/abs/2212.04489)] 
-[[Project](https://zhang-zx.github.io/SINE/)] 
-[[Code](https://github.com/zhang-zx/SINE)] 
-
-⭐**Break-A-Scene: Extracting Multiple Concepts from a Single Image** \
-[[SIGGRAPH Asia 2023](https://arxiv.org/abs/2305.16311)] 
-[[Project](https://omriavrahami.com/break-a-scene/)]
-[[Code](https://github.com/google/break-a-scene)]
-
-⭐**Concept Decomposition for Visual Exploration and Inspiration** \
-[[SIGGRAPH Asia 2023](https://arxiv.org/abs/2305.18203)] 
-[[Project](https://inspirationtree.github.io/inspirationtree/)] 
-[[Code](https://github.com/google/inspiration_tree)]
-
-**Cones: Concept Neurons in Diffusion Models for Customized Generation** \
-[[ICML 2023 Oral](https://icml.cc/virtual/2023/oral/25582)] 
-[[ICML 2023 Oral](https://dl.acm.org/doi/10.5555/3618408.3619298)] 
-[[Website](https://arxiv.org/abs/2303.05125)] 
-[[Code](https://github.com/Johanan528/Cones)]
 
 **BLIP-Diffusion: Pre-trained Subject Representation for Controllable Text-to-Image Generation and Editing** \
 [[NeurIPS 2023](https://nips.cc/virtual/2023/poster/70870)] 
@@ -2412,29 +3672,11 @@
 [[Project](https://dxli94.github.io/BLIP-Diffusion-website/)]
 [[Code](https://github.com/salesforce/LAVIS/tree/main/projects/blip-diffusion)]
 
-**Inserting Anybody in Diffusion Models via Celeb Basis** \
-[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71823)] 
-[[Website](https://arxiv.org/abs/2306.00926)] 
-[[Project](https://celeb-basis.github.io/)] 
-[[Code](https://github.com/ygtxr1997/celebbasis)]
-
-**Controlling Text-to-Image Diffusion by Orthogonal Finetuning** \
-[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/72033)] 
-[[Website](https://arxiv.org/abs/2306.07280)] 
-[[Project](https://oft.wyliu.com/)] 
-[[Code](https://github.com/Zeju1997/oft)]
-
 **Photoswap: Personalized Subject Swapping in Images** \
 [[NeurIPS 2023](https://nips.cc/virtual/2023/poster/70336)] 
 [[Website](https://arxiv.org/abs/2305.18286)] 
 [[Project](https://photoswap.github.io/)] 
 [[Code](https://github.com/eric-ai-lab/photoswap)]
-
-**Mix-of-Show: Decentralized Low-Rank Adaptation for Multi-Concept Customization of Diffusion Models** \
-[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71844)] 
-[[Website](https://arxiv.org/abs/2305.18292)] 
-[[Project](https://showlab.github.io/Mix-of-Show/)] 
-[[Code](https://github.com/TencentARC/Mix-of-Show)]
 
 **ITI-GEN: Inclusive Text-to-Image Generation** \
 [[ICCV 2023 Oral](https://arxiv.org/abs/2309.05569)] 
@@ -2448,61 +3690,20 @@
 [[Project](https://energy-based-model.github.io/unsupervised-concept-discovery/)]
 [[Code](https://github.com/nanlliu/Unsupervised-Compositional-Concepts-Discovery)]
 
-**ELITE: Encoding Visual Concepts into Textual Embeddings for Customized Text-to-Image Generation** \
-[[ICCV 2023 Oral](https://openaccess.thecvf.com/content/ICCV2023/html/Wei_ELITE_Encoding_Visual_Concepts_into_Textual_Embeddings_for_Customized_Text-to-Image_ICCV_2023_paper.html)] 
-[[Website](https://arxiv.org/abs/2302.13848)] 
-[[Code](https://github.com/csyxwei/ELITE)]
-<!-- [[Demo](https://huggingface.co/spaces/ELITE-library/ELITE)] -->
-
-**A Neural Space-Time Representation for Text-to-Image Personalization** \
-[[SIGGRAPH Asia 2023](https://arxiv.org/abs/2305.15391)] 
-[[Project](https://neuraltextualinversion.github.io/NeTI/)] 
-[[Code](https://github.com/NeuralTextualInversion/NeTI)]
-
-**Encoder-based Domain Tuning for Fast Personalization of Text-to-Image Models** \
-[[SIGGRAPH 2023](https://arxiv.org/abs/2302.12228)] 
-[[Project](https://tuning-encoder.github.io/)] 
-[[Code](https://github.com/mkshing/e4t-diffusion)]
-
-**Is This Loss Informative? Speeding Up Textual Inversion with Deterministic Objective Evaluation** \
-[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71329)] 
-[[Website](https://arxiv.org/abs/2302.04841)] 
-[[Code](https://github.com/yandex-research/DVAR)]
-
-**ConceptExpress: Harnessing Diffusion Models for Single-image Unsupervised Concept Extraction** \
-[[ECCV 2024](https://arxiv.org/abs/2407.07077)] 
-[[Project](https://haoosz.github.io/ConceptExpress/)] 
-[[Code](https://github.com/haoosz/ConceptExpress)]
-
-**Face2Diffusion for Fast and Editable Face Personalization** \
-[[CVPR 2024](https://arxiv.org/abs/2403.05094)] 
-[[Project](https://mapooon.github.io/Face2DiffusionPage/)] 
-[[Code](https://github.com/mapooon/Face2Diffusion)]
-
-**Identity Decoupling for Multi-Subject Personalization of Text-to-Image Models** \
-[[CVPR 2024](https://arxiv.org/abs/2404.04243)] 
-[[Project](https://mudi-t2i.github.io/)] 
-[[Code](https://github.com/agwmon/MuDI)]
-
-**CapHuman: Capture Your Moments in Parallel Universes** \
-[[CVPR 2024](https://arxiv.org/abs/2402.00627)] 
-[[Project](https://caphuman.github.io/)] 
-[[Code](https://github.com/VamosC/CapHumanf)]
+**Total Selfie: Generating Full-Body Selfies** \
+[[CVPR 2024 Highlight](https://arxiv.org/abs/2308.14740)] 
+[[Project](https://homes.cs.washington.edu/~boweiche/project_page/totalselfie/)] 
+[[Code](https://github.com/ArmastusChen/total_selfie)] 
 
 **Style Aligned Image Generation via Shared Attention** \
 [[CVPR 2024](https://arxiv.org/abs/2312.02133)] 
 [[Project](https://style-aligned-gen.github.io/)] 
 [[Code](https://github.com/google/style-aligned/)]
 
-**FreeCustom: Tuning-Free Customized Image Generation for Multi-Concept Composition** \
-[[CVPR 2024](https://arxiv.org/abs/2405.13870v1)] 
-[[Project](https://aim-uofa.github.io/FreeCustom/)] 
-[[Code](https://github.com/aim-uofa/FreeCustom)]
-
-**DreamMatcher: Appearance Matching Self-Attention for Semantically-Consistent Text-to-Image Personalization** \
-[[CVPR 2024](https://arxiv.org/abs/2402.09812)] 
-[[Project](https://ku-cvlab.github.io/DreamMatcher/)] 
-[[Code](https://github.com/KU-CVLAB/DreamMatcher)]
+**Diffusion Self-Distillation for Zero-Shot Customized Image Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2411.18616)] 
+[[Project](https://primecai.github.io/dsd/)] 
+[[Code](https://github.com/primecai/diffusion-self-distillation)]
 
 **Material Palette: Extraction of Materials from a Single Image** \
 [[CVPR 2024](https://arxiv.org/abs/2311.17060)] 
@@ -2519,10 +3720,10 @@
 [[Project](https://conceptbed.github.io/)] 
 [[Code](https://github.com/conceptbed/evaluations)]
 
-**Direct Consistency Optimization for Compositional Text-to-Image Personalization** \
-[[NeurIPS 2024](https://arxiv.org/abs/2402.12004)] 
-[[Project](https://dco-t2i.github.io/)] 
-[[Code](https://github.com/kyungmnlee/dco)]
+**InstaStyle: Inversion Noise of a Stylized Image is Secretly a Style Adviser** \
+[[ECCV 2024](https://arxiv.org/abs/2311.15040)] 
+[[Project](https://cuixing100876.github.io/instastyle.github.io/)] 
+[[Code](https://github.com/cuixing100876/InstaStyle)] 
 
 **The Hidden Language of Diffusion Models** \
 [[ICLR 2024](https://arxiv.org/abs/2306.00966)] 
@@ -2534,197 +3735,100 @@
 [[Project](https://ttchengab.github.io/zest/)] 
 [[Code](https://github.com/ttchengab/zest_code)]
 
-**UniPortrait: A Unified Framework for Identity-Preserving Single- and Multi-Human Image Personalization** \
-[[Website](https://arxiv.org/abs/2408.05939)] 
-[[Project](https://aigcdesigngroup.github.io/UniPortrait-Page/)] 
-[[Code](https://github.com/junjiehe96/UniPortrait)]
+**RealCustom: Narrowing Real Text Word for Real-Time Open-Domain Text-to-Image Customization** \
+[[CVPR 2024](https://arxiv.org/abs/2403.00483)] 
+[[Project](https://corleone-huang.github.io/realcustom/)] 
+[[Code](https://github.com/Corleone-Huang/RealCustomProject)] 
 
-**MagicFace: Training-free Universal-Style Human Image Customized Synthesis** \
-[[Website](https://arxiv.org/abs/2408.07433)] 
-[[Project](https://codegoat24.github.io/MagicFace/)] 
-[[Code](https://github.com/CodeGoat24/MagicFace)]
+**Viewpoint Textual Inversion: Unleashing Novel View Synthesis with Pretrained 2D Diffusion Models** \
+[[ECCV 2024](https://arxiv.org/abs/2309.07986)] 
+[[Project](https://jmhb0.github.io/viewneti/)] 
+[[Code](https://github.com/jmhb0/view_neti)]
 
-**LCM-Lookahead for Encoder-based Text-to-Image Personalization** \
-[[Website](https://arxiv.org/abs/2404.03620)] 
-[[Project](https://lcm-lookahead.github.io/)] 
-[[Code](https://github.com/OrLichter/lcm-lookahead)]
+**Kosmos-G: Generating Images in Context with Multimodal Large Language Models** \
+[[ICLR 2024](https://arxiv.org/abs/2310.02992)] 
+[[Project](https://xichenpan.com/kosmosg/)] 
+[[Code](https://github.com/xichenpan/Kosmos-G)]
 
-**AITTI: Learning Adaptive Inclusive Token for Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2406.12805)] 
-[[Project](https://itsmag11.github.io/AITTI/)] 
-[[Code](https://github.com/itsmag11/AITTI)]
+**StyleBlend: Enhancing Style-Specific Content Creation in Text-to-Image Diffusion Models** \
+[[Eurographics 2025](https://arxiv.org/abs/2502.09064)] 
+[[Project](https://zichongc.github.io/StyleBlend/)] 
+[[Code](https://github.com/zichongc/StyleBlend)] 
 
-**MS-Diffusion: Multi-subject Zero-shot Image Personalization with Layout Guidance** \
-[[Website](https://arxiv.org/abs/2406.07209)] 
-[[Project](https://ms-diffusion.github.io/)] 
-[[Code](https://github.com/MS-Diffusion/MS-Diffusion)]
+**Personalize Anything for Free with Diffusion Transformer** \
+[[Website](https://arxiv.org/abs/2503.12590)] 
+[[Project](https://fenghora.github.io/Personalize-Anything-Page/)] 
+[[Code](https://github.com/fenghora/personalize-anything)] 
 
-**ClassDiffusion: More Aligned Personalization Tuning with Explicit Class Guidance** \
-[[Website](https://arxiv.org/abs/2405.17532)] 
-[[Project](https://classdiffusion.github.io/)] 
-[[Code](https://github.com/Rbrq03/ClassDiffusion)]
+**RealCustom++: Representing Images as Real-Word for Real-Time Customization** \
+[[Website](https://arxiv.org/abs/2408.09744)] 
+[[Project](https://corleone-huang.github.io/RealCustom_plus_plus/)] 
+[[Code](https://github.com/Corleone-Huang/RealCustomProject)] 
 
-**MasterWeaver: Taming Editability and Identity for Personalized Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2405.05806)] 
-[[Project](https://masterweaver.github.io/)] 
-[[Code](https://github.com/csyxwei/MasterWeaver)]
+**Generating Multi-Image Synthetic Data for Text-to-Image Customization** \
+[[Website](https://arxiv.org/abs/2502.01720)] 
+[[Project](https://www.cs.cmu.edu/~syncd-project/)] 
+[[Code](https://github.com/nupurkmr9/syncd-project)] 
 
-**Customizing Text-to-Image Models with a Single Image Pair** \
-[[Website](https://arxiv.org/abs/2405.01536)] 
-[[Project](https://paircustomization.github.io/)] 
-[[Code](https://github.com/PairCustomization/PairCustomization)]
+**EasyRef: Omni-Generalized Group Image Reference for Diffusion Models via Multimodal LLM** \
+[[Website](https://arxiv.org/abs/2412.09618)] 
+[[Project](https://easyref-gen.github.io/)] 
+[[Code](https://github.com/TempleX98/EasyRef)]
 
-**DisEnvisioner: Disentangled and Enriched Visual Prompt for Customized Image Generation** \
-[[Website](https://arxiv.org/abs/2410.02067)] 
-[[Project](https://disenvisioner.github.io/)] 
-[[Code](https://github.com/EnVision-Research/DisEnvisioner)]
-
-**ConsistentID: Portrait Generation with Multimodal Fine-Grained Identity Preserving** \
-[[Website](https://arxiv.org/abs/2404.16771)] 
-[[Project](https://ssugarwh.github.io/consistentid.github.io/)] 
-[[Code](https://github.com/JackAILab/ConsistentID)]
-
-**ID-Aligner: Enhancing Identity-Preserving Text-to-Image Generation with Reward Feedback Learning** \
-[[Website](https://arxiv.org/abs/2404.15449)] 
-[[Project](https://idaligner.github.io/)] 
-[[Code](https://github.com/Weifeng-Chen/ID-Aligner)]
-
-**CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models** \
-[[Website](https://arxiv.org/abs/2404.15677)] 
-[[Project](https://qinghew.github.io/CharacterFactory/)] 
-[[Code](https://github.com/qinghew/CharacterFactory)]
+**Conceptrol: Concept Control of Zero-shot Personalized Image Generation** \
+[[Website](https://arxiv.org/abs/2503.06568)] 
+[[Project](https://qy-h00.github.io/Conceptrol/)] 
+[[Code](https://github.com/QY-H00/Conceptrol)]
 
 **Customizing Text-to-Image Diffusion with Camera Viewpoint Control** \
 [[Website](https://arxiv.org/abs/2404.12333)] 
 [[Project](https://customdiffusion360.github.io/)] 
 [[Code](https://github.com/customdiffusion360/custom-diffusion360)]
 
-**Harmonizing Visual and Textual Embeddings for Zero-Shot Text-to-Image Customization** \
-[[Website](https://arxiv.org/abs/2403.14155)] 
-[[Project](https://ldynx.github.io/harmony-zero-t2i/)] 
-[[Code](https://github.com/ldynx/harmony-zero-t2i)]
+**K-LoRA: Unlocking Training-Free Fusion of Any Subject and Style LoRAs** \
+[[Website](https://arxiv.org/abs/2502.18461)] 
+[[Project](https://k-lora.github.io/K-LoRA.io/)] 
+[[Code](https://github.com/HVision-NKU/K-LoRA)]
 
 **StyleDrop: Text-to-Image Generation in Any Style** \
 [[Website](https://arxiv.org/abs/2306.00983)] 
 [[Project](https://styledrop.github.io/)] 
 [[Code](https://github.com/zideliu/StyleDrop-PyTorch)]
 
-
-**FastComposer: Tuning-Free Multi-Subject Image Generation with Localized Attention** \
-[[Website](https://arxiv.org/abs/2305.10431)] 
-[[Project](https://fastcomposer.mit.edu/)] 
-[[Code](https://github.com/mit-han-lab/fastcomposer)]
-<!-- [[Demo](https://2acfe10ec96df6f2b0.gradio.live/)] -->
-
-**AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning** \
-[[Website](https://arxiv.org/abs/2307.04725)] 
-[[Project](https://animatediff.github.io/)] 
-[[Code](https://github.com/guoyww/animatediff/)]
-
-**Subject-Diffusion:Open Domain Personalized Text-to-Image Generation without Test-time Fine-tuning**\
-[[Website](https://arxiv.org/abs/2307.11410)] 
-[[Project](https://oppo-mente-lab.github.io/subject_diffusion/)] 
-[[Code](https://github.com/OPPO-Mente-Lab/Subject-Diffusion)]
+**Personalized Representation from Personalized Generation** \
+[[Website](https://arxiv.org/abs/2412.16156)] 
+[[Project](https://personalized-rep.github.io/)] 
+[[Code](https://github.com/ssundaram21/personalized-rep)]
 
 **Highly Personalized Text Embedding for Image Manipulation by Stable Diffusion** \
 [[Website](https://arxiv.org/abs/2303.08767)] 
 [[Project](https://hiper0.github.io/)] 
 [[Code](https://github.com/HiPer0/HiPer)]
 
-**MagicTailor: Component-Controllable Personalization in Text-to-Image Diffusion Models** \
-[[Website](https://arxiv.org/abs/2410.13370)] 
-[[Project](https://correr-zhou.github.io/MagicTailor/)] 
-[[Code](https://github.com/correr-zhou/MagicTailor)]
-
-
-**DreamArtist: Towards Controllable One-Shot Text-to-Image Generation via Positive-Negative Prompt-Tuning** \
-[[Website](https://arxiv.org/abs/2211.11337)] 
-[[Project](https://www.sysu-hcp.net/projects/dreamartist/index.html)] 
-[[Code](https://github.com/7eu7d7/DreamArtist-stable-diffusion)]
-
-**SingleInsert: Inserting New Concepts from a Single Image into Text-to-Image Models for Flexible Editing** \
-[[Website](https://arxiv.org/abs/2310.08094)] 
-[[Project](https://jarrentwu1031.github.io/SingleInsert-web/)] 
-[[Code](https://github.com/JarrentWu1031/SingleInsert)]
+**PersonalVideo: High ID-Fidelity Video Customization without Dynamic and Semantic Degradation** \
+[[Website](https://arxiv.org/abs/2411.17048)] 
+[[Project](https://personalvideo.github.io/)] 
+[[Code](https://github.com/EchoPluto/PersonalVideo)] 
 
 **CustomNet: Zero-shot Object Customization with Variable-Viewpoints in Text-to-Image Diffusion Models** \
 [[Website](https://arxiv.org/abs//2310.19784)] 
 [[Project](https://jiangyzy.github.io/CustomNet/)] 
 [[Code](https://github.com/TencentARC/CustomNet)]
 
+**MagicTailor: Component-Controllable Personalization in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2410.13370)] 
+[[Project](https://correr-zhou.github.io/MagicTailor/)] 
+[[Code](https://github.com/correr-zhou/MagicTailor)]
+
+**DreamArtist: Towards Controllable One-Shot Text-to-Image Generation via Positive-Negative Prompt-Tuning** \
+[[Website](https://arxiv.org/abs/2211.11337)] 
+[[Project](https://www.sysu-hcp.net/projects/dreamartist/index.html)] 
+[[Code](https://github.com/7eu7d7/DreamArtist-stable-diffusion)]
+
 **When StyleGAN Meets Stable Diffusion: a W+ Adapter for Personalized Image Generation** \
 [[Website](https://arxiv.org/abs/2311.17461)] 
 [[Project](https://csxmli2016.github.io/projects/w-plus-adapter/)] 
 [[Code](https://github.com/csxmli2016/w-plus-adapter)]
-
-**InstantID: Zero-shot Identity-Preserving Generation in Seconds** \
-[[Website](https://arxiv.org/abs/2401.07519)] 
-[[Project](https://instantid.github.io/)] 
-[[Code](https://github.com/InstantID/InstantID)]
-
-**PhotoMaker: Customizing Realistic Human Photos via Stacked ID Embedding** \
-[[Website](https://arxiv.org/abs/2312.04461)] 
-[[Project](https://photo-maker.github.io/)] 
-[[Code](https://github.com/TencentARC/PhotoMaker)]
-
-
-
-
-**CatVersion: Concatenating Embeddings for Diffusion-Based Text-to-Image Personalization** \
-[[Website](https://arxiv.org/abs/2311.14631)] 
-[[Project](https://royzhao926.github.io/CatVersion-page/)] 
-[[Code](https://github.com/RoyZhao926/CatVersion)]
-
-**DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models** \
-[[Website](https://arxiv.org/abs/2312.14216)] 
-[[Project](https://briannlongzhao.github.io/DreamDistribution/)] 
-[[Code](https://github.com/briannlongzhao/DreamDistribution)]
-
-
-**λ-ECLIPSE: Multi-Concept Personalized Text-to-Image Diffusion Models by Leveraging CLIP Latent Space** \
-[[Website](https://arxiv.org/abs/2402.05195)] 
-[[Project](https://eclipse-t2i.github.io/Lambda-ECLIPSE/)] 
-[[Code](https://github.com/eclipse-t2i/lambda-eclipse-inference)]
-
-**Viewpoint Textual Inversion: Unleashing Novel View Synthesis with Pretrained 2D Diffusion Models** \
-[[Website](https://arxiv.org/abs/2309.07986)] 
-[[Project](https://jmhb0.github.io/viewneti/)] 
-[[Code](https://github.com/jmhb0/view_neti)]
-
-**Gen4Gen: Generative Data Pipeline for Generative Multi-Concept Composition** \
-[[Website](https://arxiv.org/abs/2402.15504)] 
-[[Project](https://danielchyeh.github.io/Gen4Gen/)] 
-[[Code](https://github.com/louisYen/Gen4Gen)]
-
-**StableIdentity: Inserting Anybody into Anywhere at First Sight** \
-[[Website](https://arxiv.org/abs/2401.15975)] 
-[[Project](https://qinghew.github.io/StableIdentity/)] 
-[[Code](https://github.com/qinghew/StableIdentity)]
-
-**DiffuseKronA: A Parameter Efficient Fine-tuning Method for Personalized Diffusion Model** \
-[[Website](https://arxiv.org/abs/2402.17412)] 
-[[Project](https://diffusekrona.github.io/)] 
-[[Code](https://github.com/IBM/DiffuseKronA)]
-
-**TextBoost: Towards One-Shot Personalization of Text-to-Image Models via Fine-tuning Text Encoder** \
-[[Website](https://arxiv.org/abs/2409.08248)] 
-[[Project](https://textboost.github.io/)] 
-[[Code](https://github.com/nahyeonkaty/textboost)]
-
-**EZIGen: Enhancing zero-shot subject-driven image generation with precise subject encoding and decoupled guidance** \
-[[Website](https://arxiv.org/abs/2409.08091)] 
-[[Project](https://zichengduan.github.io/pages/EZIGen/index.html)] 
-[[Code](https://github.com/ZichengDuan/EZIGen)]
-
-**OMG: Occlusion-friendly Personalized Multi-concept Generation in Diffusion Models** \
-[[Website](https://arxiv.org/abs/2403.10983)] 
-[[Project](https://kongzhecn.github.io/omg-project/)] 
-[[Code](https://github.com/kongzhecn/OMG/)]
-
-**MoMA: Multimodal LLM Adapter for Fast Personalized Image Generation** \
-[[Website](https://arxiv.org/abs/2404.05674)] 
-[[Project](https://moma-adapter.github.io/)] 
-[[Code](https://github.com/bytedance/MoMA/tree/main)]
 
 **ZipLoRA: Any Subject in Any Style by Effectively Merging LoRAs** \
 [[Website](https://arxiv.org/abs/2311.13600)] 
@@ -2736,21 +3840,47 @@
 [[Project](https://csgo-gen.github.io/)] 
 [[Code](https://github.com/instantX-research/CSGO)]
 
+**DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2312.14216)] 
+[[Project](https://briannlongzhao.github.io/DreamDistribution/)] 
+[[Code](https://github.com/briannlongzhao/DreamDistribution)]
+
+**Magic Mirror: ID-Preserved Video Generation in Video Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2501.03931)] 
+[[Project](https://julianjuaner.github.io/projects/MagicMirror/)] 
+[[Code](https://github.com/dvlab-research/MagicMirror/)]
+
+**AnyCharV: Bootstrap Controllable Character Video Generation with Fine-to-Coarse Guidance** \
+[[Website](https://arxiv.org/abs/2502.08189)] 
+[[Project](https://anycharv.github.io/)] 
+[[Code](https://github.com/AnyCharV/AnyCharV)]
+
+**SkyReels-A2: Compose Anything in Video Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2504.02436)] 
+[[Project](https://skyworkai.github.io/skyreels-a2.github.io/)] 
+[[Code](https://github.com/SkyworkAI/SkyReels-A2)] 
+
+**Visual Style Prompting with Swapping Self-Attention** \
+[[Website](https://arxiv.org/abs/2402.12974)] 
+[[Project](https://curryjung.github.io/VisualStylePrompt/)] 
+[[Code](https://github.com/naver-ai/Visual-Style-Prompting)] 
+
+**MoMA: Multimodal LLM Adapter for Fast Personalized Image Generation** \
+[[Website](https://arxiv.org/abs/2404.05674)] 
+[[Project](https://moma-adapter.github.io/)] 
+[[Code](https://github.com/bytedance/MoMA/tree/main)]
+
 **DreamSteerer: Enhancing Source Image Conditioned Editability using Personalized Diffusion Models** \
 [[NeurIPS 2024](https://arxiv.org/abs/2410.11208)] 
 [[Code](https://github.com/Dijkstra14/DreamSteerer)]
 
+**DisenBooth: Disentangled Parameter-Efficient Tuning for Subject-Driven Text-to-Image Generation** \
+[[ICLR 2024](https://arxiv.org/abs/2305.03374)] 
+[[Code](https://github.com/forchchch/disenbooth)]
+
 **Customized Generation Reimagined: Fidelity and Editability Harmonized** \
 [[ECCV 2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06727.pdf)] 
 [[Code](https://github.com/jinjianRick/DCI_ICO)]
-
-**Powerful and Flexible: Personalized Text-to-Image Generation via Reinforcement Learning** \
-[[ECCV 2024](https://arxiv.org/abs/2407.06642)] 
-[[Code](https://github.com/wfanyue/DPG-T2I-Personalization)]
-
-**High-fidelity Person-centric Subject-to-Image Synthesis** \
-[[CVPR 2024](https://arxiv.org/abs/2311.10329)] 
-[[Code](https://github.com/codegoat24/face-diffuser)] 
 
 **ProSpect: Expanded Conditioning for the Personalization of Attribute-aware Image Generation** \
 [[SIGGRAPH Asia 2023](https://arxiv.org/abs/2305.16225)] 
@@ -2760,115 +3890,45 @@
 [[WACV 2025](https://arxiv.org/abs/2410.22317)] 
 [[Code](https://github.com/wangkai930418/mc_ti)]
 
-**Multiresolution Textual Inversion** \
-[[NeurIPS 2022 workshop](https://arxiv.org/abs/2211.17115)] 
-[[Code](https://github.com/giannisdaras/multires_textual_inversion)]
-
-
-**Compositional Inversion for Stable Diffusion Models** \
-[[AAAI 2024](https://arxiv.org/abs/2312.08048)] 
-[[Code](https://github.com/zhangxulu1996/Compositional-Inversion)]
-
-**Decoupled Textual Embeddings for Customized Image Generation** \
-[[AAAI 2024](https://arxiv.org/abs/2312.11826)] 
-[[Code](https://github.com/PrototypeNx/DETEX)]
+**Memory-Efficient Personalization using Quantized Diffusion Model** \
+[[ECCV 2024](https://arxiv.org/abs/2401.04339)] 
+[[Code](https://github.com/ugonfor/TuneQDM)]
 
 **DomainGallery: Few-shot Domain-driven Image Generation by Attribute-centric Finetuning** \
 [[NeurIPS 2024](https://arxiv.org/abs/2411.04571)] 
 [[Code](https://github.com/Ldhlwh/DomainGallery)]
 
 **TweedieMix: Improving Multi-Concept Fusion for Diffusion-based Image/Video Generation** \
-[[Website](https://arxiv.org/abs/2410.05591)] 
+[[ICLR 2025](https://arxiv.org/abs/2410.05591)] 
 [[Code](https://github.com/KwonGihyun/TweedieMix)]
 
-**Resolving Multi-Condition Confusion for Finetuning-Free Personalized Image Generation** \
-[[Website](https://arxiv.org/abs/2409.17920)] 
-[[Code](https://github.com/hqhQAQ/MIP-Adapter)]
+**Concept-centric Personalization with Large-scale Diffusion Priors** \
+[[CVPR 2025](https://arxiv.org/abs/2312.08195)] 
+[[Code](https://github.com/PRIV-Creation/Concept-centric-Personalization)] 
 
-**Concept Conductor: Orchestrating Multiple Personalized Concepts in Text-to-Image Synthesis** \
-[[Website](https://arxiv.org/abs/2408.03632)] 
-[[Code](https://github.com/Nihukat/Concept-Conductor)]
+**PersonaHOI: Effortlessly Improving Personalized Face with Human-Object Interaction Generation** \
+[[Website](https://arxiv.org/abs/2501.05823)] 
+[[Code](https://github.com/joyhuyy1412/personahoi)]
 
-**RectifID: Personalizing Rectified Flow with Anchored Classifier Guidance** \
-[[Website](https://arxiv.org/abs/2405.14677)] 
-[[Code](https://github.com/feifeiobama/RectifID)]
-
-**PuLID: Pure and Lightning ID Customization via Contrastive Alignment** \
-[[Website](https://arxiv.org/abs/2404.16022)] 
-[[Code](https://github.com/ToTheBeginning/PuLID)]
-
-**Cross Initialization for Personalized Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2312.15905)] 
-[[Code](https://github.com/lyupang/crossinitialization)]
-
-**Enhancing Detail Preservation for Customized Text-to-Image Generation: A Regularization-Free Approach** \
-[[Website](https://arxiv.org/abs/2305.13579)] 
-[[Code](https://github.com/drboog/profusion)]
-
-**SVDiff: Compact Parameter Space for Diffusion Fine-Tuning** \
-[[Website](https://arxiv.org/abs/2303.11305)] 
-[[Code](https://github.com/mkshing/svdiff-pytorch)]
-
-
-**ViCo: Detail-Preserving Visual Condition for Personalized Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2306.00971)] 
-[[Code](https://github.com/haoosz/vico)]
+**BootPIG: Bootstrapping Zero-shot Personalized Image Generation Capabilities in Pretrained Diffusion Models** \
+[[Website](https://arxiv.org/abs/2401.13974)] 
+[[Code](https://github.com/SalesforceAIResearch/bootpig)]
 
 **AerialBooth: Mutual Information Guidance for Text Controlled Aerial View Synthesis from a Single Image** \
 [[Website](https://arxiv.org/abs/2311.15040)] 
 [[Code](https://github.com/Xiang-cd/unet-finetune)]
 
-**A Closer Look at Parameter-Efficient Tuning in Diffusion Models** \
-[[Website](https://arxiv.org/abs/2311.15478)] 
-[[Code](https://github.com/divyakraman/AerialBooth2023)]
-
-**FaceChain-FACT: Face Adapter with Decoupled Training for Identity-preserved Personalization** \
-[[Website](https://arxiv.org/abs/2410.12312)] 
-[[Code](https://github.com/modelscope/facechain)]
-
-**Controllable Textual Inversion for Personalized Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2304.05265)] 
-[[Code](https://github.com/jnzju/COTI)]
-
 **Cross-domain Compositing with Pretrained Diffusion Models** \
 [[Website](https://arxiv.org/abs/2302.10167)] 
 [[Code](https://github.com/cross-domain-compositing/cross-domain-compositing)] 
-
-**Concept-centric Personalization with Large-scale Diffusion Priors** \
-[[Website](https://arxiv.org/abs/2312.08195)] 
-[[Code](https://github.com/PRIV-Creation/Concept-centric-Personalization)] 
 
 **Customization Assistant for Text-to-image Generation** \
 [[Website](https://arxiv.org/abs/2312.03045)] 
 [[Code](https://github.com/drboog/profusion)] 
 
-**Cross Initialization for Personalized Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2312.15905)] 
-[[Code](https://github.com/lyupang/crossinitialization)] 
-
-**Cones 2: Customizable Image Synthesis with Multiple Subjects** \
-[[Website](https://arxiv.org/abs/2305.19327v1)] 
-[[Code](https://github.com/ali-vilab/cones-v2)] 
-
-**LoRA-Composer: Leveraging Low-Rank Adaptation for Multi-Concept Customization in Training-Free Diffusion Models** \
-[[Website](https://arxiv.org/abs/2403.11627)] 
-[[Code](https://github.com/Young98CN/LoRA_Composer)] 
-
-**AttenCraft: Attention-guided Disentanglement of Multiple Concepts for Text-to-Image Customization** \
-[[Website](https://arxiv.org/abs/2405.17965)] 
-[[Code](https://github.com/junjie-shentu/AttenCraft)] 
-
-**CusConcept: Customized Visual Concept Decomposition with Diffusion Models** \
-[[Website](https://arxiv.org/abs/2410.00398)] 
-[[Code](https://github.com/xzLcan/CusConcept)] 
-
 **HybridBooth: Hybrid Prompt Inversion for Efficient Subject-Driven Generation** \
 [[ECCV 2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01439.pdf)] 
 [[Project](https://sites.google.com/view/hybridbooth)] 
-
-**Language-Informed Visual Concept Learning** \
-[[ICLR 2024](https://arxiv.org/abs/2312.03587)] 
-[[Project](https://ai.stanford.edu/~yzzhang/projects/concept-axes/)] 
 
 **Key-Locked Rank One Editing for Text-to-Image Personalization** \
 [[SIGGRAPH 2023](https://arxiv.org/abs/2305.01644)] 
@@ -2878,13 +3938,9 @@
 [[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Everaert_Diffusion_in_Style_ICCV_2023_paper.pdf)] 
 [[Project](https://ivrl.github.io/diffusion-in-style/)] 
 
-**RealCustom: Narrowing Real Text Word for Real-Time Open-Domain Text-to-Image Customization** \
-[[CVPR 2024](https://arxiv.org/abs/2403.00483)] 
-[[Project](https://corleone-huang.github.io/realcustom/)] 
-
-**RealCustom++: Representing Images as Real-Word for Real-Time Customization** \
-[[Website](https://arxiv.org/abs/2408.09744)] 
-[[Project](https://corleone-huang.github.io/RealCustom_plus_plus/)] 
+**TextureDreamer: Image-guided Texture Synthesis through Geometry-aware Diffusion** \
+[[CVPR 2024](https://arxiv.org/abs/2401.09416)] 
+[[Project](https://texturedreamer.github.io/)] 
 
 **Personalized Residuals for Concept-Driven Text-to-Image Generation** \
 [[CVPR 2024](https://arxiv.org/abs/2405.12978)] 
@@ -2894,9 +3950,22 @@
 [[ECCV 2024](https://arxiv.org/abs/2407.13752)] 
 [[Project](https://mingkangz.github.io/logosticker/)] 
 
-**Diffusion Self-Distillation for Zero-Shot Customized Image Generation** \
-[[Website](https://arxiv.org/abs/2411.18616)] 
-[[Project](https://primecai.github.io/dsd/)] 
+**Movie Weaver: Tuning-Free Multi-Concept Video Personalization with Anchored Prompts** \
+[[CVPR 2025](https://arxiv.org/abs/2502.07802)] 
+[[Project](https://jeff-liangf.github.io/projects/movieweaver/)] 
+
+**VideoMage: Multi-Subject and Motion Customization of Text-to-Video Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2503.21781)] 
+[[Project](https://jasper0314-huang.github.io/videomage-customization/)] 
+
+**Multi-subject Open-set Personalization in Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2501.06187)] 
+[[Project](https://snap-research.github.io/open-set-video-personalization/)] 
+
+**SerialGen: Personalized Image Generation by First Standardization Then Personalization** \
+[[CVPR 2025](https://arxiv.org/abs/2412.01485)] 
+[[Project](https://serialgen.github.io/)] 
+
 
 **RelationBooth: Towards Relation-Aware Customized Object Generation** \
 [[Website](https://arxiv.org/abs/2410.23280)] 
@@ -2906,18 +3975,25 @@
 [[Website](https://arxiv.org/abs/2312.03011)] 
 [[Project](https://sites.google.com/view/instructbooth)] 
 
-**AttnDreamBooth: Towards Text-Aligned Personalized Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2406.05000)] 
-[[Project](https://attndreambooth.github.io/)] 
-
 **MoA: Mixture-of-Attention for Subject-Context Disentanglement in Personalized Image Generation** \
 [[Website](https://arxiv.org/abs/2404.11565)] 
 [[Project](https://snap-research.github.io/mixture-of-attention/)] 
 
+**ObjectMate: A Recurrence Prior for Object Insertion and Subject-Driven Generation** \
+[[Website](https://arxiv.org/abs/2412.08645)] 
+[[Project](https://object-mate.com/)] 
+
+**TokenVerse: Versatile Multi-concept Personalization in Token Modulation Space** \
+[[Website](https://arxiv.org/abs/2501.12224)] 
+[[Project](https://token-verse.github.io/)] 
 
 **PortraitBooth: A Versatile Portrait Model for Fast Identity-preserved Personalization** \
 [[Website](https://arxiv.org/abs/2312.06354)] 
 [[Project](https://portraitbooth.github.io/)] 
+
+**Dynamic Concepts Personalization from Single Videos** \
+[[Website](https://arxiv.org/abs/2502.14844)] 
+[[Project](https://snap-research.github.io/dynamic_concepts/)] 
 
 **Subject-driven Text-to-Image Generation via Apprenticeship Learning** \
 [[Website](https://arxiv.org/abs/2304.00186)] 
@@ -2931,11 +4007,29 @@
 [[Website](https://arxiv.org/abs/2306.08247)] 
 [[Project](https://bigaandsmallq.github.io/COW/)] 
 
+**Nested Attention: Semantic-aware Attention Values for Concept Personalization** \
+[[Website](https://arxiv.org/abs/2501.01407)] 
+[[Project](https://snap-research.github.io/NestedAttention/)] 
 
 **HyperDreamBooth: HyperNetworks for Fast Personalization of Text-to-Image Models** \
 [[Website](https://arxiv.org/abs/2307.06949)] 
 [[Project](https://hyperdreambooth.github.io/)] 
 
+**Paste, Inpaint and Harmonize via Denoising: Subject-Driven Image Editing with Pre-Trained Diffusion Model** \
+[[Website](https://arxiv.org/abs/2306.07596)] 
+[[Project](https://sites.google.com/view/phd-demo-page)] 
+
+**HybridBooth: Hybrid Prompt Inversion for Efficient Subject-Driven Generation** \
+[[Website](https://arxiv.org/abs/2410.08192)] 
+[[Project](https://sites.google.com/view/hybridboot/)] 
+
+**SUGAR: Subject-Driven Video Customization in a Zero-Shot Manner** \
+[[Website](https://arxiv.org/abs/2412.10533)] 
+[[Project](https://yufanzhou.com/SUGAR/)] 
+
+**JointTuner: Appearance-Motion Adaptive Joint Training for Customized Video Generation** \
+[[Website](https://arxiv.org/abs/2503.23951)] 
+[[Project](https://fdchen24.github.io/JointTuner-Website/)] 
 
 **Domain-Agnostic Tuning-Encoder for Fast Personalization of Text-To-Image Models** \
 [[Website](https://arxiv.org/abs/2307.06925)] 
@@ -2953,46 +4047,17 @@
 [[Website](https://arxiv.org/abs/2304.03411)] 
 [[Project](https://jshi31.github.io/InstantBooth/)] 
 
-**Total Selfie: Generating Full-Body Selfies** \
-[[Website](https://arxiv.org/abs/2308.14740)] 
-[[Project](https://homes.cs.washington.edu/~boweiche/project_page/totalselfie/)] 
-
-**PersonalVideo: High ID-Fidelity Video Customization without Dynamic and Semantic Degradation** \
-[[Website](https://arxiv.org/abs/2411.17048)] 
-[[Project](https://personalvideo.github.io/)] 
-
 **DreamTuner: Single Image is Enough for Subject-Driven Generation** \
 [[Website](https://arxiv.org/abs/2312.13691)] 
 [[Project](https://dreamtuner-diffusion.github.io/)] 
 
-**SerialGen: Personalized Image Generation by First Standardization Then Personalization** \
-[[Website](https://arxiv.org/abs/2412.01485)] 
-[[Project](https://serialgen.github.io/)] 
-
+**ConceptMaster: Multi-Concept Video Customization on Diffusion Transformer Models Without Test-Time Tuning** \
+[[Website](https://arxiv.org/abs/2501.04698)] 
+[[Project](https://yuzhou914.github.io/ConceptMaster/)] 
 
 **PALP: Prompt Aligned Personalization of Text-to-Image Models** \
 [[Website](https://arxiv.org/abs/2401.06105)] 
 [[Project](https://prompt-aligned.github.io/)] 
-
-**TextureDreamer: Image-guided Texture Synthesis through Geometry-aware Diffusion** \
-[[CVPR 2024](https://arxiv.org/abs/2401.09416)] 
-[[Project](https://texturedreamer.github.io/)] 
-
-**Visual Style Prompting with Swapping Self-Attention** \
-[[Website](https://arxiv.org/abs/2402.12974)] 
-[[Project](https://curryjung.github.io/VisualStylePrompt/)] 
-
-**Infinite-ID: Identity-preserved Personalization via ID-semantics Decoupling Paradigm** \
-[[Website](https://arxiv.org/abs/2403.11781)] 
-[[Project](https://infinite-id.github.io/)] 
-
-**Non-confusing Generation of Customized Concepts in Diffusion Models** \
-[[Website](https://arxiv.org/abs/2405.06914)] 
-[[Project](https://clif-official.github.io/clif/)] 
-
-**HybridBooth: Hybrid Prompt Inversion for Efficient Subject-Driven Generation** \
-[[Website](https://arxiv.org/abs/2410.08192)] 
-[[Project](https://sites.google.com/view/hybridboot/)] 
 
 **Hollowed Net for On-Device Personalization of Text-to-Image Diffusion Models** \
 [[NeurIPS 2024](https://arxiv.org/abs/2411.01179)] 
@@ -3006,20 +4071,20 @@
 **JeDi: Joint-Image Diffusion Models for Finetuning-Free Personalized Text-to-Image Generation** \
 [[CVPR 2024](https://arxiv.org/abs/2407.06187)] 
 
+**DynASyn: Multi-Subject Personalization Enabling Dynamic Action Synthesis** \
+[[AAAI 2025](https://arxiv.org/abs/2503.17728)] 
+
 **DreamStyler: Paint by Style Inversion with Text-to-Image Diffusion Models** \
 [[AAAI 2024](https://arxiv.org/abs/2309.06933)] 
+
+**Proxy-Tuning: Tailoring Multimodal Autoregressive Models for Subject-Driven Image Generation** \
+[[Website](https://arxiv.org/abs/2503.10125)] 
 
 **FreeTuner: Any Subject in Any Style with Training-free Diffusion** \
 [[Website](https://arxiv.org/abs/2405.14201)] 
 
 **Towards Prompt-robust Face Privacy Protection via Adversarial Decoupling Augmentation Framework** \
 [[Website](https://arxiv.org/abs/2305.03980)] 
-
-**InstaStyle: Inversion Noise of a Stylized Image is Secretly a Style Adviser** \
-[[Website](https://arxiv.org/abs/2311.15040)] 
-
-**DisenBooth: Disentangled Parameter-Efficient Tuning for Subject-Driven Text-to-Image Generation** \
-[[Website](https://arxiv.org/abs/2305.03374)] 
 
 **Taming Encoder for Zero Fine-tuning Image Customization with Text-to-Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2304.02642)] 
@@ -3039,11 +4104,11 @@
 **Generate Anything Anywhere in Any Scene** \
 [[Website](https://arxiv.org/abs/2306.17154)] 
 
-**Paste, Inpaint and Harmonize via Denoising: Subject-Driven Image Editing with Pre-Trained Diffusion Model** \
-[[Website](https://arxiv.org/abs/2306.07596)] 
-
 **Face0: Instantaneously Conditioning a Text-to-Image Model on a Face** \
 [[Website](https://arxiv.org/abs/2306.06638v1)] 
+
+**CustomVideoX: 3D Reference Attention Driven Dynamic Adaptation for Zero-Shot Customized Video Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2502.06527)] 
 
 **MagiCapture: High-Resolution Multi-Concept Portrait Customization** \
 [[Website](https://arxiv.org/abs/2309.06895)] 
@@ -3054,17 +4119,11 @@
 **DIFFNAT: Improving Diffusion Image Quality Using Natural Image Statistics** \
 [[Website](https://arxiv.org/abs/2311.09753)] 
 
+**ACCORD: Alleviating Concept Coupling through Dependence Regularization for Text-to-Image Diffusion Personalization** \
+[[Website](https://arxiv.org/abs/2503.01122)] 
+
 **An Image is Worth Multiple Words: Multi-attribute Inversion for Constrained Text-to-Image Synthesis** \
 [[Website](https://arxiv.org/abs/2311.11919)] 
-
-**Lego: Learning to Disentangle and Invert Concepts Beyond Object Appearance in Text-to-Image Diffusion Models** \
-[[Website](https://arxiv.org/abs/2311.13833)] 
-
-**Memory-Efficient Personalization using Quantized Diffusion Model** \
-[[Website](https://arxiv.org/abs/2401.04339)] 
-
-**BootPIG: Bootstrapping Zero-shot Personalized Image Generation Capabilities in Pretrained Diffusion Models** \
-[[Website](https://arxiv.org/abs/2401.13974)] 
 
 **Pick-and-Draw: Training-free Semantic Guidance for Text-to-Image Personalization** \
 [[Website](https://arxiv.org/abs/2401.16762)] 
@@ -3078,7 +4137,6 @@
 **Visual Concept-driven Image Generation with Text-to-Image Diffusion Model** \
 [[Website](https://arxiv.org/abs/2402.11487)] 
 
-
 **IDAdapter: Learning Mixed Features for Tuning-Free Personalization of Text-to-Image Models** \
 [[Website](https://arxiv.org/abs/2403.13535)] 
 
@@ -3087,9 +4145,6 @@
 
 **DreamSalon: A Staged Diffusion Framework for Preserving Identity-Context in Editable Face Generation** \
 [[Website](https://arxiv.org/abs/2403.19235)] 
-
-**OneActor: Consistent Character Generation via Cluster-Conditioned Guidance** \
-[[Website](https://arxiv.org/abs/2404.10267)] 
 
 **StyleMaster: Towards Flexible Stylized Image Generation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2405.15287)] 
@@ -3131,7 +4186,7 @@
 [[Website](https://arxiv.org/abs/2410.02483)] 
 
 **LEARNING TO CUSTOMIZE TEXT-TO-IMAGE DIFFUSION IN DIVERSE CONTEXT** \
-[[Website](https://arxiv.org/pdf/2410.10058)] 
+[[Website](https://arxiv.org/abs/2410.10058)] 
 
 **HYPNOS : Highly Precise Foreground-focused Diffusion Finetuning for Inanimate Objects** \
 [[Website](https://arxiv.org/abs/2410.14265)] 
@@ -3148,9 +4203,467 @@
 **DreamBlend: Advancing Personalized Fine-tuning of Text-to-Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2411.19390)] 
 
+**RealisID: Scale-Robust and Fine-Controllable Identity Customization via Local and Global Complementation** \
+[[Website](https://arxiv.org/abs/2412.16832)] 
+
+**P3S-Diffusion:A Selective Subject-driven Generation Framework via Point Supervision** \
+[[Website](https://arxiv.org/abs/2412.19533)] 
+
+**Efficient Personalization of Quantized Diffusion Model without Backpropagation** \
+[[Website](https://arxiv.org/abs/2503.14868)] 
+
+**ICE: Intrinsic Concept Extraction from a Single Image via Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.19902)] 
+
+**Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation** \
+[[Website](https://arxiv.org/abs/2504.02612)] 
 
 
-## T2I Diffusion Model augmentation
+
+## Mutiple Concepts
+
+**Mix-of-Show: Decentralized Low-Rank Adaptation for Multi-Concept Customization of Diffusion Models** \
+[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71844)] 
+[[Website](https://arxiv.org/abs/2305.18292)] 
+[[Project](https://showlab.github.io/Mix-of-Show/)] 
+[[Code](https://github.com/TencentARC/Mix-of-Show)]
+
+**LatexBlend: Scaling Multi-concept Customized Generation with Latent Textual Blending** \
+[[CVPR 2025 Highlight](https://arxiv.org/abs/2503.06956)] 
+[[Project](https://jinjianrick.github.io/latexblend/)] 
+[[Code](https://github.com/jinjianRick/latexblend)] 
+
+**Identity Decoupling for Multi-Subject Personalization of Text-to-Image Models** \
+[[CVPR 2024](https://arxiv.org/abs/2404.04243)] 
+[[Project](https://mudi-t2i.github.io/)] 
+[[Code](https://github.com/agwmon/MuDI)]
+
+**FreeCustom: Tuning-Free Customized Image Generation for Multi-Concept Composition** \
+[[CVPR 2024](https://arxiv.org/abs/2405.13870v1)] 
+[[Project](https://aim-uofa.github.io/FreeCustom/)] 
+[[Code](https://github.com/aim-uofa/FreeCustom)]
+
+**OMG: Occlusion-friendly Personalized Multi-concept Generation in Diffusion Models** \
+[[ECCV 2024](https://arxiv.org/abs/2403.10983)] 
+[[Project](https://kongzhecn.github.io/omg-project/)] 
+[[Code](https://github.com/kongzhecn/OMG/)]
+
+**MS-Diffusion: Multi-subject Zero-shot Image Personalization with Layout Guidance** \
+[[Website](https://arxiv.org/abs/2406.07209)] 
+[[Project](https://ms-diffusion.github.io/)] 
+[[Code](https://github.com/MS-Diffusion/MS-Diffusion)]
+
+**λ-ECLIPSE: Multi-Concept Personalized Text-to-Image Diffusion Models by Leveraging CLIP Latent Space** \
+[[Website](https://arxiv.org/abs/2402.05195)] 
+[[Project](https://eclipse-t2i.github.io/Lambda-ECLIPSE/)] 
+[[Code](https://github.com/eclipse-t2i/lambda-eclipse-inference)]
+
+**Gen4Gen: Generative Data Pipeline for Generative Multi-Concept Composition** \
+[[Website](https://arxiv.org/abs/2402.15504)] 
+[[Project](https://danielchyeh.github.io/Gen4Gen/)] 
+[[Code](https://github.com/louisYen/Gen4Gen)]
+
+**Non-confusing Generation of Customized Concepts in Diffusion Models** \
+[[Website](https://arxiv.org/abs/2405.06914)] 
+[[Project](https://clif-official.github.io/clif/)] 
+[[Code](https://github.com/clif-official/clif_code)] 
+
+**Resolving Multi-Condition Confusion for Finetuning-Free Personalized Image Generation** \
+[[AAAI 2025](https://arxiv.org/abs/2409.17920)] 
+[[Code](https://github.com/hqhQAQ/MIP-Adapter)]
+
+**Cached Multi-Lora Composition for Multi-Concept Image Generation** \
+[[Website](https://arxiv.org/abs/2502.04923)] 
+[[Code](https://github.com/Yqcca/CMLoRA)]
+
+**Concept Conductor: Orchestrating Multiple Personalized Concepts in Text-to-Image Synthesis** \
+[[Website](https://arxiv.org/abs/2408.03632)] 
+[[Code](https://github.com/Nihukat/Concept-Conductor)]
+
+**LoRA-Composer: Leveraging Low-Rank Adaptation for Multi-Concept Customization in Training-Free Diffusion Models** \
+[[Website](https://arxiv.org/abs/2403.11627)] 
+[[Code](https://github.com/Young98CN/LoRA_Composer)] 
+
+**AttenCraft: Attention-guided Disentanglement of Multiple Concepts for Text-to-Image Customization** \
+[[Website](https://arxiv.org/abs/2405.17965)] 
+[[Code](https://github.com/junjie-shentu/AttenCraft)] 
+
+**LoRACLR: Contrastive Adaptation for Customization of Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2412.09622)] 
+[[Project](https://loraclr.github.io/)] 
+
+**FreeBlend: Advancing Concept Blending with Staged Feedback-Driven Interpolation Diffusion** \
+[[Website](https://arxiv.org/abs/2502.05606)] 
+
+**Modular Customization of Diffusion Models via Blockwise-Parameterized Low-Rank Adaptation** \
+[[Website](https://arxiv.org/abs/2503.08575)] 
+
+**FaR: Enhancing Multi-Concept Text-to-Image Diffusion via Concept Fusion and Localized Refinement** \
+[[Website](https://arxiv.org/abs/2504.03292)] 
+
+
+
+## Decomposition
+
+**Break-A-Scene: Extracting Multiple Concepts from a Single Image** \
+[[SIGGRAPH Asia 2023](https://arxiv.org/abs/2305.16311)] 
+[[Project](https://omriavrahami.com/break-a-scene/)]
+[[Code](https://github.com/google/break-a-scene)]
+
+**Concept Decomposition for Visual Exploration and Inspiration** \
+[[SIGGRAPH Asia 2023](https://arxiv.org/abs/2305.18203)] 
+[[Project](https://inspirationtree.github.io/inspirationtree/)] 
+[[Code](https://github.com/google/inspiration_tree)]
+
+**ConceptExpress: Harnessing Diffusion Models for Single-image Unsupervised Concept Extraction** \
+[[ECCV 2024](https://arxiv.org/abs/2407.07077)] 
+[[Project](https://haoosz.github.io/ConceptExpress/)] 
+[[Code](https://github.com/haoosz/ConceptExpress)]
+
+**Customizing Text-to-Image Models with a Single Image Pair** \
+[[SIGGRAPH Asia 2024](https://arxiv.org/abs/2405.01536)] 
+[[Project](https://paircustomization.github.io/)] 
+[[Code](https://github.com/PairCustomization/PairCustomization)]
+
+**CusConcept: Customized Visual Concept Decomposition with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2410.00398)] 
+[[Code](https://github.com/xzLcan/CusConcept)] 
+
+**Language-Informed Visual Concept Learning** \
+[[ICLR 2024](https://arxiv.org/abs/2312.03587)] 
+[[Project](https://ai.stanford.edu/~yzzhang/projects/concept-axes/)] 
+
+**Lego: Learning to Disentangle and Invert Concepts Beyond Object Appearance in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2311.13833)] 
+
+## ID encoder
+
+**Inserting Anybody in Diffusion Models via Celeb Basis** \
+[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71823)] 
+[[Website](https://arxiv.org/abs/2306.00926)] 
+[[Project](https://celeb-basis.github.io/)] 
+[[Code](https://github.com/ygtxr1997/celebbasis)]
+
+**Encoder-based Domain Tuning for Fast Personalization of Text-to-Image Models** \
+[[SIGGRAPH 2023](https://arxiv.org/abs/2302.12228)] 
+[[Project](https://tuning-encoder.github.io/)] 
+[[Code](https://github.com/mkshing/e4t-diffusion)]
+
+**Face2Diffusion for Fast and Editable Face Personalization** \
+[[CVPR 2024](https://arxiv.org/abs/2403.05094)] 
+[[Project](https://mapooon.github.io/Face2DiffusionPage/)] 
+[[Code](https://github.com/mapooon/Face2Diffusion)]
+
+**CapHuman: Capture Your Moments in Parallel Universes** \
+[[CVPR 2024](https://arxiv.org/abs/2402.00627)] 
+[[Project](https://caphuman.github.io/)] 
+[[Code](https://github.com/VamosC/CapHumanf)]
+
+**MasterWeaver: Taming Editability and Identity for Personalized Text-to-Image Generation** \
+[[ECCV 2024](https://arxiv.org/abs/2405.05806)] 
+[[Project](https://masterweaver.github.io/)] 
+[[Code](https://github.com/csyxwei/MasterWeaver)]
+
+**FastComposer: Tuning-Free Multi-Subject Image Generation with Localized Attention** \
+[[IJCV 2024](https://arxiv.org/abs/2305.10431)] 
+[[Project](https://fastcomposer.mit.edu/)] 
+[[Code](https://github.com/mit-han-lab/fastcomposer)]
+
+**MagicNaming: Consistent Identity Generation by Finding a "Name Space" in T2I Diffusion Models** \
+[[AAAI 2025](https://arxiv.org/abs/2412.14902)] 
+[[Project](https://magicfusion.github.io/MagicNaming/)] 
+[[Code](https://github.com/MagicFusion/MagicNaming)]
+
+**PhotoMaker: Customizing Realistic Human Photos via Stacked ID Embedding** \
+[[CVPR 2024](https://arxiv.org/abs/2312.04461)] 
+[[Project](https://photo-maker.github.io/)] 
+[[Code](https://github.com/TencentARC/PhotoMaker)]
+
+**Visual Persona: Foundation Model for Full-Body Human Customization** \
+[[CVPR 2025](https://arxiv.org/abs/2503.15406)] 
+[[Project](https://cvlab-kaist.github.io/Visual-Persona/)] 
+[[Code](https://github.com/cvlab-kaist/Visual-Persona)]
+
+**InfiniteYou: Flexible Photo Recrafting While Preserving Your Identity** \
+[[Website](https://arxiv.org/abs/2503.16418)] 
+[[Project](https://bytedance.github.io/InfiniteYou/)] 
+[[Code](https://github.com/bytedance/InfiniteYou)]
+
+**Concat-ID: Towards Universal Identity-Preserving Video Synthesis** \
+[[Website](https://arxiv.org/abs/2503.14151)] 
+[[Project](https://ml-gsai.github.io/Concat-ID-demo/)] 
+[[Code](https://github.com/ML-GSAI/Concat-ID)]
+
+**UniPortrait: A Unified Framework for Identity-Preserving Single- and Multi-Human Image Personalization** \
+[[Website](https://arxiv.org/abs/2408.05939)] 
+[[Project](https://aigcdesigngroup.github.io/UniPortrait-Page/)] 
+[[Code](https://github.com/junjiehe96/UniPortrait)]
+
+**MagicFace: Training-free Universal-Style Human Image Customized Synthesis** \
+[[Website](https://arxiv.org/abs/2408.07433)] 
+[[Project](https://codegoat24.github.io/MagicFace/)] 
+[[Code](https://github.com/CodeGoat24/MagicFace)]
+
+**LCM-Lookahead for Encoder-based Text-to-Image Personalization** \
+[[Website](https://arxiv.org/abs/2404.03620)] 
+[[Project](https://lcm-lookahead.github.io/)] 
+[[Code](https://github.com/OrLichter/lcm-lookahead)]
+
+**ConsistentID: Portrait Generation with Multimodal Fine-Grained Identity Preserving** \
+[[Website](https://arxiv.org/abs/2404.16771)] 
+[[Project](https://ssugarwh.github.io/consistentid.github.io/)] 
+[[Code](https://github.com/JackAILab/ConsistentID)]
+
+**ID-Aligner: Enhancing Identity-Preserving Text-to-Image Generation with Reward Feedback Learning** \
+[[Website](https://arxiv.org/abs/2404.15449)] 
+[[Project](https://idaligner.github.io/)] 
+[[Code](https://github.com/Weifeng-Chen/ID-Aligner)]
+
+**CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models** \
+[[Website](https://arxiv.org/abs/2404.15677)] 
+[[Project](https://qinghew.github.io/CharacterFactory/)] 
+[[Code](https://github.com/qinghew/CharacterFactory)]
+
+**InstantID: Zero-shot Identity-Preserving Generation in Seconds** \
+[[Website](https://arxiv.org/abs/2401.07519)] 
+[[Project](https://instantid.github.io/)] 
+[[Code](https://github.com/InstantID/InstantID)]
+
+**StableIdentity: Inserting Anybody into Anywhere at First Sight** \
+[[Website](https://arxiv.org/abs/2401.15975)] 
+[[Project](https://qinghew.github.io/StableIdentity/)] 
+[[Code](https://github.com/qinghew/StableIdentity)]
+
+**Dense-Face: Personalized Face Generation Model via Dense Annotation Prediction** \
+[[Website](https://arxiv.org/abs/2412.18149)] 
+[[Project](https://chelsea234.github.io/Dense-Face.github.io/)] 
+[[Code](https://github.com/CHELSEA234/Dense-Face)]
+
+**High-fidelity Person-centric Subject-to-Image Synthesis** \
+[[CVPR 2024](https://arxiv.org/abs/2311.10329)] 
+[[Code](https://github.com/codegoat24/face-diffuser)] 
+
+**RectifID: Personalizing Rectified Flow with Anchored Classifier Guidance** \
+[[NeurIPS 2024](https://arxiv.org/abs/2405.14677)] 
+[[Code](https://github.com/feifeiobama/RectifID)]
+
+**PuLID: Pure and Lightning ID Customization via Contrastive Alignment** \
+[[NeurIPS 2024](https://arxiv.org/abs/2404.16022)] 
+[[Code](https://github.com/ToTheBeginning/PuLID)]
+
+**FaceChain-FACT: Face Adapter with Decoupled Training for Identity-preserved Personalization** \
+[[Website](https://arxiv.org/abs/2410.12312)] 
+[[Code](https://github.com/modelscope/facechain)]
+
+**ModelScope Text-to-Video Technical Report** \
+[[Website](https://arxiv.org/abs/2308.06571)] 
+[[Code](https://github.com/exponentialml/text-to-video-finetuning)] 
+
+**PersonaMagic: Stage-Regulated High-Fidelity Face Customization with Tandem Equilibrium** \
+[[Website](https://arxiv.org/abs/2412.15674)] 
+[[Code](https://github.com/xzhe-Vision/PersonaMagic)] 
+
+**Enhancing Detail Preservation for Customized Text-to-Image Generation: A Regularization-Free Approach** \
+[[Website](https://arxiv.org/abs/2305.13579)] 
+[[Code](https://github.com/drboog/profusion)]
+
+**ID-Booth: Identity-consistent Face Generation with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2504.07392)] 
+[[Code](https://github.com/dariant/ID-Booth)]
+
+**Infinite-ID: Identity-preserved Personalization via ID-semantics Decoupling Paradigm** \
+[[Website](https://arxiv.org/abs/2403.11781)] 
+[[Project](https://infinite-id.github.io/)] 
+
+**FlexIP: Dynamic Control of Preservation and Personality for Customized Image Generation** \
+[[Website](https://arxiv.org/abs/2504.07405)] 
+[[Project](https://flexip-tech.github.io/flexip/#/)] 
+
+
+**DP-Adapter: Dual-Pathway Adapter for Boosting Fidelity and Text Consistency in Customizable Human Image Generation** \
+[[Website](https://arxiv.org/abs/2502.13999)] 
+
+**DynamicID: Zero-Shot Multi-ID Image Personalization with Flexible Facial Editability** \
+[[Website](https://arxiv.org/abs/2503.06505)] 
+
+**EditID: Training-Free Editable ID Customization for Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2503.12526)] 
+
+**Meta-LoRA: Meta-Learning LoRA Components for Domain-Aware ID Personalization** \
+[[Website](https://arxiv.org/abs/2503.22352)] 
+
+
+## General Concept 
+
+**DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation** \
+[[CVPR 2023 Honorable Mention](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] 
+[[Website](https://arxiv.org/abs/2208.12242)] 
+[[Project](https://dreambooth.github.io/)] 
+[[Official Dataset](https://github.com/google/dreambooth)]
+[[Unofficial Code](https://github.com/XavierXiao/Dreambooth-Stable-Diffusion)]
+[[Diffusers Doc](https://huggingface.co/docs/diffusers/training/dreambooth)] 
+[[Diffusers Code](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth)] 
+
+**An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion** \
+[[ICLR 2023 top-25%](https://openreview.net/forum?id=NAQvF08TcyG)] 
+[[Website](https://arxiv.org/abs/2208.01618)] 
+[[Diffusers Doc](https://huggingface.co/docs/diffusers/training/text_inversion)] 
+[[Diffusers Code](https://github.com/huggingface/diffusers/tree/main/examples/textual_inversion)] 
+[[Code](https://github.com/rinongal/textual_inversion)]
+
+**Custom Diffusion: Multi-Concept Customization of Text-to-Image Diffusion** \
+[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Kumari_Multi-Concept_Customization_of_Text-to-Image_Diffusion_CVPR_2023_paper.html)] 
+[[Website](https://arxiv.org/abs/2212.04488)] 
+[[Project](https://www.cs.cmu.edu/~custom-diffusion/)] 
+[[Diffusers Doc](https://huggingface.co/docs/diffusers/main/en/training/custom_diffusion)] 
+[[Diffusers Code](https://github.com/huggingface/diffusers/tree/main/examples/custom_diffusion)] 
+[[Code](https://github.com/adobe-research/custom-diffusion)]
+
+**Cones: Concept Neurons in Diffusion Models for Customized Generation** \
+[[ICML 2023 Oral](https://icml.cc/virtual/2023/oral/25582)] 
+[[ICML 2023 Oral](https://dl.acm.org/doi/10.5555/3618408.3619298)] 
+[[Website](https://arxiv.org/abs/2303.05125)] 
+[[Code](https://github.com/ali-vilab/Cones)]
+
+**Controlling Text-to-Image Diffusion by Orthogonal Finetuning** \
+[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/72033)] 
+[[Website](https://arxiv.org/abs/2306.07280)] 
+[[Project](https://oft.wyliu.com/)] 
+[[Code](https://github.com/Zeju1997/oft)]
+
+**ELITE: Encoding Visual Concepts into Textual Embeddings for Customized Text-to-Image Generation** \
+[[ICCV 2023 Oral](https://openaccess.thecvf.com/content/ICCV2023/html/Wei_ELITE_Encoding_Visual_Concepts_into_Textual_Embeddings_for_Customized_Text-to-Image_ICCV_2023_paper.html)] 
+[[Website](https://arxiv.org/abs/2302.13848)] 
+[[Code](https://github.com/csyxwei/ELITE)]
+
+**A Neural Space-Time Representation for Text-to-Image Personalization** \
+[[SIGGRAPH Asia 2023](https://arxiv.org/abs/2305.15391)] 
+[[Project](https://neuraltextualinversion.github.io/NeTI/)] 
+[[Code](https://github.com/NeuralTextualInversion/NeTI)]
+
+**Is This Loss Informative? Speeding Up Textual Inversion with Deterministic Objective Evaluation** \
+[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71329)] 
+[[Website](https://arxiv.org/abs/2302.04841)] 
+[[Code](https://github.com/yandex-research/DVAR)]
+
+**DreamMatcher: Appearance Matching Self-Attention for Semantically-Consistent Text-to-Image Personalization** \
+[[CVPR 2024](https://arxiv.org/abs/2402.09812)] 
+[[Project](https://ku-cvlab.github.io/DreamMatcher/)] 
+[[Code](https://github.com/KU-CVLAB/DreamMatcher)]
+
+**Direct Consistency Optimization for Compositional Text-to-Image Personalization** \
+[[NeurIPS 2024](https://arxiv.org/abs/2402.12004)] 
+[[Project](https://dco-t2i.github.io/)] 
+[[Code](https://github.com/kyungmnlee/dco)]
+
+**SVDiff: Compact Parameter Space for Diffusion Fine-Tuning** \
+[[ICCV 2023](https://arxiv.org/abs/2303.11305)] 
+[[Project](https://svdiff.github.io/)] 
+[[Code](https://github.com/mkshing/svdiff-pytorch)]
+
+
+**ClassDiffusion: More Aligned Personalization Tuning with Explicit Class Guidance** \
+[[ICLR 2025](https://arxiv.org/abs/2405.17532)] 
+[[Project](https://classdiffusion.github.io/)] 
+[[Code](https://github.com/Rbrq03/ClassDiffusion)]
+
+**DisEnvisioner: Disentangled and Enriched Visual Prompt for Customized Image Generation** \
+[[ICLR 2025](https://arxiv.org/abs/2410.02067)] 
+[[Project](https://disenvisioner.github.io/)] 
+[[Code](https://github.com/EnVision-Research/DisEnvisioner)]
+
+**Subject-Diffusion:Open Domain Personalized Text-to-Image Generation without Test-time Fine-tuning**\
+[[SIGGRAPH 2024](https://arxiv.org/abs/2307.11410)] 
+[[Project](https://oppo-mente-lab.github.io/subject_diffusion/)] 
+[[Code](https://github.com/OPPO-Mente-Lab/Subject-Diffusion)]
+
+**CatVersion: Concatenating Embeddings for Diffusion-Based Text-to-Image Personalization** \
+[[TCSVT 2025](https://arxiv.org/abs/2311.14631)] 
+[[Project](https://royzhao926.github.io/CatVersion-page/)] 
+[[Code](https://github.com/RoyZhao926/CatVersion)]
+
+**AttnDreamBooth: Towards Text-Aligned Personalized Text-to-Image Generation** \
+[[NeurIPS 2024](https://arxiv.org/abs/2406.05000)] 
+[[Project](https://attndreambooth.github.io/)] 
+[[Code](https://github.com/lyuPang/AttnDreamBooth)] 
+
+**AITTI: Learning Adaptive Inclusive Token for Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2406.12805)] 
+[[Project](https://itsmag11.github.io/AITTI/)] 
+[[Code](https://github.com/itsmag11/AITTI)]
+
+**Harmonizing Visual and Textual Embeddings for Zero-Shot Text-to-Image Customization** \
+[[Website](https://arxiv.org/abs/2403.14155)] 
+[[Project](https://ldynx.github.io/harmony-zero-t2i/)] 
+[[Code](https://github.com/ldynx/harmony-zero-t2i)]
+
+**SingleInsert: Inserting New Concepts from a Single Image into Text-to-Image Models for Flexible Editing** \
+[[Website](https://arxiv.org/abs/2310.08094)] 
+[[Project](https://jarrentwu1031.github.io/SingleInsert-web/)] 
+[[Code](https://github.com/JarrentWu1031/SingleInsert)]
+
+**DiffuseKronA: A Parameter Efficient Fine-tuning Method for Personalized Diffusion Model** \
+[[Website](https://arxiv.org/abs/2402.17412)] 
+[[Project](https://diffusekrona.github.io/)] 
+[[Code](https://github.com/IBM/DiffuseKronA)]
+
+**TextBoost: Towards One-Shot Personalization of Text-to-Image Models via Fine-tuning Text Encoder** \
+[[Website](https://arxiv.org/abs/2409.08248)] 
+[[Project](https://textboost.github.io/)] 
+[[Code](https://github.com/nahyeonkaty/textboost)]
+
+**EZIGen: Enhancing zero-shot subject-driven image generation with precise subject encoding and decoupled guidance** \
+[[Website](https://arxiv.org/abs/2409.08091)] 
+[[Project](https://zichengduan.github.io/pages/EZIGen/index.html)] 
+[[Code](https://github.com/ZichengDuan/EZIGen)]
+
+**Cones 2: Customizable Image Synthesis with Multiple Subjects** \
+[[NeurIPS 2023](https://arxiv.org/abs/2305.19327v1)] 
+[[Code](https://github.com/ali-vilab/cones-v2)] 
+
+**Powerful and Flexible: Personalized Text-to-Image Generation via Reinforcement Learning** \
+[[ECCV 2024](https://arxiv.org/abs/2407.06642)] 
+[[Code](https://github.com/wfanyue/DPG-T2I-Personalization)]
+
+**Multiresolution Textual Inversion** \
+[[NeurIPS 2022 workshop](https://arxiv.org/abs/2211.17115)] 
+[[Code](https://github.com/giannisdaras/multires_textual_inversion)]
+
+**Compositional Inversion for Stable Diffusion Models** \
+[[AAAI 2024](https://arxiv.org/abs/2312.08048)] 
+[[Code](https://github.com/zhangxulu1996/Compositional-Inversion)]
+
+**Decoupled Textual Embeddings for Customized Image Generation** \
+[[AAAI 2024](https://arxiv.org/abs/2312.11826)] 
+[[Code](https://github.com/PrototypeNx/DETEX)]
+
+**Cross Initialization for Personalized Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2312.15905)] 
+[[Code](https://github.com/lyupang/crossinitialization)]
+
+
+**ViCo: Detail-Preserving Visual Condition for Personalized Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2306.00971)] 
+[[Code](https://github.com/haoosz/vico)]
+
+**A Closer Look at Parameter-Efficient Tuning in Diffusion Models** \
+[[Website](https://arxiv.org/abs/2311.15478)] 
+[[Code](https://github.com/divyakraman/AerialBooth2023)]
+
+**Controllable Textual Inversion for Personalized Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2304.05265)] 
+[[Code](https://github.com/jnzju/COTI)]
+
+**Beyond Fine-Tuning: A Systematic Study of Sampling Techniques in Personalized Image Generation** \
+[[Website](https://arxiv.org/abs/2502.05895)] 
+
+**Towards More Accurate Personalized Image Generation: Addressing Overfitting and Evaluation Bias** \
+[[Website](https://arxiv.org/abs/2503.06632)] 
+
+
+
+
+# T2I Diffusion Model augmentation
 
 ⭐⭐⭐**Attend-and-Excite: Attention-Based Semantic Guidance for Text-to-Image Diffusion Models** \
 [[SIGGRAPH 2023](https://arxiv.org/abs/2301.13826)] 
@@ -3254,6 +4767,11 @@
 [[Project](https://hcplayercvpr2024.github.io/)] 
 [[Code](https://github.com/hcplayercvpr2024/hcplayer)] 
 
+**Spatial Transport Optimization by Repositioning Attention Map for Training-Free Text-to-Image Synthesis** \
+[[CVPR 2025](https://arxiv.org/abs/2503.22168)] 
+[[Project](https://micv-yonsei.github.io/storm2025/)] 
+[[Code](https://github.com/MICV-yonsei/STORM)] 
+
 **Training Diffusion Models with Reinforcement Learning** \
 [[ICLR 2024](https://arxiv.org/abs/2305.13301)] 
 [[Project](https://rl-diffusion.github.io/)] 
@@ -3264,10 +4782,35 @@
 [[Project](https://sites.google.com/view/divide-and-bind)] 
 [[Code](https://github.com/boschresearch/Divide-and-Bind)] 
 
+**Free-Lunch Color-Texture Disentanglement for Stylized Image Generation** \
+[[Website](https://arxiv.org/abs/2503.14275v1)] 
+[[Project](https://deepffff.github.io/sadis.github.io/)] 
+[[Code](https://github.com/deepffff/SADis)]
+
+**IP-Composer: Semantic Composition of Visual Concepts** \
+[[Website](https://arxiv.org/abs/2502.13951)] 
+[[Project](https://ip-composer.github.io/IP-Composer/)] 
+[[Code](https://github.com/ip-composer/IP-Composer/tree/master)]
+
+**Inference-Time Scaling for Flow Models via Stochastic Generation and Rollover Budget Forcing** \
+[[Website](https://arxiv.org/abs/2503.19385)] 
+[[Project](https://flow-inference-time-scaling.github.io/)] 
+[[Code](https://github.com/KAIST-Visual-AI-Group/Flow-Inference-Time-Scaling)]
+
+**Region-Adaptive Sampling for Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2502.10389)] 
+[[Project](https://microsoft.github.io/RAS/)] 
+[[Code](https://github.com/microsoft/RAS)]
+
 **Make It Count: Text-to-Image Generation with an Accurate Number of Objects** \
 [[Website](https://arxiv.org/abs/2406.10210)] 
 [[Project](https://make-it-count-paper.github.io//)] 
 [[Code](https://github.com/Litalby1/make-it-count)]
+
+**TF-TI2I: Training-Free Text-and-Image-to-Image Generation via Multi-Modal Implicit-Context Learning in Text-to-Image Models** \
+[[Website](https://arxiv.org/abs/2503.15283)] 
+[[Project](https://bluedyee.github.io/TF-TI2I_page/)] 
+[[Code](https://github.com/BlueDyee/TF-TI2I)]
 
 **OmniBooth: Learning Latent Control for Image Synthesis with Multi-modal Instruction** \
 [[Website](https://arxiv.org/abs/2410.04932)] 
@@ -3288,6 +4831,21 @@
 [[Website](https://arxiv.org/abs/2403.07860)] 
 [[Project](https://shihaozhaozsh.github.io/LaVi-Bridge/)] 
 [[Code](https://github.com/ShihaoZhaoZSH/LaVi-Bridge)]
+
+**Aligning Text to Image in Diffusion Models is Easier Than You Think** \
+[[Website](https://arxiv.org/abs/2503.08250)] 
+[[Project](https://softrepa.github.io/)] 
+[[Code](https://github.com/softrepa/SoftREPA)]
+
+**Bokeh Diffusion: Defocus Blur Control in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.08434)] 
+[[Project](https://atfortes.github.io/projects/bokeh-diffusion/)] 
+[[Code](https://github.com/atfortes/BokehDiffusion)]
+
+**Less-to-More Generalization: Unlocking More Controllability by In-Context Generation** \
+[[Website](https://arxiv.org/abs/2504.02160)] 
+[[Project](https://bytedance.github.io/UNO/)] 
+[[Code](https://github.com/bytedance/UNO)]
 
 **MoLE: Enhancing Human-centric Text-to-image Diffusion via Mixture of Low-rank Experts** \
 [[Website](https://arxiv.org/abs/2410.23332)] 
@@ -3343,6 +4901,16 @@
 [[Website](https://arxiv.org/abs/2310.07653)] 
 [[Project](https://minidalle3.github.io/)] 
 [[Code](https://github.com/Zeqiang-Lai/Mini-DALLE3)]
+
+**VMix: Improving Text-to-Image Diffusion Model with Cross-Attention Mixing Control** \
+[[Website](https://arxiv.org/abs/2412.20800)] 
+[[Project](https://vmix-diffusion.github.io/VMix/)] 
+[[Code](https://github.com/fenfenfenfan/VMix)]
+
+**Tiled Diffusion** \
+[[Website](https://arxiv.org/abs/2412.15185)] 
+[[Project](https://madaror.github.io/tiled-diffusion.github.io/)] 
+[[Code](https://github.com/madaror/tiled-diffusion)]
 
 **ScaleCrafter: Tuning-free Higher-Resolution Visual Generation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2310.07702)] 
@@ -3404,6 +4972,11 @@
 [[Project](https://negtome.github.io/)] 
 [[Code](https://github.com/1jsingh/negtome)]
 
+**LDGen: Enhancing Text-to-Image Synthesis via Large Language Model-Driven Language Representation** \
+[[Website](https://arxiv.org/abs/2502.18302)] 
+[[Project](https://zrealli.github.io/LDGen/)] 
+[[Code](https://github.com/zrealli/LDGen)]
+
 **Iterative Object Count Optimization for Text-to-image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2408.11721)] 
 [[Project](https://ozzafar.github.io/count_token/)] 
@@ -3419,6 +4992,11 @@
 [[Project](https://liuxinyv.github.io/HiPrompt/)] 
 [[Code](https://github.com/Liuxinyv/HiPrompt)]
 
+**Towards Transformer-Based Aligned Generation with Self-Coherence Guidance** \
+[[Website](https://arxiv.org/abs/2503.17675)] 
+[[Project](https://scg-diffusion.github.io/scg-diffusion/)] 
+[[Code](https://github.com/wang-shulei/SCG-diffusion-code)]
+
 **Omegance: A Single Parameter for Various Granularities in Diffusion-Based Synthesis** \
 [[Website](https://arxiv.org/abs/2411.17769)] 
 [[Project](https://itsmag11.github.io/Omegance/)] 
@@ -3429,14 +5007,21 @@
 [[Project](https://howe140.github.io/theatergen.io/)] 
 [[Code](https://github.com/donahowe/Theatergen)]
 
-**SUR-adapter: Enhancing Text-to-Image Pre-trained Diffusion Models with Large Language Models** \
-[[ACM MM 2023 Oral](https://arxiv.org/abs/2305.05189)] 
-[[Code](https://github.com/Qrange-group/SUR-adapter)]
+**InPO: Inversion Preference Optimization with Reparametrized DDIM for Efficient Diffusion Model Alignment** \
+[[CVPR 2025](https://arxiv.org/abs/2503.18454)] 
+[[Code](https://github.com/JaydenLyh/InPO)]
 
 **Get What You Want, Not What You Don't: Image Content Suppression for Text-to-Image Diffusion Models** \
 [[ICLR 2024](https://arxiv.org/abs/2402.05375)] 
 [[Code](https://github.com/sen-mao/SuppressEOT)]
 
+**SUR-adapter: Enhancing Text-to-Image Pre-trained Diffusion Models with Large Language Models** \
+[[ACM MM 2023 Oral](https://arxiv.org/abs/2305.05189)] 
+[[Code](https://github.com/Qrange-group/SUR-adapter)]
+
+**Enhancing Creative Generation on Stable Diffusion-based Models** \
+[[CVPR 2025](https://arxiv.org/abs/2503.23538)] 
+[[Code](https://github.com/daheekwon/C3)]
 
 **Token Merging for Training-Free Semantic Binding in Text-to-Image Synthesis** \
 [[NeurIPS 2024](https://arxiv.org/abs/2411.07132)] 
@@ -3459,6 +5044,10 @@
 [[CVPR 2024](https://arxiv.org/abs/2404.04650)] 
 [[Code](https://github.com/xiefan-guo/initno)]
 
+**Towards Better Alignment: Training Diffusion Models with Reinforcement Learning Against Sparse Rewards** \
+[[CVPR 2025](https://arxiv.org/abs/2503.11240)] 
+[[Code](https://github.com/hu-zijing/B2-DiffuRL)]
+
 **Object-Conditioned Energy-Based Attention Map Alignment in Text-to-Image Diffusion Models** \
 [[ECCV 2024](https://arxiv.org/abs/2404.07389)] 
 [[Code](https://github.com/YasminZhang/EBAMA/tree/master)]
@@ -3479,6 +5068,10 @@
 [[NeurIPS 2023](https://arxiv.org/abs/2305.16381)] 
 [[Code](https://github.com/google-research/google-research/tree/master/dpok)]
 
+**Training-free Dense-Aligned Diffusion Guidance for Modular Conditional Image Synthesis** \
+[[Website](https://arxiv.org/abs/2504.01515)] 
+[[Code](https://github.com/ZixuanWang0525/DADG)]
+
 **Diffusion Model Alignment Using Direct Preference Optimization** \
 [[Website](https://arxiv.org/abs/2311.12908)] 
 [[Code](https://github.com/SalesforceAIResearch/DiffusionDPO)]
@@ -3490,6 +5083,10 @@
 **Bridging the Gap: Aligning Text-to-Image Diffusion Models with Specific Feedback** \
 [[Website](https://arxiv.org/abs/2412.00122)] 
 [[Code](https://github.com/kingniu0329/Visions)]
+
+**Zigzag Diffusion Sampling: The Path to Success Is Zigzag** \
+[[Website](https://arxiv.org/abs/2412.10891)] 
+[[Code](https://github.com/xie-lab-ml/Zigzag-Diffusion-Sampling)]
 
 **Prompt-Consistency Image Generation (PCIG): A Unified Framework Integrating LLMs, Knowledge Graphs, and Controllable Diffusion Models** \
 [[Website](https://arxiv.org/abs/2406.16333)] 
@@ -3511,6 +5108,10 @@
 [[Website](https://arxiv.org/abs/2409.03644)] 
 [[Code](https://github.com/Wangbenzhi/RealisHuman)]
 
+**Fine-Grained Alignment and Noise Refinement for Compositional Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2503.06506)] 
+[[Code](https://github.com/hadi-hosseini/noise-refinement)]
+
 **Aggregation of Multi Diffusion Models for Enhancing Learned Representations** \
 [[Website](https://arxiv.org/abs/2410.01262)] 
 [[Code](https://github.com/hammour-steak/amdm)]
@@ -3531,6 +5132,18 @@
 [[Website](https://arxiv.org/abs/2308.13785)] 
 [[Code](https://github.com/kodenii/ores)]
 
+**Rewards Are Enough for Fast Photo-Realistic Text-to-image Generation** \
+[[Website](https://arxiv.org/abs/2503.13070)] 
+[[Code](https://github.com/Luo-Yihong/R0)]
+
+**Diffusion Model as a Noise-Aware Latent Reward Model for Step-Level Preference Optimization** \
+[[Website](https://arxiv.org/abs/2502.01051)] 
+[[Code](https://github.com/casiatao/LPO)]
+
+**Alignment without Over-optimization: Training-Free Solution for Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.05803)] 
+[[Code](https://github.com/krafton-ai/DAS)]
+
 **Fair Diffusion: Instructing Text-to-Image Generation Models on Fairness** \
 [[Website](https://arxiv.org/abs/2302.10893)] 
 [[Code](https://github.com/ml-research/fair-diffusion)]
@@ -3547,6 +5160,9 @@
 [[Website](https://arxiv.org/abs/2410.07157)] 
 [[Code](https://github.com/PeterGriffinJin/InstructG2I)]
 
+**Diffusion-Sharpening: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening** \
+[[Website](https://arxiv.org/abs/2502.12146)] 
+[[Code](https://github.com/Gen-Verse/Diffusion-Sharpening)]
 
 **Detector Guidance for Multi-Object Text-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2306.02236)] 
@@ -3560,6 +5176,9 @@
 [[Website](https://arxiv.org/abs/2307.10159)] 
 [[Code](https://github.com/sd-fabric/fabric)]
 
+**IPGO: Indirect Prompt Gradient Optimization on Text-to-Image Generative Models with High Data Efficiency** \
+[[Website](https://arxiv.org/abs/2503.21812)] 
+[[Code](https://github.com/Demos750/IPGO)] 
 
 **Prompt-Free Diffusion: Taking "Text" out of Text-to-Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2305.16223)] 
@@ -3581,9 +5200,21 @@
 [[Website](https://arxiv.org/abs/2305.13308)] 
 [[Code](https://github.com/ExplainableML/ImageSelect)]
 
+**CoMPaSS: Enhancing Spatial Understanding in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2412.13195)] 
+[[Code](https://github.com/blurgyy/CoMPaSS)]
+
+**LayerCraft: Enhancing Text-to-Image Generation with CoT Reasoning and Layered Object Integration** \
+[[Website](https://arxiv.org/abs/2504.00010)] 
+[[Code](https://github.com/PeterYYZhang/LayerCraft)]
+
 **LLM Blueprint: Enabling Text-to-Image Generation with Complex and Detailed Prompts** \
 [[Website](https://arxiv.org/abs/2310.10640)] 
 [[Code](https://github.com/hananshafi/llmblueprint)]
+
+**A General Framework for Inference-time Scaling and Steering of Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.06848)] 
+[[Code](https://github.com/zacharyhorvitz/Fk-Diffusion-Steering)]
 
 **Making Multimodal Generation Easier: When Diffusion Models Meet LLMs** \
 [[Website](https://arxiv.org/abs/2310.08949)] 
@@ -3605,6 +5236,10 @@
 [[Website](https://arxiv.org/abs/2303.13703)] 
 [[Code](https://github.com/salesforce/doodl)]
 
+**ReNeg: Learning Negative Embedding with Reward Guidance** \
+[[Website](https://arxiv.org/abs/2412.19637)] 
+[[Code](https://github.com/LemonTwoL/ReNeg)]
+
 **Correcting Diffusion Generation through Resampling** \
 [[Website](https://arxiv.org/abs/2312.06038)] 
 [[Code](https://github.com/ucsb-nlp-chang/diffusion_resampling)]
@@ -3620,6 +5255,10 @@
 **A User-Friendly Framework for Generating Model-Preferred Prompts in Text-to-Image Synthesis** \
 [[Website](https://arxiv.org/abs/2402.12760)] 
 [[Code](https://github.com/naylenv/uf-fgtg)] 
+
+**Follow the Flow: On Information Flow Across Textual Tokens in Text-to-Image Models** \
+[[Website](https://arxiv.org/abs/2504.01137)] 
+[[Code](https://github.com/tokeron/lens)] 
 
 **PromptCharm: Text-to-Image Generation through Multi-modal Prompting and Refinement** \
 [[Website](https://arxiv.org/abs/2403.04014)] 
@@ -3637,17 +5276,41 @@
 [[Website](https://arxiv.org/abs/2411.11727)] 
 [[Code](https://github.com/ZiyiZhang27/sdpo)] 
 
+**VPO: Aligning Text-to-Video Generation Models with Prompt Optimization** \
+[[Website](https://arxiv.org/abs/2503.20491)] 
+[[Code](https://github.com/thu-coai/VPO)] 
+
 **LightIt: Illumination Modeling and Control for Diffusion Models** \
 [[CVPR 2024](https://arxiv.org/abs/2403.10615)] 
 [[Project](https://peter-kocsis.github.io/LightIt/)] 
+
+**Compass Control: Multi Object Orientation Control for Text-to-Image Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2504.06752)] 
+[[Project](https://rishubhpar.github.io/compasscontrol/)] 
 
 **Adapting Diffusion Models for Improved Prompt Compliance and Controllable Image Synthesis** \
 [[NeurIPS 2024](https://arxiv.org/abs/2410.21638)] 
 [[Project](https://deepaksridhar.github.io/factorgraphdiffusion.github.io/)] 
 
+**Hummingbird: High Fidelity Image Generation via Multimodal Context Alignment** \
+[[ICLR 2025](https://arxiv.org/abs/2502.05153)] 
+[[Project](https://roar-ai.github.io/hummingbird/)] 
+
+**Leveraging Semantic Attribute Binding for Free-Lunch Color Control in Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.09864)] 
+[[Project](https://hecoding.github.io/colorwave-page/)] 
+
+**Context Canvas: Enhancing Text-to-Image Diffusion Models with Knowledge Graph-Based RAG** \
+[[Website](https://arxiv.org/abs/2412.09614)] 
+[[Project](https://context-canvas.github.io/)] 
+
 **Scalable Ranked Preference Optimization for Text-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2410.18013)] 
 [[Project](https://snap-research.github.io/RankDPO/)] 
+
+**PreciseCam: Precise Camera Control for Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2501.12910)] 
+[[Project](https://graphics.unizar.es/projects/PreciseCam2024/)] 
 
 **A Noise is Worth Diffusion Guidance** \
 [[Website](https://arxiv.org/abs/2412.03895)] 
@@ -3657,6 +5320,10 @@
 [[Website](https://arxiv.org/abs/2412.04460)] 
 [[Project](https://layerfusion.github.io/)] 
 
+**DreamLayer: Simultaneous Multi-Layer Generation via Diffusion Mode** \
+[[Website](https://arxiv.org/abs/2503.12838)] 
+[[Project](https://ll3rd.github.io/DreamLayer/)] 
+
 **ComfyGen: Prompt-Adaptive Workflows for Text-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2410.01731)] 
 [[Project](https://comfygen-paper.github.io/)] 
@@ -3664,6 +5331,10 @@
 **LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2407.00737)] 
 [[Project](https://xiaobul.github.io/LLM4GEN/)] 
+
+**MotiF: Making Text Count in Image Animation with Motion Focal Loss** \
+[[Website](https://arxiv.org/abs/2412.16153)] 
+[[Project](https://wang-sj16.github.io/motif/)] 
 
 **RefDrop: Controllable Consistency in Image or Video Generation via Reference Feature Guidance** \
 [[Website](https://arxiv.org/abs/2405.17661)] 
@@ -3688,6 +5359,10 @@
 **Semantic Guidance Tuning for Text-To-Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2312.15964)] 
 [[Project](https://korguy.github.io/)] 
+
+**ORIGEN: Zero-Shot 3D Orientation Grounding in Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2503.22194)] 
+[[Project](https://origen2025.github.io/)] 
 
 **Amazing Combinatorial Creation: Acceptable Swap-Sampling for Text-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2310.01819)] 
@@ -3744,6 +5419,30 @@
 **Generating Compositional Scenes via Text-to-image RGBA Instance Generation** \
 [[NeurIPS 2024](https://arxiv.org/abs/2411.10913)]
 
+**DiffExp: Efficient Exploration in Reward Fine-tuning for Text-to-Image Diffusion Models** \
+[[AAAI 2025](https://arxiv.org/abs/2502.14070)] 
+
+**T2ICount: Enhancing Cross-modal Understanding for Zero-Shot Counting** \
+[[CVPR 2025](https://arxiv.org/abs/2502.04412)] 
+
+**Investigating and Improving Counter-Stereotypical Action Relation in Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.10037)] 
+
+**PLADIS: Pushing the Limits of Attention in Diffusion Models at Inference Time by Leveraging Sparsity** \
+[[Website](https://arxiv.org/abs/2503.07677)] 
+
+**ROCM: RLHF on consistency models** \
+[[Website](https://arxiv.org/abs/2503.06171)] 
+
+**A Simple and Effective Reinforcement Learning Method for Text-to-Image Diffusion Fine-tuning** \
+[[Website](https://arxiv.org/abs/2503.00897)] 
+
+**DiffBrush:Just Painting the Art by Your Hands** \
+[[Website](https://arxiv.org/abs/2502.20904)] 
+
+**Decoder-Only LLMs are Better Controllers for Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.04412)] 
+
 **A Cat Is A Cat (Not A Dog!): Unraveling Information Mix-ups in Text-to-Image Encoders through Causal Analysis and Embedding Optimization** \
 [[Website](https://arxiv.org/abs/2410.00321)] 
 
@@ -3789,6 +5488,17 @@
 **UNIMO-G: Unified Image Generation through Multimodal Conditional Diffusion** \
 [[Website](https://arxiv.org/abs/2401.13388)] 
 
+**Heterogeneous Image GNN: Graph-Conditioned Diffusion for Image Synthesis** \
+[[Website](https://arxiv.org/abs/2502.01309)] 
+
+**RealRAG: Retrieval-augmented Realistic Image Generation via Self-reflective Contrastive Learning** \
+[[Website](https://arxiv.org/abs/2502.00848)] 
+
+**Zeroth-order Informed Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio Optimizer** \
+[[Website](https://arxiv.org/abs/2502.00639)] 
+
+**Weak-to-Strong Diffusion with Reflection** \
+[[Website](https://arxiv.org/abs/2502.00473)] 
 
 **Improving Compositional Text-to-image Generation with Large Vision-Language Models** \
 [[Website](https://arxiv.org/abs/2310.06311)] 
@@ -3967,6 +5677,54 @@
 **BudgetFusion: Perceptually-Guided Adaptive Diffusion Models** \
 [[Website](https://arxiv.org/abs/2412.05780)] 
 
+**ArtAug: Enhancing Text-to-Image Generation through Synthesis-Understanding Interaction** \
+[[Website](https://arxiv.org/abs/2412.12888)] 
+
+**TextMatch: Enhancing Image-Text Consistency Through Multimodal Optimization** \
+[[Website](https://arxiv.org/abs/2412.18185)] 
+
+**Personalized Preference Fine-tuning of Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.06655)] 
+
+**Focus-N-Fix: Region-Aware Fine-Tuning for Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2501.06481)] 
+
+**Fine-Tuning Discrete Diffusion Models with Policy Gradient Methods** \
+[[Website](https://arxiv.org/abs/2502.01384)] 
+
+**Calibrated Multi-Preference Optimization for Aligning Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.02588)] 
+
+**Score as Action: Fine-Tuning Diffusion Generative Models by Continuous-time Reinforcement Learning** \
+[[Website](https://arxiv.org/abs/2502.01819)] 
+
+**IPO: Iterative Preference Optimization for Text-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2502.02088)] 
+
+**Dual Caption Preference Optimization for Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.06023)] 
+
+**Generating on Generated: An Approach Towards Self-Evolving Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.09963)] 
+
+**CHATS: Combining Human-Aligned Optimization and Test-Time Sampling for Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2502.12579)] 
+
+**Fine-Tuning Diffusion Generative Models via Rich Preference Optimization** \
+[[Website](https://arxiv.org/abs/2503.11720)] 
+
+**Reflect-DiT: Inference-Time Scaling for Text-to-Image Diffusion Transformers via In-Context Reflection** \
+[[Website](https://arxiv.org/abs/2503.12271)] 
+
+**When Preferences Diverge: Aligning Diffusion Models with Minority-Aware Adaptive DPO** \
+[[Website](https://arxiv.org/abs/2503.16921)] 
+
+**Reverse Prompt: Cracking the Recipe Inside Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2503.19937)] 
+
+**On Geometrical Properties of Text Token Embeddings for Strong Semantic Binding in Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2503.23011)] 
+
 
 
 ## Spatial Control
@@ -4069,6 +5827,11 @@
 [[Project](https://roictrl.github.io/)] 
 [[Code](https://github.com/showlab/ROICtrl)]
 
+**PlanGen: Towards Unified Layout Planning and Image Generation in Auto-Regressive Vision Language Models** \
+[[Website](https://arxiv.org/abs/2503.10127)] 
+[[Project](https://360cvgroup.github.io/PlanGen/)] 
+[[Code](https://github.com/360CVGroup/PlanGen)]
+
 **CreatiLayout: Siamese Multimodal Diffusion Transformer for Creative Layout-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2412.03859)] 
 [[Project](https://creatilayout.github.io/)] 
@@ -4088,6 +5851,11 @@
 [[Website](https://arxiv.org/abs/2211.01324)] 
 [[Project](https://research.nvidia.com/labs/dir/eDiff-I/)] 
 [[Code](https://github.com/cloneofsimo/paint-with-words-sd)]
+
+**DreamRenderer: Taming Multi-Instance Attribute Control in Large-Scale Text-to-Image Models** \
+[[Website](https://arxiv.org/abs/2503.12885)] 
+[[Project](https://limuloo.github.io/DreamRenderer/)] 
+[[Code](https://github.com/limuloo/DreamRenderer)]
 
 **LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2304.03373)] 
@@ -4124,6 +5892,11 @@
 [[Project](https://people.eecs.berkeley.edu/~xdwang/projects/InstDiff/)] 
 [[Code](https://github.com/frank-xwang/InstanceDiffusion)]
 
+**3DIS-FLUX: simple and efficient multi-instance generation with DiT rendering** \
+[[Website](https://arxiv.org/abs/2501.05131)] 
+[[Project](https://limuloo.github.io/3DIS/)] 
+[[Code](https://github.com/limuloo/3DIS)]
+
 **Coarse-to-Fine Latent Diffusion for Pose-Guided Person Image Synthesis** \
 [[CVPR 2024](https://arxiv.org/abs/2402.18078)] 
 [[Code](https://github.com/YanzuoLu/CFLD)]
@@ -4131,6 +5904,10 @@
 **NoiseCollage: A Layout-Aware Text-to-Image Diffusion Model Based on Noise Cropping and Merging** \
 [[CVPR 2024](https://arxiv.org/abs/2403.03485)] 
 [[Code](https://github.com/univ-esuty/noisecollage)]
+
+**VerbDiff: Text-Only Diffusion Models with Enhanced Interaction Awareness** \
+[[CVPR 2025](https://arxiv.org/abs/2503.164065)] 
+[[Code](https://github.com/SeungJuCha/VerbDiffe)]
 
 **Masked-Attention Diffusion Guidance for Spatially Controlling Text-to-Image Generation** \
 [[Website](https://arxiv.org/abs/2308.06027)] 
@@ -4143,6 +5920,10 @@
 **Enhancing Object Coherence in Layout-to-Image Synthesis** \
 [[Website](https://arxiv.org/abs/2311.10522)] 
 [[Code](https://github.com/CodeGoat24/EOCNet)]
+
+**ToLo: A Two-Stage, Training-Free Layout-To-Image Generation Framework For High-Overlap Layouts** \
+[[Website](https://arxiv.org/abs/2503.01667)] 
+[[Code](https://github.com/misaka12435/ToLo)]
 
 **Training-free Regional Prompting for Diffusion Transformers** \
 [[Website](https://arxiv.org/abs/2411.02395)] 
@@ -4164,6 +5945,9 @@
 [[Website](https://arxiv.org/abs/2410.14324)] 
 [[Code](https://github.com/360CVGroup/HiCo_T2I)]
 
+**StageDesigner: Artistic Stage Generation for Scenography via Theater Scripts** \
+[[CVPR 2025](https://arxiv.org/abs/2503.02595)] 
+[[Project](https://deadsmither5.github.io/2025/01/03/StageDesigner/#)] 
 
 **Layered Rendering Diffusion Model for Zero-Shot Guided Image Synthesis** \
 [[ECCV 2024](https://arxiv.org/abs/2311.18435)] 
@@ -4232,6 +6016,9 @@
 **Composite Diffusion | whole >= \Sigma parts** \
 [[Website](https://arxiv.org/abs/2307.13720)] 
 
+**SketchFlex: Facilitating Spatial-Semantic Coherence in Text-to-Image Generation with Region-Based Sketches** \
+[[Website](https://arxiv.org/abs/2502.07556)] 
+
 **Continuous Layout Editing of Single Images with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2306.13078)] 
 
@@ -4240,6 +6027,9 @@
 
 **Obtaining Favorable Layouts for Multiple Object Generation** \
 [[Website](https://arxiv.org/abs/2405.00791)] 
+
+**EliGen: Entity-Level Controlled Image Generation with Regional Attention** \
+[[Website](https://arxiv.org/abs/2501.01097)] 
 
 **LoCo: Locally Constrained Training-Free Layout-to-Image Synthesis**\
 [[Website](https://arxiv.org/abs/2311.12342)] 
@@ -4280,8 +6070,27 @@
 **Region-Aware Text-to-Image Generation via Hard Binding and Soft Refinement** \
 [[Website](https://arxiv.org/abs/2411.06558)] 
 
+**Test-time Controllable Image Generation by Explicit Spatial Constraint Enforcement** \
+[[Website](https://arxiv.org/abs/2501.01368)] 
 
-## I2I translation
+**Grounding Text-To-Image Diffusion Models For Controlled High-Quality Image Generation** \
+[[Website](https://arxiv.org/abs/2501.09194)] 
+
+**ComposeAnyone: Controllable Layout-to-Human Generation with Decoupled Multimodal Conditions** \
+[[Website](https://arxiv.org/abs/2501.09194)] 
+
+**Consistent Image Layout Editing with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.06419)] 
+
+**STAY Diffusion: Styled Layout Diffusion Model for Diverse Layout-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2503.12213)] 
+
+**Efficient Multi-Instance Generation with Janus-Pro-Dirven Prompt Parsing** \
+[[Website](https://arxiv.org/abs/2503.21069)] 
+
+
+
+# I2I translation
 
 ⭐⭐⭐**SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations** \
 [[ICLR 2022](https://openreview.net/forum?id=aBsCjcPu_tE)] 
@@ -4427,6 +6236,10 @@
 [[Website](https://arxiv.org/abs/2408.03558)] 
 [[Code](https://github.com/Onkarsus13/D2Styler)] 
 
+**Single-Step Bidirectional Unpaired Image Translation Using Implicit Bridge Consistency Distillation** \
+[[Website](https://arxiv.org/abs/2503.15056)] 
+[[Project](https://hyn2028.github.io/project_page/IBCD/index.html)] 
+
 **StyleDiffusion: Controllable Disentangled Style Transfer via Diffusion Models** \
 [[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Wang_StyleDiffusion_Controllable_Disentangled_Style_Transfer_via_Diffusion_Models_ICCV_2023_paper.html)]
 [[Website](https://arxiv.org/abs/2308.07863)]
@@ -4461,11 +6274,18 @@
 **Latent Schrodinger Bridge: Prompting Latent Diffusion for Fast Unpaired Image-to-Image Translation** \
 [[Website](https://arxiv.org/abs/2411.14863)]
 
+**A Diffusion Model Translator for Efficient Image-to-Image Translation** \
+[[Website](https://arxiv.org/abs/2502.00307)]
+
+**Bidirectional Diffusion Bridge Models** \
+[[Website](https://arxiv.org/abs/2502.09655)]
+
+**LBM: Latent Bridge Matching for Fast Image-to-Image Translation** \
+[[Website](https://arxiv.org/abs/2503.07535)]
 
 
 
-
-## Segmentation Detection Tracking
+# Segmentation Detection Tracking
 **odise: open-vocabulary panoptic segmentation with text-to-image diffusion modelss** \
 [[CVPR 2023 Highlight](https://arxiv.org/abs/2303.04803)] 
 [[Project](https://jerryxu.net/ODISE/)] 
@@ -4541,6 +6361,11 @@
 [[Project](https://segment-me-in-time.github.io/)] 
 [[Code](https://github.com/alimohammadiamirhossein/smite/)]
 
+**Studying Image Diffusion Features for Zero-Shot Video Object Segmentation** \
+[[Website](https://arxiv.org/abs/2504.05468)] 
+[[Project](https://diff-zsvos.compute.dtu.dk/)] 
+[[Code](https://github.com/thanosDelatolas/diff-zvos)]
+
 **Unsupervised Modality Adaptation with Text-to-Image Diffusion Models for Semantic Segmentation** \
 [[NeurIPS 2024](https://arxiv.org/abs/2410.21708)] 
 [[Code](https://github.com/XiaRho/MADM)]
@@ -4613,6 +6438,10 @@
 **No Annotations for Object Detection in Art through Stable Diffusion** \
 [[Website](https://arxiv.org/abs/2412.06286)] 
 [[Code](https://github.com/patrick-john-ramos/nada)]
+
+**PDDM: Pseudo Depth Diffusion Model for RGB-PD Semantic Segmentation Based in Complex Indoor Scenes** \
+[[Website](https://arxiv.org/abs/2503.18393)] 
+[[Code](https://github.com/Oleki-xxh/PDDM)]
 
 **EmerDiff: Emerging Pixel-level Semantic Knowledge in Diffusion Models** \
 [[ICLR 2024](https://openreview.net/forum?id=YqyTXmF8Y2)]
@@ -4731,9 +6560,12 @@
 **Panoptic Diffusion Models: co-generation of images and segmentation maps** \
 [[Website](https://arxiv.org/abs/2412.02929)] 
 
+**Tuning-Free Amodal Segmentation via the Occlusion-Free Bias of Inpainting Models** \
+[[Website](https://arxiv.org/abs/2503.18947)] 
 
 
-## Additional conditions 
+
+# Additional conditions 
 
 ⭐⭐⭐**Adding Conditional Control to Text-to-Image Diffusion Models** \
 [[ICCV 2023 best paper](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html)] 
@@ -4840,6 +6672,10 @@
 [[Project](https://alonzoleeeooo.github.io/LCDG/)] 
 [[Code](https://github.com/AlonzoLeeeooo/LCDG)]
 
+**PixelPonder: Dynamic Patch Adaptation for Enhanced Multi-Conditional Text-to-Image Generation** \
+[[Website](https://arxiv.org/abs/2503.06684)] 
+[[Project](https://hithqd.github.io/projects/PixelPonder/)] 
+[[Code](https://github.com/chfyfr/PixelPonder)]
 
 **Composer: Creative and controllable image synthesis with composable conditions** \
 [[Website](https://arxiv.org/abs/2302.09778)] 
@@ -4900,6 +6736,10 @@
 [[CVPR 2024](https://arxiv.org/abs/2403.07234)] 
 [[Code](https://github.com/subhadeepkoley/DemoSketch2RGB)]
 
+**VersaGen: Unleashing Versatile Visual Control for Text-to-Image Synthesis** \
+[[AAAI 2025](https://arxiv.org/abs/2412.11594)] 
+[[Code](https://github.com/FelixChan9527/VersaGen_official)]
+
 **CtrLoRA: An Extensible and Efficient Framework for Controllable Image Generation** \
 [[Website](https://arxiv.org/abs/2410.09400)] 
 [[Code](https://github.com/xyfJASON/ctrlora)]
@@ -4916,6 +6756,10 @@
 [[Website](https://arxiv.org/abs/2312.01255)] 
 [[Code](https://github.com/JunjieYang97/Meta-ControlNet)]
 
+**EasyControl: Adding Efficient and Flexible Control for Diffusion Transformer** \
+[[Website](https://arxiv.org/abs/2503.07027)] 
+[[Code](https://github.com/Xiaojiu-z/EasyControl)]
+
 **Local Conditional Controlling for Text-to-Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2312.08768)] 
 [[Code](https://github.com/YibooZhao/Local-Control)]
@@ -4931,6 +6775,14 @@
 **OminiControl: Minimal and Universal Control for Diffusion Transformer** \
 [[Website](https://arxiv.org/abs/2411.15098)] 
 [[Code](https://github.com/Yuanshi9815/OminiControl)]
+
+**OminiControl2: Efficient Conditioning for Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2503.08280)] 
+[[Code](https://github.com/Yuanshi9815/OminiControl)]
+
+**UniCombine: Unified Multi-Conditional Combination with Diffusion Transformer** \
+[[Website](https://arxiv.org/abs/2503.09277)] 
+[[Code](https://github.com/Xuan-World/UniCombine)]
 
 **Modulating Pretrained Diffusion Models for Multimodal Image Synthesis** \
 [[SIGGRAPH 2023](https://arxiv.org/abs/2302.12764)] 
@@ -4980,6 +6832,19 @@
 [[Website](https://arxiv.org/abs/2406.18958)] 
 [[Project](https://any-control.github.io/)] 
 
+**EditAR: Unified Conditional Generation with Autoregressive Models** \
+[[Website](https://arxiv.org/abs/2501.04699)] 
+[[Project](https://jitengmu.github.io/EditAR/)] 
+
+**DC-ControlNet: Decoupling Inter- and Intra-Element Conditions in Image Generation with Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.14779)] 
+[[Project](https://um-lab.github.io/DC-ControlNet/)] 
+
+**RelaCtrl: Relevance-Guided Efficient Control for Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2502.14377)] 
+[[Project](https://relactrl.github.io/RelaCtrl/)] 
+
+
 **Sketch-Guided Scene Image Generation** \
 [[Website](https://arxiv.org/abs/2407.06469)] 
 
@@ -5019,7 +6884,20 @@
 **Label-free Neural Semantic Image Synthesis** \
 [[Website]](https://arxiv.org/abs/2407.01790) 
 
-## Few-Shot 
+**UNIC-Adapter: Unified Image-instruction Adapter with Multi-modal Transformer for Image Generation** \
+[[Website]](https://arxiv.org/abs/2412.18928) 
+
+**FlexControl: Computation-Aware ControlNet with Differentiable Router for Text-to-Image Generation** \
+[[Website]](https://arxiv.org/abs/2502.10451) 
+
+**Adding Additional Control to One-Step Diffusion with Joint Distribution Matching** \
+[[Website]](https://arxiv.org/abs/2503.06652) 
+
+**UniCon: Unidirectional Information Flow for Effective Control of Large-Scale Diffusion Models** \
+[[Website]](https://arxiv.org/abs/2503.17221) 
+
+
+# Few-Shot 
 **Discriminative Diffusion Models as Few-shot Vision and Language Learners** \
 [[Website](https://arxiv.org/abs/2305.10722)] 
 [[Code](https://github.com/eric-ai-lab/dsd)]
@@ -5046,7 +6924,7 @@
 [[Website](https://arxiv.org/abs/2411.04987)] 
 
 
-## SD-inpaint
+# SD-inpaint
 
 **Paint by Example: Exemplar-based Image Editing with Diffusion Models** \
 [[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Yang_Paint_by_Example_Exemplar-Based_Image_Editing_With_Diffusion_Models_CVPR_2023_paper.html
@@ -5073,6 +6951,11 @@
 [[Project](https://omriavrahami.com/blended-latent-diffusion-page/)]
 [[Code](https://github.com/omriav/blended-latent-diffusion)]
 
+**CLIPAway: Harmonizing Focused Embeddings for Removing Objects via Diffusion Models** \
+[[NeurIPS 2024](https://arxiv.org/abs/2406.09368)] 
+[[Project](https://yigitekin.github.io/CLIPAway/)]
+[[Code](https://github.com/YigitEkin/CLIPAway)] 
+
 **TF-ICON: Diffusion-Based Training-Free Cross-Domain Image Composition** \
 [[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Lu_TF-ICON_Diffusion-Based_Training-Free_Cross-Domain_Image_Composition_ICCV_2023_paper.html)] 
 [[Website](https://arxiv.org/abs/2307.12493)] 
@@ -5095,6 +6978,7 @@
 [[Project](https://pilot-page.github.io/)] 
 [[Code](https://github.com/Lingzhi-Pan/PILOT)]
 
+
 **Inst-Inpaint: Instructing to Remove Objects with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2304.03246)] 
 [[Project](http://instinpaint.abyildirim.com/)] 
@@ -5106,15 +6990,20 @@
 [[Project](https://anywheremultiagent.github.io/)]
 [[Code](https://github.com/Sealical/anywhere-multi-agent)] 
 
-**CLIPAway: Harmonizing Focused Embeddings for Removing Objects via Diffusion Models** \
-[[Website](https://arxiv.org/abs/2406.09368)] 
-[[Project](https://yigitekin.github.io/CLIPAway/)]
-[[Code](https://github.com/YigitEkin/CLIPAway)] 
-
 **AnyDoor: Zero-shot Object-level Image Customization** \
 [[Website](https://arxiv.org/abs/2307.09481)] 
 [[Project](https://damo-vilab.github.io/AnyDoor-Page/)]
 [[Code](https://github.com/damo-vilab/AnyDoor)] 
+
+**Affordance-Aware Object Insertion via Mask-Aware Dual Diffusion** \
+[[Website](https://arxiv.org/abs/2412.14462)] 
+[[Project](https://kakituken.github.io/affordance-any.github.io/)] 
+[[Code](https://github.com/KaKituken/affordance-aware-any)]
+
+**MTV-Inpaint: Multi-Task Long Video Inpainting** \
+[[Website](https://arxiv.org/abs/2503.11412)] 
+[[Project](https://mtv-inpaint.github.io/)] 
+[[Code](https://github.com/ysy31415/MTV-Inpaint)]
 
 **A Task is Worth One Word: Learning with Task Prompts for High-Quality Versatile Image Inpainting** \
 [[Website](https://arxiv.org/abs/2312.03594)] 
@@ -5153,14 +7042,25 @@
 [[ACM MM 2022](https://arxiv.org/abs/2209.08217)] 
 [[Code](https://github.com/htyjers/DGTS-Inpainting)]
 
+**PIXELS: Progressive Image Xemplar-based Editing with Latent Surgery** \
+[[AAAI 2025](https://arxiv.org/abs/2501.09826)] 
+[[Code](https://github.com/amazon-science/pixels)]
+
 **ControlEdit: A MultiModal Local Clothing Image Editing Method** \
 [[Website](https://arxiv.org/abs/2409.14720)] 
 [[Code](https://github.com/cd123-cd/ControlEdit)]
+
+**CA-Edit: Causality-Aware Condition Adapter for High-Fidelity Local Facial Attribute Editing** \
+[[Website](https://arxiv.org/abs/2412.13565)] 
+[[Code](https://github.com/connorxian/CA-Edit)] 
 
 **DreamMix: Decoupling Object Attributes for Enhanced Editability in Customized Image Inpainting** \
 [[Website](https://arxiv.org/abs/2411.17223)] 
 [[Code](https://github.com/mycfhs/DreamMix)] 
 
+**Attentive Eraser: Unleashing Diffusion Model's Object Removal Potential via Self-Attention Redirection Guidance** \
+[[Website](https://arxiv.org/abs/2412.12974)] 
+[[Code](https://github.com/Anonym0u3/AttentiveEraser)]
 
 **Training-and-prompt-free General Painterly Harmonization Using Image-wise Attention Sharing** \
 [[Website](https://arxiv.org/abs/2404.12900)] 
@@ -5169,6 +7069,10 @@
 **What to Preserve and What to Transfer: Faithful, Identity-Preserving Diffusion-based Hairstyle Transfer** \
 [[Website](https://arxiv.org/abs/2408.16450)] 
 [[Code](https://github.com/cychungg/HairFusion)]
+
+**A Large-scale AI-generated Image Inpainting Benchmark** \
+[[Website](https://arxiv.org/abs/2502.06593)] 
+[[Code](https://github.com/mever-team/DiQuID)]
 
 **Diffree: Text-Guided Shape Free Object Inpainting with Diffusion Model** \
 [[Website](https://arxiv.org/abs/2407.16982)] 
@@ -5222,6 +7126,14 @@
 [[Website](https://arxiv.org/abs/2409.10090)] 
 [[Code](https://github.com/weijing-tao/MotionCom)] 
 
+**Yuan: Yielding Unblemished Aesthetics Through A Unified Network for Visual Imperfections Removal in Generated Images** \
+[[Website](https://arxiv.org/abs/2501.08505)] 
+[[Code](https://github.com/YuZhenyuLindy/Yuan)] 
+
+**OmniPaint: Mastering Object-Oriented Editing via Disentangled Insertion-Removal Inpainting** \
+[[Website](https://arxiv.org/abs/2503.08677)] 
+[[Code](https://github.com/yeates/OmniPaint-Page/)] 
+
 **AddMe: Zero-shot Group-photo Synthesis by Inserting People into Scenes** \
 [[ECCV 2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03028.pdf)] 
 [[Project](https://addme-awesome.github.io/page/)]
@@ -5238,13 +7150,29 @@
 [[SIGGRAPH 2024](https://arxiv.org/abs/2407.21017)] 
 [[Project](https://lightchaserx.github.io/matting-by-generation/)]
 
+**TurboFill: Adapting Few-step Text-to-image Model for Fast Image Inpainting** \
+[[CVPR 2025](https://arxiv.org/abs/2504.00996)] 
+[[Project](https://liangbinxie.github.io/projects/TurboFill/)]
+
 **PrefPaint: Aligning Image Inpainting Diffusion Model with Human Preference** \
 [[NeurIPS 2024](https://arxiv.org/abs/2407.21017)] 
 [[Project](https://prefpaint.github.io/)]
 
+**Get In Video: Add Anything You Want to the Video** \
+[[Website](https://arxiv.org/abs/2503.06268)] 
+[[Project](https://zhuangshaobin.github.io/GetInVideo-project/)]
+
 **Taming Latent Diffusion Model for Neural Radiance Field Inpainting** \
 [[Website](https://arxiv.org/abs/2404.09995)] 
 [[Project](https://hubert0527.github.io/MALD-NeRF/)]
+
+**VideoAnydoor: High-fidelity Video Object Insertion with Precise Motion Control** \
+[[Website](https://arxiv.org/abs/2501.01427)] 
+[[Project](https://videoanydoor.github.io/)]
+
+**CorrFill: Enhancing Faithfulness in Reference-based Inpainting with Correspondence Guidance in Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.02355)] 
+[[Project](https://corrfill.github.io/)]
 
 **SmartMask: Context Aware High-Fidelity Mask Generation for Fine-grained Object Insertion and Layout Control** \
 [[Website](https://arxiv.org/abs/2312.05039)] 
@@ -5264,6 +7192,12 @@
 
 **TALE: Training-free Cross-domain Image Composition via Adaptive Latent Manipulation and Energy-guided Optimization** \
 [[ACM MM 2024](https://arxiv.org/abs/2408.03637)] 
+
+**Erase Diffusion: Empowering Object Removal Through Calibrating Diffusion Pathways** \
+[[CVPR 2025](https://arxiv.org/abs/2503.07026)] 
+
+**ATA: Adaptive Transformation Agent for Text-Guided Subject-Position Variable Background Inpainting** \
+[[CVPR 2025](https://arxiv.org/abs/2504.01603)] 
 
 **Semantically Consistent Video Inpainting with Conditional Diffusion Models** \
 [[Website](https://arxiv.org/abs/2405.00251)] 
@@ -5334,8 +7268,30 @@
 **Pinco: Position-induced Consistent Adapter for Diffusion Transformer in Foreground-conditioned Inpainting** \
 [[Website](https://arxiv.org/abs/2412.03812)] 
 
+**AsyncDSB: Schedule-Asynchronous Diffusion Schrödinger Bridge for Image Inpainting** \
+[[Website](https://arxiv.org/abs/2412.08149)] 
 
-## Layout Generation
+**RAD: Region-Aware Diffusion Models for Image Inpainting** \
+[[Website](https://arxiv.org/abs/2412.09191)] 
+
+**MObI: Multimodal Object Inpainting Using Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.03173)] 
+
+**DiffuEraser: A Diffusion Model for Video Inpainting** \
+[[Website](https://arxiv.org/abs/2501.10018)] 
+
+**VipDiff: Towards Coherent and Diverse Video Inpainting via Training-free Denoising Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.12267)] 
+
+**E-MD3C: Taming Masked Diffusion Transformers for Efficient Zero-Shot Object Customization** \
+[[Website](https://arxiv.org/abs/2502.09164)] 
+
+**Energy-Guided Optimization for Personalized Image Editing with Pretrained Text-to-Image Diffusion Models** \
+[[Website](https://arxiv.org/abs//2503.04215)] 
+
+
+
+# Layout Generation
 
 **LayoutDM: Discrete Diffusion Model for Controllable Layout Generation** \
 [[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Inoue_LayoutDM_Discrete_Diffusion_Model_for_Controllable_Layout_Generation_CVPR_2023_paper.html)]
@@ -5401,7 +7357,7 @@
 [[Website](https://arxiv.org/abs/2409.16689)]
 
 
-## Text Generation
+# Text Generation
 
 ⭐⭐**TextDiffuser: Diffusion Models as Text Painters** \
 [[NeurIPS 2023](https://neurips.cc/virtual/2023/poster/70636)]
@@ -5492,6 +7448,10 @@
 [[ECAI 2024](https://arxiv.org/abs/2410.10168)]
 [[Code](https://github.com/Zhenhang-Li/GlyphOnly)] 
 
+**Poetry in Pixels: Prompt Tuning for Poem Image Generation via Diffusion Models** \
+[[COLING 2025](https://arxiv.org/abs//2501.05839)]
+[[Code](https://github.com/sofeeyaj/poetry-in-pixels-coling2025)] 
+
 **VitaGlyph: Vitalizing Artistic Typography with Flexible Dual-branch Diffusion Models** \
 [[Website](https://arxiv.org/abs/2410.01738)]
 [[Code](https://github.com/Carlofkl/VitaGlyph)] 
@@ -5532,6 +7492,10 @@
 [[Website](https://arxiv.org/abs/2409.06065)]
 [[Code](https://github.com/koninik/DiffusionPen)] 
 
+**PosterMaker: Towards High-Quality Product Poster Generation with Accurate Text Rendering** \
+[[CVPR 2025](https://arxiv.org/abs/2504.06632)]
+[[Project](https://poster-maker.github.io/)] 
+
 **AmbiGen: Generating Ambigrams from Pre-trained Diffusion Model** \
 [[Website](https://arxiv.org/abs/2312.02967)]
 [[Project](https://raymond-yeh.com/AmbiGen/)] 
@@ -5544,11 +7508,22 @@
 [[Website](https://arxiv.org/abs/2406.08392)]
 [[Project](https://font-studio.github.io/)] 
 
+**Beyond Words: Advancing Long-Text Image Generation via Multimodal Autoregressive Models** \
+[[Website](https://arxiv.org/abs/2503.20198)]
+[[Project](https://fingerrec.github.io/longtextar/)] 
+
+**DesignDiffusion: High-Quality Text-to-Design Image Generation with Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2503.01645)]
+
 **DECDM: Document Enhancement using Cycle-Consistent Diffusion Models** \
 [[WACV 2024](https://arxiv.org/abs/2311.09625)]
 
 **SceneTextGen: Layout-Agnostic Scene Text Image Synthesis with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2406.01062)]
+
+**Beyond Flat Text: Dual Self-inherited Guidance for Visual Text Generation** \
+[[Website](https://arxiv.org/abs/2501.05892)]
+
 
 **AnyTrans: Translate AnyText in the Image with Large Scale Models** \
 [[Website](https://arxiv.org/abs/2406.11432)]
@@ -5619,250 +7594,23 @@
 **FonTS: Text Rendering with Typography and Style Controls** \
 [[Website](https://arxiv.org/abs/2412.00136)]
 
+**CharGen: High Accurate Character-Level Visual Text Generation Model with MultiModal Encoder** \
+[[Website](https://arxiv.org/abs/2412.17225)]
 
-## Super Resolution
+**Precise Parameter Localization for Textual Generation in Diffusion Models** \
+[[Website](https://arxiv.org/abs/2502.09935)]
 
-**ResShift: Efficient Diffusion Model for Image Super-resolution by Residual Shifting** \
-[[NeurIPS 2023 spotlight](https://nips.cc/virtual/2023/poster/71244)] 
-[[Website](https://arxiv.org/abs/2307.12348)] 
-[[Project](https://zsyoaoa.github.io/projects/resshift/)] 
-[[Code](https://github.com/zsyoaoa/resshift)] 
+**TextInVision: Text and Prompt Complexity Driven Visual Text Generation Benchmark** \
+[[Website](https://arxiv.org/abs/2503.13730)]
 
-**Image Super-Resolution via Iterative Refinement** \
-[[TPAMI](https://ieeexplore.ieee.org/document/9887996)] 
-[[Website](https://arxiv.org/abs/2104.07636)] 
-[[Project](https://iterative-refinement.github.io/)] 
-[[Code](https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement)] 
+**Zero-Shot Styled Text Image Generation, but Make It Autoregressive** \
+[[Website](https://arxiv.org/abs/2503.17074)]
 
-**DiffIR: Efficient Diffusion Model for Image Restoration**\
-[[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Xia_DiffIR_Efficient_Diffusion_Model_for_Image_Restoration_ICCV_2023_paper.pdf)]
-[[Website](https://arxiv.org/abs/2303.09472)] 
-[[Code](https://github.com/Zj-BinXia/DiffIR)]
+**TextCrafter: Accurately Rendering Multiple Texts in Complex Visual Scenes** \
+[[Website](https://arxiv.org/abs/2503.23461)]
 
-**Kalman-Inspired Feature Propagation for Video Face Super-Resolution** \
-[[ECCV 2024](https://arxiv.org/abs/2408.05205)] 
-[[Project](https://jnjaby.github.io/projects/KEEP/)] 
-[[Code](https://github.com/jnjaby/KEEP)] 
 
-**HoliSDiP: Image Super-Resolution via Holistic Semantics and Diffusion Prior** \
-[[Website](https://arxiv.org/abs/2411.18662)] 
-[[Project](https://liyuantsao.github.io/HoliSDiP/)] 
-[[Code](https://github.com/liyuantsao/HoliSDiP)] 
-
-**MatchDiffusion: Training-free Generation of Match-cuts** \
-[[Website](https://arxiv.org/abs/2411.18677)] 
-[[Project](https://matchdiffusion.github.io/)] 
-[[Code](https://github.com/PardoAlejo/MatchDiffusion)] 
-
-**Spatiotemporal Skip Guidance for Enhanced Video Diffusion Sampling** \
-[[Website](https://arxiv.org/abs/2411.18664)] 
-[[Project](https://junhahyung.github.io/STGuidance/)] 
-[[Code](https://github.com/junhahyung/STGuidance)] 
-
-
-**AddSR: Accelerating Diffusion-based Blind Super-Resolution with Adversarial Diffusion Distillation** \
-[[Website](https://arxiv.org/abs/2404.01717)] 
-[[Project](https://nju-pcalab.github.io/projects/AddSR/)] 
-[[Code](https://github.com/NJU-PCALab/AddSR)] 
-
-**FaithDiff: Unleashing Diffusion Priors for Faithful Image Super-resolution** \
-[[Website](https://arxiv.org/abs/2411.18824)] 
-[[Project](https://jychen9811.github.io/FaithDiff_page/)] 
-[[Code](https://github.com/JyChen9811/FaithDiff/)] 
-
-**Exploiting Diffusion Prior for Real-World Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2305.07015)] 
-[[Project](https://iceclear.github.io/projects/stablesr/)] 
-[[Code](https://github.com/IceClear/StableSR)] 
-
-**SinSR: Diffusion-Based Image Super-Resolution in a Single Step** \
-[[CVPR 2024](https://arxiv.org/abs/2311.14760)] 
-[[Code](https://github.com/wyf0912/SinSR)] 
-
-**CDFormer:When Degradation Prediction Embraces Diffusion Model for Blind Image Super-Resolution** \
-[[CVPR 2024](https://arxiv.org/abs/2405.07648)] 
-[[Code](https://github.com/I2-Multimedia-Lab/CDFormer)] 
-
-**Taming Diffusion Prior for Image Super-Resolution with Domain Shift SDEs** \
-[[NeurIPS 2024](https://arxiv.org/abs/2409.17778)] 
-[[Code](https://github.com/QinpengCui/DoSSR)] 
-
-**SeeClear: Semantic Distillation Enhances Pixel Condensation for Video Super-Resolution** \
-[[NeurIPS 2024](https://arxiv.org/abs/2410.05799)] 
-[[Code](https://github.com/Tang1705/SeeClear-NeurIPS24)] 
-
-**Iterative Token Evaluation and Refinement for Real-World Super-Resolution** \
-[[AAAI 2024](https://arxiv.org/abs/2312.05616)] 
-[[Code](https://github.com/chaofengc/ITER)] 
-
-**PassionSR: Post-Training Quantization with Adaptive Scale in One-Step Diffusion based Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2411.17106)] 
-[[Code](https://github.com/libozhu03/PassionSR)] 
-
-**Distillation-Free One-Step Diffusion for Real-World Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2410.04224)] 
-[[Code](https://github.com/JianzeLi-114/DFOSD)] 
-
-**Degradation-Guided One-Step Image Super-Resolution with Diffusion Priors** \
-[[Website](https://arxiv.org/abs/2409.17058)] 
-[[Code](https://github.com/ArcticHare105/S3Diff)] 
-
-**One Step Diffusion-based Super-Resolution with Time-Aware Distillation** \
-[[Website](https://arxiv.org/abs/2408.07476)] 
-[[Code](https://github.com/LearningHx/TAD-SR)] 
-
-**Hero-SR: One-Step Diffusion for Super-Resolution with Human Perception Priors** \
-[[Website](https://arxiv.org/abs/2412.07152)] 
-[[Code](https://github.com/W-JG/Hero-SR)] 
-
-**RAP-SR: RestorAtion Prior Enhancement in Diffusion Models for Realistic Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2412.07149)] 
-[[Code](https://github.com/W-JG/RAP-SR)] 
-
-**One-Step Effective Diffusion Network for Real-World Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2406.08177)] 
-[[Code](https://github.com/cswry/OSEDiff)] 
-
-**Binarized Diffusion Model for Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2406.05723)] 
-[[Code](https://github.com/zhengchen1999/BI-DiffSR)] 
-
-**Does Diffusion Beat GAN in Image Super Resolution?** \
-[[Website](https://arxiv.org/abs/2405.17261)] 
-[[Code](https://github.com/yandex-research/gan_vs_diff_sr)] 
-
-**PatchScaler: An Efficient Patch-independent Diffusion Model for Super-Resolution** \
-[[Website](https://arxiv.org/abs/2405.17158)] 
-[[Code](https://github.com/yongliuy/PatchScaler)] 
-
-**DeeDSR: Towards Real-World Image Super-Resolution via Degradation-Aware Stable Diffusion** \
-[[Website](https://arxiv.org/abs/2404.00661)] 
-[[Code](https://github.com/bichunyang419/DeeDSR)] 
-
-**Image Super-resolution Via Latent Diffusion: A Sampling-space Mixture Of Experts And Frequency-augmented Decoder Approach** \
-[[Website](https://arxiv.org/abs/2310.12004)] 
-[[Code](https://github.com/amandaluof/moe_sr)] 
-
-**Pixel-Aware Stable Diffusion for Realistic Image Super-resolution and Personalized Stylization** \
-[[Website](https://arxiv.org/abs/2308.14469)] 
-[[Code](https://github.com/yangxy/PASD)] 
-
-**DSR-Diff: Depth Map Super-Resolution with Diffusion Model** \
-[[Website](https://arxiv.org/abs/2311.09919)] 
-[[Code](https://github.com/shiyuan7/DSR-Diff)] 
-
-**Pixel-level and Semantic-level Adjustable Super-resolution: A Dual-LoRA Approach** \
-[[Website](https://arxiv.org/abs/2412.03017)]
-[[Code](https://github.com/csslc/PiSA-SR)] 
-
-**RFSR: Improving ISR Diffusion Models via Reward Feedback Learning** \
-[[Website](https://arxiv.org/abs/2412.03268)] 
-[[Code](https://github.com/sxpro/RFSR)] 
-
-**SAM-DiffSR: Structure-Modulated Diffusion Model for Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2402.17133)] 
-[[Code](https://github.com/lose4578/SAM-DiffSR)] 
-
-**XPSR: Cross-modal Priors for Diffusion-based Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2403.05049)] 
-[[Code](https://github.com/qyp2000/XPSR)] 
-
-**Self-Adaptive Reality-Guided Diffusion for Artifact-Free Super-Resolution** \
-[[Website](https://arxiv.org/abs/2403.16643)] 
-[[Code](https://github.com/ProAirVerse/Self-Adaptive-Guidance-Diffusion)] 
-
-**BlindDiff: Empowering Degradation Modelling in Diffusion Models for Blind Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2403.10211)] 
-[[Code](https://github.com/lifengcs/BlindDiff)] 
-
-**TASR: Timestep-Aware Diffusion Model for Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2412.03355)] 
-[[Code](https://github.com/SleepyLin/TASR)] 
-
-**HSR-Diff: Hyperspectral Image Super-Resolution via Conditional Diffusion Models**\
-[[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Wu_HSR-Diff_Hyperspectral_Image_Super-Resolution_via_Conditional_Diffusion_Models_ICCV_2023_paper.pdf)]
-[[Website](https://arxiv.org/abs/2306.12085)] 
-
-**Text-guided Explorable Image Super-resolution** \
-[[CVPR 2024](https://arxiv.org/abs/2403.01124)] 
-
-**Arbitrary-Scale Image Generation and Upsampling using Latent Diffusion Model and Implicit Neural Decoder** \
-[[CVPR 2024](https://arxiv.org/abs/2403.10255)] 
-
-**AdaDiffSR: Adaptive Region-aware Dynamic Acceleration Diffusion Model for Real-World Image Super-Resolution** \
-[[CVPR 2024](https://arxiv.org/abs/2410.17752)] 
-
-**Enhancing Hyperspectral Images via Diffusion Model and Group-Autoencoder Super-resolution Network** \
-[[AAAI 2024](https://arxiv.org/abs/2402.17285)] 
-
-**Detail-Enhancing Framework for Reference-Based Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2405.00431)] 
-
-**You Only Need One Step: Fast Super-Resolution with Stable Diffusion via Scale Distillation** \
-[[Website](https://arxiv.org/abs/2401.17258)] 
-
-**Solving Diffusion ODEs with Optimal Boundary Conditions for Better Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2305.15357)] 
-
-**Dissecting Arbitrary-scale Super-resolution Capability from Pre-trained Diffusion Generative Models** \
-[[Website](https://arxiv.org/abs/2306.00714)] 
-
-**Edge-SD-SR: Low Latency and Parameter Efficient On-device Super-Resolution with Stable Diffusion via Bidirectional Conditioning** \
-[[Website](https://arxiv.org/abs/2412.06978)]
-
-**YODA: You Only Diffuse Areas. An Area-Masked Diffusion Approach For Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2308.07977)]
-
-**Domain Transfer in Latent Space (DTLS) Wins on Image Super-Resolution -- a Non-Denoising Model** \
-[[Website](https://arxiv.org/abs/2311.02358)]
-
-**TDDSR: Single-Step Diffusion with Two Discriminators for Super Resolution** \
-[[Website](https://arxiv.org/abs/2410.07663)]
-
-**ConsisSR: Delving Deep into Consistency in Diffusion-based Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2410.13807)]
-
-**Image Super-Resolution with Text Prompt Diffusio** \
-[[Website](https://arxiv.org/abs/2311.14282)]
-
-**DifAugGAN: A Practical Diffusion-style Data Augmentation for GAN-based Single Image Super-resolution** \
-[[Website](https://arxiv.org/abs/2311.18508)]
-
-**DREAM: Diffusion Rectification and Estimation-Adaptive Models** \
-[[Website](https://arxiv.org/abs/2312.00210)]
-
-**Inflation with Diffusion: Efficient Temporal Adaptation for Text-to-Video Super-Resolution** \
-[[Website](https://arxiv.org/abs/2401.10404)]
-
-**Adaptive Multi-modal Fusion of Spatially Variant Kernel Refinement with Diffusion Model for Blind Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2403.05808)]
-
-**CasSR: Activating Image Power for Real-World Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2403.11451)]
-
-**Learning Spatial Adaptation and Temporal Coherence in Diffusion Models for Video Super-Resolution** \
-[[Website](https://arxiv.org/abs/2403.17000)]
-
-**Frequency-Domain Refinement with Multiscale Diffusion for Super Resolution** \
-[[Website](https://arxiv.org/abs/2405.10014)]
-
-**ClearSR: Latent Low-Resolution Image Embeddings Help Diffusion-Based Real-World Super Resolution Models See Clearer** \
-[[Website](https://arxiv.org/abs/2410.14279)]
-
-**Zoomed In, Diffused Out: Towards Local Degradation-Aware Multi-Diffusion for Extreme Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2411.12072)]
-
-**Adversarial Diffusion Compression for Real-World Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2411.13383)]
-
-**HF-Diff: High-Frequency Perceptual Loss and Distribution Matching for One-Step Diffusion-Based Image Super-Resolution** \
-[[Website](https://arxiv.org/abs/2411.13548)]
-
-**Semantic Segmentation Prior for Diffusion-Based Real-World Super-Resolution** \
-[[Website](https://arxiv.org/abs/2412.02960)]
-
-
-## Video Generation 
+# Video Generation 
 
 **Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators**  \
 [[ICCV 2023 Oral](https://openaccess.thecvf.com/content/ICCV2023/html/Khachatryan_Text2Video-Zero_Text-to-Image_Diffusion_Models_are_Zero-Shot_Video_Generators_ICCV_2023_paper.html)]
@@ -5876,54 +7624,17 @@
 [[Project](http://yaniv.nikankin.com/sinfusion/)] 
 [[Code](https://github.com/yanivnik/sinfusion-code)]
 
-
 **Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models** \
 [[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/papers/Blattmann_Align_Your_Latents_High-Resolution_Video_Synthesis_With_Latent_Diffusion_Models_CVPR_2023_paper.pdf)]
 [[Website](https://arxiv.org/abs/2304.08818)]
 [[Project](https://research.nvidia.com/labs/toronto-ai/VideoLDM/)] 
 [[Code](https://github.com/srpkdyy/VideoLDM)]
 
-
-**ZIGMA: A DiT-style Zigzag Mamba Diffusion Model**  \
-[[ECCV 2024](https://arxiv.org/abs/2403.13802)]
-[[Project](https://taohu.me/zigma/)]
-[[Code](https://github.com/CompVis/zigma)]
-
 **MCVD: Masked Conditional Video Diffusion for Prediction, Generation, and Interpolation** \
 [[NeurIPS 2022](https://proceedings.neurips.cc/paper_files/paper/2022/hash/944618542d80a63bbec16dfbd2bd689a-Abstract-Conference.html)]
 [[Website](https://arxiv.org/abs/2205.09853)]
 [[Project](https://mask-cond-video-diffusion.github.io/)] 
 [[Code](https://github.com/voletiv/mcvd-pytorch)]
-<!-- [[NeurIPS 2022](https://openreview.net/forum?id=hX5Ia-ION8Y)] -->
-
-
-**GLOBER: Coherent Non-autoregressive Video Generation via GLOBal Guided Video DecodER** \
-[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71560)]
-[[Website](https://arxiv.org/abs/2309.13274)]
-[[Code](https://github.com/iva-mzsun/glober)]
-<!-- [[NeurIPS 2023](https://openreview.net/forum?id=TRbklCR2ZW)] -->
-
-**Free-Bloom: Zero-Shot Text-to-Video Generator with LLM Director and LDM Animator** \
-[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/70404)]
-[[Website](https://arxiv.org/abs/2309.14494)]
-[[Code](https://github.com/SooLab/Free-Bloom)]
-<!-- [[NeurIPS 2023](https://openreview.net/forum?id=paa2OU5jN8)] -->
-
-**Conditional Image-to-Video Generation with Latent Flow Diffusion Models** \
-[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Ni_Conditional_Image-to-Video_Generation_With_Latent_Flow_Diffusion_Models_CVPR_2023_paper.html)]
-[[Website](https://arxiv.org/abs/2303.13744)]
-[[Code](https://github.com/nihaomiao/CVPR23_LFDM)]
-
-**FRESCO: Spatial-Temporal Correspondence for Zero-Shot Video Translation** \
-[[CVPR 2023](https://arxiv.org/abs/2403.12962)]
-[[Project](https://www.mmlab-ntu.com/project/fresco/)]
-[[Code](https://github.com/williamyang1991/FRESCO)]
-
-
-**TI2V-Zero: Zero-Shot Image Conditioning for Text-to-Video Diffusion Models** \
-[[CVPR 2024](https://arxiv.org/abs/2404.16306)]
-[[Project](https://merl.com/research/highlights/TI2V-Zero)] 
-[[Code](https://github.com/merlresearch/TI2V-Zero)]
 
 **Video Diffusion Models** \
 [[ICLR 2022 workshop](https://openreview.net/forum?id=BBelR2NdDZ5)]
@@ -5937,41 +7648,531 @@
 [[Project](https://pi-animator.github.io/)]
 [[Code](https://github.com/open-mmlab/PIA)] 
 
+**GLOBER: Coherent Non-autoregressive Video Generation via GLOBal Guided Video DecodER** \
+[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/71560)]
+[[Website](https://arxiv.org/abs/2309.13274)]
+[[Code](https://github.com/iva-mzsun/glober)]
+
+**Free-Bloom: Zero-Shot Text-to-Video Generator with LLM Director and LDM Animator** \
+[[NeurIPS 2023](https://nips.cc/virtual/2023/poster/70404)]
+[[Website](https://arxiv.org/abs/2309.14494)]
+[[Code](https://github.com/SooLab/Free-Bloom)]
+
+**Conditional Image-to-Video Generation with Latent Flow Diffusion Models** \
+[[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Ni_Conditional_Image-to-Video_Generation_With_Latent_Flow_Diffusion_Models_CVPR_2023_paper.html)]
+[[Website](https://arxiv.org/abs/2303.13744)]
+[[Code](https://github.com/nihaomiao/CVPR23_LFDM)]
+
+**FRESCO: Spatial-Temporal Correspondence for Zero-Shot Video Translation** \
+[[CVPR 2023](https://arxiv.org/abs/2403.12962)]
+[[Project](https://www.mmlab-ntu.com/project/fresco/)]
+[[Code](https://github.com/williamyang1991/FRESCO)]
+
+**TI2V-Zero: Zero-Shot Image Conditioning for Text-to-Video Diffusion Models** \
+[[CVPR 2024](https://arxiv.org/abs/2404.16306)]
+[[Project](https://merl.com/research/highlights/TI2V-Zero)] 
+[[Code](https://github.com/merlresearch/TI2V-Zero)]
+
 **IDOL: Unified Dual-Modal Latent Diffusion for Human-Centric Joint Video-Depth Generation** \
 [[ECCV 2024](https://arxiv.org/abs/2407.10937)]
 [[Project](https://yhzhai.github.io/idol/)] 
 [[Code](https://github.com/yhZhai/idol)]
-
 
 **EMO: Emote Portrait Alive - Generating Expressive Portrait Videos with Audio2Video Diffusion Model under Weak Conditions** \
 [[ECCV 2024](https://arxiv.org/abs/2402.17485)]
 [[Project](https://humanaigc.github.io/emote-portrait-alive/)] 
 [[Code](https://github.com/HumanAIGC/EMO)]
 
+**Tora: Trajectory-oriented Diffusion Transformer for Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2407.21705)]
+[[Project](https://ali-videoai.github.io/tora_video/)] 
+[[Code](https://github.com/ali-videoai/Tora)]
+
+**T2V-Turbo: Breaking the Quality Bottleneck of Video Consistency Model with Mixed Reward Feedback** \
+[[NeurIPS 2024](https://arxiv.org/abs/2405.18750)]
+[[Project](https://t2v-turbo.github.io/)] 
+[[Code](https://github.com/Ji4chenLi/t2v-turbo)]
+
 **T2V-Turbo-v2: Enhancing Video Generation Model Post-Training through Data, Reward, and Conditional Guidance Design** \
-[[Website](https://arxiv.org/abs/2410.05677)]
+[[ICLR 2025](https://arxiv.org/abs/2410.05677)]
 [[Project](https://t2v-turbo-v2.github.io/)] 
 [[Code](https://github.com/Ji4chenLi/t2v-turbo)]
 
-**Tora: Trajectory-oriented Diffusion Transformer for Video Generation** \
-[[Website](https://arxiv.org/abs/2407.21705)]
-[[Project](https://ali-videoai.github.io/tora_video/)] 
-[[Code](https://github.com/ali-videoai/Tora)]
+**MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequence** \
+[[ICLR 2025](https://arxiv.org/abs/2407.16655)]
+[[Project](https://aim-uofa.github.io/MovieDreamer/)] 
+[[Code](https://github.com/aim-uofa/MovieDreamer)]
+
+**SG-I2V: Self-Guided Trajectory Control in Image-to-Video Generation** \
+[[ICLR 2025](https://arxiv.org/abs/2411.04989)]
+[[Project](https://kmcode1.github.io/Projects/SG-I2V/)] 
+[[Code](https://github.com/Kmcode1/SG-I2V)]
+
+**Cinemo: Consistent and Controllable Image Animation with Motion Diffusion Models** \
+[[CVPR 2025](https://arxiv.org/abs/2407.15642)]
+[[Project](https://maxin-cn.github.io/cinemo_project/)] 
+[[Code](https://github.com/maxin-cn/Cinemo)]
+
+**Identity-Preserving Text-to-Video Generation by Frequency Decomposition** \
+[[CVPR 2025](https://arxiv.org/abs/2411.17440)]
+[[Project](https://pku-yuangroup.github.io/ConsisID/)] 
+[[Code](https://github.com/PKU-YuanGroup/ConsisID)]
+
+**Enhancing Motion in Text-to-Video Generation with Decomposed Encoding and Conditioning** \
+[[NeurIPS 2024](https://arxiv.org/abs/2410.24219)]
+[[Project](https://pr-ryan.github.io/DEMO-project/)] 
+[[Code](https://github.com/PR-Ryan/DEMO)]
+
+**MotionClone: Training-Free Motion Cloning for Controllable Video Generation** \
+[[ICLR 2025](https://arxiv.org/abs/2406.05338)]
+[[Project](https://bujiazi.github.io/motionclone.github.io/)] 
+[[Code](https://github.com/Bujiazi/MotionClone)]
+
+**TransPixar: Advancing Text-to-Video Generation with Transparency** \
+[[CVPR 2025](https://arxiv.org/abs/2501.03006)]
+[[Project](https://wileewang.github.io/TransPixar/)] 
+[[Code](https://github.com/wileewang/TransPixar)]
+
+**StableAnimator: High-Quality Identity-Preserving Human Image Animation** \
+[[CVPR 2025](https://arxiv.org/abs/2411.17697)]
+[[Project](https://francis-rings.github.io/StableAnimator/)] 
+[[Code](https://github.com/Francis-Rings/StableAnimator)]
+
+**AnimateAnything: Consistent and Controllable Animation for Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2411.10836)]
+[[Project](https://yu-shaonian.github.io/Animate_Anything/)] 
+[[Code](https://github.com/yu-shaonian/AnimateAnything)]
+
+**AniDoc: Animation Creation Made Easier** \
+[[CVPR 2025](https://arxiv.org/abs/2412.14173)]
+[[Project](https://yihao-meng.github.io/AniDoc_demo/)] 
+[[Code](https://github.com/yihao-meng/AniDoc)]
+
+**AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning** \
+[[ICLR 2024 Spotlight](https://arxiv.org/abs/2307.04725)] 
+[[Project](https://animatediff.github.io/)] 
+[[Code](https://github.com/guoyww/animatediff/)]
+
+**SF-V: Single Forward Video Generation Model** \
+[[NeurIPS 2024](https://arxiv.org/abs/2406.04324)]
+[[Project](https://snap-research.github.io/SF-V/)] 
+[[Code](https://github.com/snap-research/SF-V)]
+
+**SynCamMaster: Synchronizing Multi-Camera Video Generation from Diverse Viewpoints** \
+[[ICLR 2025](https://arxiv.org/abs/2412.07760)]
+[[Project](https://jianhongbai.github.io/SynCamMaster/)] 
+[[Code](https://github.com/KwaiVGI/SynCamMaster)]
+
+**Trajectory Attention for Fine-grained Video Motion Control** \
+[[ICLR 2025](https://arxiv.org/abs/2411.19324)]
+[[Project](https://xizaoqu.github.io/trajattn/)] 
+[[Code](https://github.com/xizaoqu/TrajectoryAttntion)]
+
+**Mask2DiT: Dual Mask-based Diffusion Transformer for Multi-Scene Long Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2503.19881)]
+[[Project](https://tianhao-qi.github.io/Mask2DiTProject/)] 
+[[Code](https://github.com/Tianhao-Qi/Mask2DiT)]
+
+**DiTCtrl: Exploring Attention Control in Multi-Modal Diffusion Transformer for Tuning-Free Multi-Prompt Longer Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.18597)]
+[[Project](https://onevfall.github.io/project_page/ditctrl/)] 
+[[Code](https://github.com/TencentARC/DiTCtrl)]
+
+**VideoTetris: Towards Compositional Text-to-Video Generation** \
+[[NeurIPS 2024](https://arxiv.org/abs/2406.04277)]
+[[Project](https://videotetris.github.io/)] 
+[[Code](https://github.com/YangLing0818/VideoTetris)]
+
+**MotionBooth: Motion-Aware Customized Text-to-Video Generation** \
+[[NeurIPS 2024 Spotlight](https://arxiv.org/abs/2406.17758)]
+[[Project](https://jianzongwu.github.io/projects/motionbooth/)] 
+[[Code](https://github.com/jianzongwu/MotionBooth)]
+
+**MOFA-Video: Controllable Image Animation via Generative Motion Field Adaptions in Frozen Image-to-Video Diffusion Model** \
+[[ECCV 2024](https://arxiv.org/abs/2405.20222)]
+[[Project](https://myniuuu.github.io/MOFA_Video/)] 
+[[Code](https://github.com/MyNiuuu/MOFA-Video)]
+
+**MotionDreamer: Zero-Shot 3D Mesh Animation from Video Diffusion Models** \
+[[3DV 2025](https://arxiv.org/abs/2405.20155)]
+[[Project](https://lukas.uzolas.com/MotionDreamer/)] 
+[[Code](https://github.com/lukasuz/MotionDreamer)]
+
+**MotionCraft: Physics-based Zero-Shot Video Generation** \
+[[NeurIPS 2024](https://arxiv.org/abs/2405.13557)]
+[[Project](https://mezzelfo.github.io/MotionCraft/)] 
+[[Code](https://github.com/mezzelfo/MotionCraft)]
+
+**MotionMaster: Training-free Camera Motion Transfer For Video Generation** \
+[[ACM MM 2024](https://arxiv.org/abs/2404.15789)]
+[[Project](https://sjtuplayer.github.io/projects/MotionMaster/)] 
+[[Code](https://github.com/sjtuplayer/MotionMaster)]
+
+**TrailBlazer: Trajectory Control for Diffusion-Based Video Generation** \
+[[SIGGRAPH Asia 2024](https://arxiv.org/abs/2401.00896)]
+[[Project](https://hohonu-vicml.github.io/Trailblazer.Page/)] 
+[[Code](https://github.com/hohonu-vicml/Trailblazer)]
+
+**Follow Your Pose: Pose-Guided Text-to-Video Generation using Pose-Free Videos** \
+[[AAAI 2024](https://arxiv.org/abs/2304.01186)]
+[[Project](https://follow-your-pose.github.io/)] 
+[[Code](https://github.com/mayuelala/FollowYourPose)]
+
+**Align3R: Aligned Monocular Depth Estimation for Dynamic Videos** \
+[[CVPR 2025](https://arxiv.org/abs/2412.03079)]
+[[Project](https://igl-hkust.github.io/Align3R.github.io/)] 
+[[Code](https://github.com/jiah-cloud/Align3R)]
+
+**Breathing Life Into Sketches Using Text-to-Video Priors** \
+[[CVPR 2024 Highlight](https://arxiv.org/abs/2311.13608)]
+[[Project](https://livesketch.github.io/)] 
+[[Code](https://github.com/yael-vinker/live_sketch)]
+
+**LAMP: Learn A Motion Pattern for Few-Shot-Based Video Generation** \
+[[CVPR 2024](https://arxiv.org/abs/2310.10769)]
+[[Project](https://rq-wu.github.io/projects/LAMP/index.html)] 
+[[Code](https://github.com/RQ-Wu/LAMP)]
+
+**MagicDance: Realistic Human Dance Video Generation with Motions & Facial Expressions Transfer** \
+[[ICML 2024](https://arxiv.org/abs/2311.12052)]
+[[Project](https://boese0601.github.io/magicdance/)] 
+[[Code](https://github.com/Boese0601/MagicDance)]
+
+**DisPose: Disentangling Pose Guidance for Controllable Human Image Animation** \
+[[ICLR 2054](https://arxiv.org/abs/2412.09349)]
+[[Project](https://lihxxx.github.io/DisPose/)] 
+[[Code](https://github.com/lihxxx/DisPose)]
+
+**DreamMover: Leveraging the Prior of Diffusion Models for Image Interpolation with Large Motion** \
+[[ECCV 2024](https://arxiv.org/abs/2409.09605)]
+[[Project](https://dreamm0ver.github.io/)] 
+[[Code](https://github.com/leoShen917/DreamMover)]
+
+**LLM-GROUNDED VIDEO DIFFUSION MODELS** \
+[[ICLR 2024](https://arxiv.org/abs/2309.17444)]
+[[Project](https://llm-grounded-video-diffusion.github.io/)] 
+[[Code](https://github.com/TonyLianLong/LLM-groundedVideoDiffusion)]
+
+**FreeNoise: Tuning-Free Longer Video Diffusion Via Noise Rescheduling** \
+[[ICLR 2024](https://arxiv.org/abs/2310.15169)]
+[[Project](http://haonanqiu.com/projects/FreeNoise.html)] 
+[[Code](https://github.com/arthur-qiu/LongerCrafter)]
+
+**MotionCtrl: A Unified and Flexible Motion Controller for Video Generation** \
+[[SIGGRAPH 2024](https://arxiv.org/abs/2312.03641)]
+[[Project](https://wzhouxiff.github.io/projects/MotionCtrl/)] 
+[[Code](https://github.com/TencentARC/MotionCtrl)]
+
+**VideoBooth: Diffusion-based Video Generation with Image Prompts** \
+[[CVPR 2024](https://arxiv.org/abs/2312.00777)]
+[[Project](https://vchitect.github.io/VideoBooth-project/)] 
+[[Code](https://github.com/Vchitect/VideoBooth)]
+
+**MagicAnimate: Temporally Consistent Human Image Animation using Diffusion Model** \
+[[CVPR 2024](https://arxiv.org/abs/2311.16498)]
+[[Project](https://showlab.github.io/magicanimate/)] 
+[[Code](https://github.com/magic-research/magic-animate)]
+
+**DreamVideo: Composing Your Dream Videos with Customized Subject and Motion** \
+[[CVPR 2024](https://arxiv.org/abs/2312.04433)]
+[[Project](https://dreamvideo-t2v.github.io/)] 
+[[Code](https://github.com/damo-vilab/i2vgen-xl)]
+
+**DreamVideo-2: Zero-Shot Subject-Driven Video Customization with Precise Motion Control** \
+[[Website](https://arxiv.org/abs/2410.13830)] 
+[[Project](https://dreamvideo2.github.io/)] 
+[[Code](https://github.com/damo-vilab/i2vgen-xl)]
+
+**Upscale-A-Video: Temporal-Consistent Diffusion Model for Real-World Video Super-Resolution** \
+[[CVPR 2024](https://arxiv.org/abs/2312.06640)]
+[[Project](https://shangchenzhou.com/projects/upscale-a-video/)] 
+[[Code](https://github.com/sczhou/Upscale-A-Video)]
+
+**FreeInit: Bridging Initialization Gap in Video Diffusion Models** \
+[[ECCV 2024](https://arxiv.org/abs/2312.07537)]
+[[Project](https://tianxingwu.github.io/pages/FreeInit/)] 
+[[Code](https://github.com/TianxingWu/FreeInit)]
+
+**SyncVP: Joint Diffusion for Synchronous Multi-Modal Video Prediction** \
+[[CVPR 2025](https://arxiv.org/abs/2503.18933)]
+[[Project](https://syncvp.github.io/)] 
+[[Code](https://github.com/PallottaEnrico/SyncVP)]
+
+
+**StyleCrafter: Enhancing Stylized Text-to-Video Generation with Style Adapter** \
+[[TOG 2024](https://arxiv.org/abs/2312.00330)]
+[[Project](https://gongyeliu.github.io/StyleCrafter.github.io/)]
+[[Code](https://github.com/GongyeLiu/StyleCrafter)]
+
+**FlowVid: Taming Imperfect Optical Flows for Consistent Video-to-Video Synthesis** \
+[[CVPR 2024 Highlight](https://arxiv.org/abs/2312.17681)]
+[[Project](https://jeff-liangf.github.io/projects/flowvid/)]
+[[Code](https://github.com/Jeff-LiangF/FlowVid)]
+
+**Generative Inbetweening through Frame-wise Conditions-Driven Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.11755)]
+[[Project](https://fcvg-inbetween.github.io/)]
+[[Code](https://github.com/Tian-one/FCVG)] 
+
+**Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation** \
+[[ICLR 2025](https://arxiv.org/abs/2408.15239)]
+[[Project](https://svd-keyframe-interpolation.github.io/)]
+[[Code](https://github.com/jeanne-wang/svd_keyframe_interpolation)] 
+
+**VideoElevator: Elevating Video Generation Quality with Versatile Text-to-Image Diffusion Models** \
+[[AAAI 2025](https://arxiv.org/abs/2403.05438)]
+[[Project](https://videoelevator.github.io/)]
+[[Code](https://github.com/YBYBZhang/VideoElevator)] 
+
+**FreeLong: Training-Free Long Video Generation with SpectralBlend Temporal Attention** \
+[[NeurIPS 2024](https://arxiv.org/abs/2407.19918)]
+[[Project](https://freelongvideo.github.io/)]
+[[Code](https://github.com/aniki-ly/FreeLong)] 
+
+**TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models** \
+[[ECCV 2024](https://arxiv.org/abs/2407.09012)]
+[[Project](https://eccv2024tcan.github.io/)] 
+[[Code](https://github.com/eccv2024tcan/TCAN)]
+
+**Optical-Flow Guided Prompt Optimization for Coherent Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2411.16199)]
+[[Project](https://motionprompt.github.io/)]
+[[Code](https://github.com/HyelinNAM/MotionPrompt)] 
+
+**ControlVideo: Training-free Controllable Text-to-Video Generation** \
+[[ICLR 2024](https://arxiv.org/abs/2305.13077)]
+[[Project](https://controlvideov1.github.io/)]
+[[Code](https://github.com/YBYBZhang/ControlVideo)] 
+
+**FIFO-Diffusion: Generating Infinite Videos from Text without Training** \
+[[NeurIPS 2024](https://arxiv.org/abs/2405.11473)]
+[[Project](https://jjihwan.github.io/projects/FIFO-Diffusion)]
+[[Code](https://github.com/jjihwan/FIFO-Diffusion_public)] 
+
+**CV-VAE: A Compatible Video VAE for Latent Generative Video Models** \
+[[NeurIPS 2024](https://arxiv.org/abs/2405.20279)]
+[[Project](https://ailab-cvc.github.io/cvvae/index.html)]
+[[Code](https://github.com/AILab-CVC/CV-VAE)] 
+
+**Identifying and Solving Conditional Image Leakage in Image-to-Video Diffusion Model** \
+[[NeurIPS 2024](https://arxiv.org/abs/2406.15735)]
+[[Project](https://cond-image-leak.github.io/)]
+[[Code](https://github.com/thu-ml/cond-image-leakage/)] 
+
+**MegActor-Σ: Unlocking Flexible Mixed-Modal Control in Portrait Animation with Diffusion Transformer** \
+[[AAAI 2025](https://arxiv.org/abs/2408.14975)]
+[[Project](https://megactor-ops.github.io/)]
+[[Code](https://github.com/megvii-research/MegActor)] 
+
+**Improved Video VAE for Latent Video Diffusion Model** \
+[[CVPR 2025](https://arxiv.org/abs/2411.06449)]
+[[Project](https://wpy1999.github.io/IV-VAE/)]
+[[Code](https://github.com/ali-vilab/iv-vae/)] 
+
+**X-Dyna: Expressive Dynamic Human Image Animation** \
+[[CVPR 2025](https://arxiv.org/abs/2501.10021)]
+[[Project](https://x-dyna.github.io/xdyna.github.io/)]
+[[Code](https://github.com/bytedance/X-Dyna)] 
+
+**Spectral Motion Alignment for Video Motion Transfer using Diffusion Models** \
+[[AAAI 2025](https://arxiv.org/abs/2403.15249)]
+[[Project](https://geonyeong-park.github.io/spectral-motion-alignment/)]
+[[Code](https://github.com/geonyeong-park/Spectral-Motion-Alignment)]
+
+**PEEKABOO: Interactive Video Generation via Masked-Diffusion**\
+[[CVPR 2024](https://arxiv.org/abs/2312.07509)]
+[[Project](https://jinga-lala.github.io/projects/Peekaboo/)]
+[[Code](https://github.com/microsoft/Peekaboo)]
+
+**VSTAR: Generative Temporal Nursing for Longer Dynamic Video Synthesis** \
+[[ICLR 2025](https://arxiv.org/abs/2403.13501)]
+[[Project](https://yumengli007.github.io/VSTAR/)] 
+[[Code](https://github.com/boschresearch/VSTAR)] 
+
+**Looking Backward: Streaming Video-to-Video Translation with Feature Banks** \
+[[ICLR 2025](https://arxiv.org/abs/2405.15757)]
+[[Project](https://jeff-liangf.github.io/projects/streamv2v/)] 
+[[Code](https://github.com/Jeff-LiangF/streamv2v)] 
+
+**Empowering Dynamics-aware Text-to-Video Diffusion with Large Language Models** \
+[[CVPR 2024](https://arxiv.org/abs/2308.13812)]
+[[Project](https://haofei.vip/Dysen-VDM/)]
+[[Code](https://github.com/scofield7419/Dysen)]
+
+**BIVDiff: A Training-Free Framework for General-Purpose Video Synthesis via Bridging Image and Video Diffusion Models** \
+[[CVPR 2024](https://arxiv.org/abs/2312.02813)]
+[[Project](https://bivdiff.github.io/)] 
+[[Code](https://github.com/MCG-NJU/BIVDiff)] 
+
+**Space-Time Diffusion Features for Zero-Shot Text-Driven Motion Transfer** \
+[[CVPR 2024](https://arxiv.org/abs/2311.17009)]
+[[Project](https://diffusion-motion-transfer.github.io/)] 
+[[Code](https://github.com/diffusion-motion-transfer/diffusion-motion-transfer)] 
+
+**Evaluation of Text-to-Video Generation Models: A Dynamics Perspective** \
+[[NeurIPS 2024](https://arxiv.org/abs/2407.01094)]
+[[Project](https://t2veval.github.io/DEVIL/)]
+[[Code](https://github.com/MingXiangL/DEVIL)]
+
+**ToonCrafter: Generative Cartoon Interpolation** \
+[[SIGGRAPH Asia 2024](https://arxiv.org/abs/2405.17933v1)]
+[[Project](https://doubiiu.github.io/projects/ToonCrafter/)]
+[[Code](https://github.com/Doubiiu/ToonCrafter)]
+
+**I2V-Adapter: A General Image-to-Video Adapter for Video Diffusion Models** \
+[[SIGGRAPH 2024](https://arxiv.org/abs/2312.16693)]
+[[Project](https://i2v-adapter-paper.github.io/)]
+[[Code](https://github.com/KwaiVGI/I2V-Adapter)]
+
+**360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model** \
+[[CVPR 2024](https://arxiv.org/abs/2401.06578)]
+[[Project](https://akaneqwq.github.io/360DVD/)]
+[[Code](https://github.com/Akaneqwq/360DVD)]
+
+**Motion-Zero: Zero-Shot Moving Object Control Framework for Diffusion-Based Video Generation** \
+[[AAAI 2025](https://arxiv.org/abs/2401.10150)]
+[[Project](https://vpx-ecnu.github.io/MotionZero-website//)]
+[[Code](https://github.com/vpx-ecnu/MotionZero)]
+
+**InstructVideo: Instructing Video Diffusion Models with Human Feedback** \
+[[CVPR 2024](https://arxiv.org/abs/2312.12490)]
+[[Project](https://instructvideo.github.io/)] 
+[[Code](https://github.com/ali-vilab/VGen/blob/main/doc/InstructVideo.md)] 
+
+**CustomCrafter: Customized Video Generation with Preserving Motion and Concept Composition Abilities** \
+[[AAAI 2025](https://arxiv.org/abs/2408.13239)]
+[[Project](https://customcrafter.github.io/)] 
+[[Code](https://github.com/WuTao-CS/CustomCrafter)] 
+
+**Follow-Your-Emoji: Fine-Controllable and Expressive Freestyle Portrait Animation** \
+[[SIGGRAPH Asia 2024](https://arxiv.org/abs/2406.01900)]
+[[Project](https://follow-your-emoji.github.io/)] 
+[[Code](https://github.com/mayuelala/FollowYourEmoji)] 
+
+**SEINE: Short-to-Long Video Diffusion Model for Generative Transition and Prediction** \
+[[ICLR 2024](https://arxiv.org/abs/2310.20700)]
+[[Project](https://vchitect.github.io/SEINE-project/)]
+[[Code](https://github.com/Vchitect/SEINE)]
+
+**I2VControl-Camera: Precise Video Camera Control with Adjustable Motion Strength** \
+[[ICLR 2025](https://arxiv.org/abs/2411.06525)]
+[[Project](https://wanquanf.github.io/I2VControlCamera)]
+[[Code](https://github.com/WanquanF/I2VControl-Camera)]
+
+**ViBiDSampler: Enhancing Video Interpolation Using Bidirectional Diffusion Sampler** \
+[[ICLR 2025](https://arxiv.org/abs/2410.05651)]
+[[Project](https://vibidsampler.github.io/)]
+[[Code](https://github.com/vibidsampler/vibid)]
+
+**Video Probabilistic Diffusion Models in Projected Latent Space** \
+[[CVPR 2023](https://arxiv.org/abs/2302.07685)]
+[[Project](https://sihyun.me/PVDM/)]
+[[Code](https://github.com/sihyun-yu/PVDM)]
+
+**Can Text-to-Video Generation help Video-Language Alignment?** \
+[[CVPR 2025](https://arxiv.org/abs/2503.18507)]
+[[Project](https://lucazanella.github.io/synvita/)]
+[[Code](https://github.com/lucazanella/synvita)]
+
+**EIDT-V: Exploiting Intersections in Diffusion Trajectories for Model-Agnostic, Zero-Shot, Training-Free Text-to-Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2504.06861)]
+[[Project](https://djagpal02.github.io/EIDT-V/)]
+[[Code](https://github.com/djagpal02/EIDT-V)]
+
+**Hybrid Video Diffusion Models with 2D Triplane and 3D Wavelet Representation** \
+[[ECCV 2024](https://arxiv.org/abs/2402.13729)]
+[[Project](https://hxngiee.github.io/HVDM/)]
+[[Code](https://github.com/hxngiee/HVDM)]
+
+**ZIGMA: A DiT-style Zigzag Mamba Diffusion Model**  \
+[[ECCV 2024](https://arxiv.org/abs/2403.13802)]
+[[Project](https://taohu.me/zigma/)]
+[[Code](https://github.com/CompVis/zigma)]
+
+**AMD-Hummingbird: Towards an Efficient Text-to-Video Model** \
+[[Website](https://arxiv.org/abs/2503.18559)]
+[[Project](https://www.amd.com/en/developer/resources/technical-articles/amd-hummingbird-0-9b-text-to-video-diffusion-model-with-4-step-inferencing.html)]
+[[Code](https://github.com/AMD-AIG-AIMA/AMD-Hummingbird-T2V)]
+
+**Pix2Gif: Motion-Guided Diffusion for GIF Generation** \
+[[Website](https://arxiv.org/abs/2403.04634)]
+[[Project](https://hiteshk03.github.io/Pix2Gif/)]
+[[Code](https://github.com/hiteshK03/Pix2Gif)]
+
+**Improving Video Generation with Human Feedback** \
+[[Website](https://arxiv.org/abs/2501.13918)]
+[[Project](https://gongyeliu.github.io/videoalign/)]
+[[Code](https://github.com/KwaiVGI/VideoAlign)]
+
+**VideoAuteur: Towards Long Narrative Video Generation** \
+[[Website](https://arxiv.org/abs/2501.06173)]
+[[Project](https://videoauteur.github.io/)] 
+[[Code](https://github.com/lambert-x/VideoAuteur)] 
+
+**AnimateZoo: Zero-shot Video Generation of Cross-Species Animation via Subject Alignment** \
+[[Website](https://arxiv.org/abs/2404.04946)]
+[[Project](https://justinxu0.github.io/AnimateZoo/)] 
+[[Code](https://github.com/JustinXu0/AnimateZoo)] 
+
+**Reuse and Diffuse: Iterative Denoising for Text-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2309.03549)]
+[[Project](https://anonymous0x233.github.io/ReuseAndDiffuse/)] 
+[[Code](https://github.com/anonymous0x233/ReuseAndDiffuse)] 
+
+**SlowFast-VGen: Slow-Fast Learning for Action-Driven Long Video Generation** \
+[[Website](https://arxiv.org/abs/2410.23277)]
+[[Project](https://slowfast-vgen.github.io/)] 
+[[Code](https://github.com/slowfast-vgen/slowfast-vgen)] 
+
+**AniClipart: Clipart Animation with Text-to-Video Priors** \
+[[Website](https://arxiv.org/abs/2404.12347)]
+[[Project](https://aniclipart.github.io/)]
+[[Code](https://github.com/kingnobro/AniClipart)]
+
+**TimeRewind: Rewinding Time with Image-and-Events Video Diffusion** \
+[[Website](https://arxiv.org/abs/2403.13800)]
+[[Project](https://timerewind.github.io/)]
+[[Code](https://github.com/codingrex/TimeRewind)]
+
+**PISA Experiments: Exploring Physics Post-Training for Video Diffusion Models by Watching Stuff Drop** \
+[[Website](https://arxiv.org/abs/2503.09595)]
+[[Project](https://vision-x-nyu.github.io/pisa-experiments.github.io/)] 
+[[Code](https://github.com/vision-x-nyu/pisa-experiments)]
+
+**TPDiff: Temporal Pyramid Video Diffusion Model** \
+[[Website](https://arxiv.org/abs/2503.09566)]
+[[Project](https://showlab.github.io/TPDiff/)] 
+[[Code](https://github.com/showlab/TPDiff)]
+
+**Enabling Versatile Controls for Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.16983)]
+[[Project](https://pp-vctrl.github.io/)] 
+[[Code](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/ppdiffusers/examples/ppvctrl)] 
+
+**Customizing Motion in Text-to-Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2312.04966)]
+[[Project](https://joaanna.github.io/customizing_motion/)] 
+[[Code](https://github.com/adobe-research/custom_motion)] 
+
+**Direct-a-Video: Customized Video Generation with User-Directed Camera Movement and Object Motion** \
+[[Website](https://arxiv.org/abs/2402.03162)]
+[[Project](https://direct-a-video.github.io/)] 
+[[Code](https://github.com/ysy31415/direct_a_video)] 
+
+**ConsistI2V: Enhancing Visual Consistency for Image-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2402.04324)]
+[[Project](https://tiger-ai-lab.github.io/ConsistI2V/)] 
+[[Code](https://github.com/TIGER-AI-Lab/ConsistI2V)] 
+
+**Tuning-Free Noise Rectification for High Fidelity Image-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2403.02827)]
+[[Project](https://noise-rectification.github.io/)] 
+[[Code](https://github.com/alimama-creative/Noise-Rectification)] 
 
 **MIMO: Controllable Character Video Synthesis with Spatial Decomposed Modeling** \
 [[Website](https://arxiv.org/abs/2409.16160)]
 [[Project](https://menyifang.github.io/projects/MIMO/index.html)] 
 [[Code](https://github.com/menyifang/MIMO)]
-
-**MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequence** \
-[[Website](https://arxiv.org/abs/2407.16655)]
-[[Project](https://aim-uofa.github.io/MovieDreamer/)] 
-[[Code](https://github.com/aim-uofa/MovieDreamer)]
-
-**SG-I2V: Self-Guided Trajectory Control in Image-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2411.04989)]
-[[Project](https://kmcode1.github.io/Projects/SG-I2V/)] 
-[[Code](https://github.com/Kmcode1/SG-I2V)]
 
 **Video Diffusion Alignment via Reward Gradients** \
 [[Website](https://arxiv.org/abs/2407.08737)]
@@ -5982,11 +8183,6 @@
 [[Website](https://arxiv.org/abs/2407.08701)]
 [[Project](https://live2diff.github.io/)] 
 [[Code](https://github.com/open-mmlab/Live2Diff)]
-
-**Cinemo: Consistent and Controllable Image Animation with Motion Diffusion Models** \
-[[Website](https://arxiv.org/abs/2407.15642)]
-[[Project](https://maxin-cn.github.io/cinemo_project/)] 
-[[Code](https://github.com/maxin-cn/Cinemo)]
 
 **TVG: A Training-free Transition Video Generation Method with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2408.13413)]
@@ -6003,35 +8199,10 @@
 [[Project](https://zgctroy.github.io/CamI2V/)] 
 [[Code](https://github.com/ZGCTroy/CamI2V)]
 
-**Identity-Preserving Text-to-Video Generation by Frequency Decomposition** \
-[[Website](https://arxiv.org/abs/2411.17440)]
-[[Project](https://pku-yuangroup.github.io/ConsisID/)] 
-[[Code](https://github.com/PKU-YuanGroup/ConsisID)]
-
-**Enhancing Motion in Text-to-Video Generation with Decomposed Encoding and Conditioning** \
-[[Website](https://arxiv.org/abs/2410.24219)]
-[[Project](https://pr-ryan.github.io/DEMO-project/)] 
-[[Code](https://github.com/PR-Ryan/DEMO)]
-
 **MIMAFace: Face Animation via Motion-Identity Modulated Appearance Feature Learning** \
 [[Website](https://arxiv.org/abs/2409.15179)]
 [[Project](https://mimaface2024.github.io/mimaface.github.io/)] 
 [[Code](https://github.com/MIMAFace2024/MIMAFace)]
-
-**MotionClone: Training-Free Motion Cloning for Controllable Video Generation** \
-[[Website](https://arxiv.org/abs/2406.05338)]
-[[Project](https://bujiazi.github.io/motionclone.github.io/)] 
-[[Code](https://github.com/Bujiazi/MotionClone)]
-
-**StableAnimator: High-Quality Identity-Preserving Human Image Animation** \
-[[Website](https://arxiv.org/abs/2411.17697)]
-[[Project](https://francis-rings.github.io/StableAnimator/)] 
-[[Code](https://github.com/Francis-Rings/StableAnimator)]
-
-**AnimateAnything: Consistent and Controllable Animation for Video Generation** \
-[[Website](https://arxiv.org/abs/2411.10836)]
-[[Project](https://yu-shaonian.github.io/Animate_Anything/)] 
-[[Code](https://github.com/yu-shaonian/AnimateAnything)]
 
 **GameGen-X: Interactive Open-world Game Video Generation** \
 [[Website](https://arxiv.org/abs/2411.00769)]
@@ -6043,20 +8214,10 @@
 [[Project](https://vchitect.github.io/VEnhancer-project/)] 
 [[Code](https://github.com/Vchitect/VEnhancer)]
 
-**SF-V: Single Forward Video Generation Model** \
-[[Website](https://arxiv.org/abs/2406.04324)]
-[[Project](https://snap-research.github.io/SF-V/)] 
-[[Code](https://github.com/snap-research/SF-V)]
-
 **Video Motion Transfer with Diffusion Transformers** \
 [[Website](https://arxiv.org/abs/2412.07776)]
 [[Project](https://ditflow.github.io/)] 
 [[Code](https://github.com/ditflow/ditflow)]
-
-**SynCamMaster: Synchronizing Multi-Camera Video Generation from Diverse Viewpoints** \
-[[Website](https://arxiv.org/abs/2412.07760)]
-[[Project](https://jianhongbai.github.io/SynCamMaster/)] 
-[[Code](https://github.com/KwaiVGI/SynCamMaster)]
 
 **Pyramidal Flow Matching for Efficient Video Generative Modeling** \
 [[Website](https://arxiv.org/abs/2410.05954)]
@@ -6068,10 +8229,10 @@
 [[Project](https://cangcz.github.io/Anchor-Crafter/)] 
 [[Code](https://github.com/cangcz/AnchorCrafter)]
 
-**Trajectory Attention for Fine-grained Video Motion Control** \
-[[Website](https://arxiv.org/abs/2411.19324)]
-[[Project](https://xizaoqu.github.io/trajattn/)] 
-[[Code](https://github.com/xizaoqu/TrajectoryAttntion)]
+**Mobius: Text to Seamless Looping Video Generation via Latent Shift** \
+[[Website](https://arxiv.org/abs/2502.20307)]
+[[Project](https://mobius-diffusion.github.io/)] 
+[[Code](https://github.com/YisuiTT/Mobius)]
 
 **GenMAC: Compositional Text-to-Video Generation with Multi-Agent Collaboration** \
 [[Website](https://arxiv.org/abs/2412.04440)]
@@ -6083,9 +8244,24 @@
 [[Project](https://wxrui182.github.io/CoNo.github.io/)] 
 [[Code](https://github.com/wxrui182/CoNo)]
 
+**VidSketch: Hand-drawn Sketch-Driven Video Generation with Diffusion Control** \
+[[Website](https://arxiv.org/abs/2502.01101)]
+[[Project](https://csfufu.github.io/vid_sketch/)] 
+[[Code](https://github.com/CSfufu/VidSketch)]
+
+**Magic 1-For-1: Generating One Minute Video Clips within One Minute** \
+[[Website](https://arxiv.org/abs/2502.07701)]
+[[Project](https://magic-141.github.io/Magic-141/)] 
+[[Code](https://github.com/DA-Group-PKU/Magic-1-For-1)]
+
 **Animate Anyone: Consistent and Controllable Image-to-Video Synthesis for Character Animation** \
 [[Website](https://arxiv.org/abs/2311.17117)]
 [[Project](https://humanaigc.github.io/animate-anyone/)] 
+[[Code](https://github.com/HumanAIGC/AnimateAnyone)]
+
+**Animate Anyone 2: High-Fidelity Character Image Animation with Environment Affordance** \
+[[Website](https://arxiv.org/abs/2502.06145)]
+[[Project](https://humanaigc.github.io/animate-anyone-2/)]
 [[Code](https://github.com/HumanAIGC/AnimateAnyone)]
 
 **MotionShop: Zero-Shot Motion Transfer in Video Diffusion Models with Mixture of Score Guidance** \
@@ -6093,50 +8269,15 @@
 [[Project](https://motionshop-diffusion.github.io/)] 
 [[Code](https://github.com/gemlab-vt/motionshop)]
 
-**VideoTetris: Towards Compositional Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2406.04277)]
-[[Project](https://videotetris.github.io/)] 
-[[Code](https://github.com/YangLing0818/VideoTetris)]
-
-**T2V-Turbo: Breaking the Quality Bottleneck of Video Consistency Model with Mixed Reward Feedback** \
-[[Website](https://arxiv.org/abs/2405.18750)]
-[[Project](https://t2v-turbo.github.io/)] 
-[[Code](https://github.com/Ji4chenLi/t2v-turbo)]
-
 **ZeroSmooth: Training-free Diffuser Adaptation for High Frame Rate Video Generation** \
 [[Website](https://arxiv.org/abs/2406.00908)]
 [[Project](https://ssyang2020.github.io/zerosmooth.github.io/)] 
 [[Code](https://github.com/ssyang2020/ZeroSmooth)]
 
-**MotionBooth: Motion-Aware Customized Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2406.17758)]
-[[Project](https://jianzongwu.github.io/projects/motionbooth/)] 
-[[Code](https://github.com/jianzongwu/MotionBooth)]
-
 **Long Video Diffusion Generation with Segmented Cross-Attention and Content-Rich Video Data Curation** \
 [[Website](https://arxiv.org/abs/2412.01316)]
 [[Project](https://presto-video.github.io/)] 
 [[Code](https://github.com/rhymes-ai/Allegro)]
-
-**MOFA-Video: Controllable Image Animation via Generative Motion Field Adaptions in Frozen Image-to-Video Diffusion Model** \
-[[Website](https://arxiv.org/abs/2405.20222)]
-[[Project](https://myniuuu.github.io/MOFA_Video/)] 
-[[Code](https://github.com/MyNiuuu/MOFA-Video)]
-
-**MotionDreamer: Zero-Shot 3D Mesh Animation from Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2405.20155)]
-[[Project](https://lukas.uzolas.com/MotionDreamer/)] 
-[[Code](https://github.com/lukasuz/MotionDreamer)]
-
-**MotionCraft: Physics-based Zero-Shot Video Generation** \
-[[Website](https://arxiv.org/abs/2405.13557)]
-[[Project](https://mezzelfo.github.io/MotionCraft/)] 
-[[Code](https://github.com/mezzelfo/MotionCraft)]
-
-**MotionMaster: Training-free Camera Motion Transfer For Video Generation** \
-[[Website](https://arxiv.org/abs/2404.15789)]
-[[Project](https://sjtuplayer.github.io/projects/MotionMaster/)] 
-[[Code](https://github.com/sjtuplayer/MotionMaster)]
 
 **Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets** \
 [[Website](https://stability.ai/research/stable-video-diffusion-scaling-latent-video-diffusion-models-to-large-datasets)]
@@ -6158,38 +8299,30 @@
 [[Project](https://desaixie.github.io/pa-vdm/)] 
 [[Code](https://github.com/desaixie/pa_vdm)]
 
-**TrailBlazer: Trajectory Control for Diffusion-Based Video Generation** \
-[[Website](https://arxiv.org/abs/2401.00896)]
-[[Project](https://hohonu-vicml.github.io/Trailblazer.Page/)] 
-[[Code](https://github.com/hohonu-vicml/Trailblazer)]
-
-**Follow Your Pose: Pose-Guided Text-to-Video Generation using Pose-Free Videos** \
-[[Website](https://arxiv.org/abs/2304.01186)]
-[[Project](https://follow-your-pose.github.io/)] 
-[[Code](https://github.com/mayuelala/FollowYourPose)]
-
-**Align3R: Aligned Monocular Depth Estimation for Dynamic Videos** \
-[[Website](https://arxiv.org/abs/2412.03079)]
-[[Project](https://igl-hkust.github.io/Align3R.github.io/)] 
-[[Code](https://github.com/jiah-cloud/Align3R)]
-
-**Breathing Life Into Sketches Using Text-to-Video Priors** \
-[[Website](https://arxiv.org/abs/2311.13608)]
-[[Project](https://livesketch.github.io/)] 
-[[Code](https://github.com/yael-vinker/live_sketch)]
+**TrajectoryCrafter: Redirecting Camera Trajectory for Monocular Videos via Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.05638)]
+[[Project](https://trajectorycrafter.github.io/)] 
+[[Code](https://github.com/TrajectoryCrafter/TrajectoryCrafter)]
 
 **Latent Video Diffusion Models for High-Fidelity Long Video Generation** \
 [[Website](https://arxiv.org/abs/2211.13221)]
 [[Project](https://yingqinghe.github.io/LVDM/)] 
 [[Code](https://github.com/YingqingHe/LVDM)]
 
+**HunyuanVideo: A Systematic Framework For Large Video Generative Models** \
+[[Website](https://arxiv.org/abs/2412.03603)]
+[[Project](https://aivideo.hunyuan.tencent.com/)] 
+[[Code](https://github.com/Tencent/HunyuanVideo)]
 
 **Make-Your-Video: Customized Video Generation Using Textual and Structural Guidance** \
 [[Website](https://arxiv.org/abs/2306.00943)]
 [[Project](https://doubiiu.github.io/projects/Make-Your-Video/)] 
 [[Code](https://github.com/VideoCrafter/Make-Your-Video)]
 
-
+**RepVideo: Rethinking Cross-Layer Representation for Video Generation** \
+[[Website](https://arxiv.org/abs/2501.08994)]
+[[Project](https://vchitect.github.io/RepVid-Webpage/)] 
+[[Code](https://github.com/Vchitect/RepVideo)]
 
 **Gen-L-Video: Multi-Text to Long Video Generation via Temporal Co-Denoising** \
 [[Website](https://arxiv.org/abs/2305.18264)]
@@ -6221,26 +8354,6 @@
 [[Project](https://showlab.github.io/Show-1/)] 
 [[Code](https://github.com/showlab/Show-1)]
 
-**LAMP: Learn A Motion Pattern for Few-Shot-Based Video Generation** \
-[[Website](https://arxiv.org/abs/2310.10769)]
-[[Project](https://rq-wu.github.io/projects/LAMP/index.html)] 
-[[Code](https://github.com/RQ-Wu/LAMP)]
-
-**MagicDance: Realistic Human Dance Video Generation with Motions & Facial Expressions Transfer** \
-[[Website](https://arxiv.org/abs/2311.12052)]
-[[Project](https://boese0601.github.io/magicdance/)] 
-[[Code](https://github.com/Boese0601/MagicDance)]
-
-**LLM-GROUNDED VIDEO DIFFUSION MODELS** \
-[[Website](https://arxiv.org/abs/2309.17444)]
-[[Project](https://llm-grounded-video-diffusion.github.io/)] 
-[[Code](https://github.com/TonyLianLong/LLM-groundedVideoDiffusion)]
-
-**FreeNoise: Tuning-Free Longer Video Diffusion Via Noise Rescheduling** \
-[[Website](https://arxiv.org/abs/2310.15169)]
-[[Project](http://haonanqiu.com/projects/FreeNoise.html)] 
-[[Code](https://github.com/arthur-qiu/LongerCrafter)]
-
 **VideoCrafter1: Open Diffusion Models for High-Quality Video Generation** \
 [[Website](https://arxiv.org/abs/2310.19512)]
 [[Project](https://ailab-cvc.github.io/videocrafter/)] 
@@ -6266,11 +8379,10 @@
 [[Project](https://ai-forever.github.io/kandinsky-video/)] 
 [[Code](https://github.com/ai-forever/KandinskyVideo)]
 
-**MotionCtrl: A Unified and Flexible Motion Controller for Video Generation** \
-[[Website](https://arxiv.org/abs/2312.03641)]
-[[Project](https://wzhouxiff.github.io/projects/MotionCtrl/)] 
-[[Code](https://github.com/TencentARC/MotionCtrl)]
-
+**FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis** \
+[[Website](https://arxiv.org/abs/2502.08244)]
+[[Project](https://jinwonjoon.github.io/flovd_site/)] 
+[[Code](https://github.com/JinWonjoon/FloVD/)]
 
 **ART⋅V: Auto-Regressive Text-to-Video Generation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2311.18834)]
@@ -6282,16 +8394,6 @@
 [[Project](https://flowzero-video.github.io/)] 
 [[Code](https://github.com/aniki-ly/FlowZero)]
 
-**VideoBooth: Diffusion-based Video Generation with Image Prompts** \
-[[Website](https://arxiv.org/abs/2312.00777)]
-[[Project](https://vchitect.github.io/VideoBooth-project/)] 
-[[Code](https://github.com/Vchitect/VideoBooth)]
-
-**MagicAnimate: Temporally Consistent Human Image Animation using Diffusion Model** \
-[[Website](https://arxiv.org/abs/2311.16498)]
-[[Project](https://showlab.github.io/magicanimate/)] 
-[[Code](https://github.com/magic-research/magic-animate)]
-
 **LivePhoto: Real Image Animation with Text-guided Motion Control** \
 [[Website](https://arxiv.org/abs/2312.02928)]
 [[Project](https://xavierchen34.github.io/LivePhoto-Page/)] 
@@ -6301,11 +8403,6 @@
 [[Website](https://arxiv.org/abs/2312.03793)]
 [[Project](https://vvictoryuki.github.io/animatezero.github.io/)] 
 [[Code](https://github.com/vvictoryuki/AnimateZero)]
-
-**DreamVideo: Composing Your Dream Videos with Customized Subject and Motion** \
-[[Website](https://arxiv.org/abs/2312.04433)]
-[[Project](https://dreamvideo-t2v.github.io/)] 
-[[Code](https://github.com/damo-vilab/i2vgen-xl)]
 
 **Hierarchical Spatio-temporal Decoupling for Text-to-Video Generation** \
 [[Website](https://arxiv.org/abs/2312.04483)]
@@ -6317,35 +8414,25 @@
 [[Project](https://dreamoving.github.io/dreamoving/)] 
 [[Code](https://github.com/dreamoving/dreamoving-project)]
 
-**Upscale-A-Video: Temporal-Consistent Diffusion Model for Real-World Video Super-Resolution** \
-[[Website](https://arxiv.org/abs/2312.06640)]
-[[Project](https://shangchenzhou.com/projects/upscale-a-video/)] 
-[[Code](https://github.com/sczhou/Upscale-A-Video)]
-
-**FreeInit: Bridging Initialization Gap in Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2312.07537)]
-[[Project](https://tianxingwu.github.io/pages/FreeInit/)] 
-[[Code](https://github.com/TianxingWu/FreeInit)]
-
 **Text2AC-Zero: Consistent Synthesis of Animated Characters using 2D Diffusion** \
 [[Website](https://arxiv.org/abs/2312.07133)]
 [[Project](https://abdo-eldesokey.github.io/text2ac-zero/)]
 [[Code](https://github.com/abdo-eldesokey/text2ac-zero)]
-
-**StyleCrafter: Enhancing Stylized Text-to-Video Generation with Style Adapter** \
-[[Website](https://arxiv.org/abs/2312.00330)]
-[[Project](https://gongyeliu.github.io/StyleCrafter.github.io/)]
-[[Code](https://github.com/GongyeLiu/StyleCrafter)]
 
 **A Recipe for Scaling up Text-to-Video Generation with Text-free Videos** \
 [[Website](https://arxiv.org/abs/2312.15770)]
 [[Project](https://tf-t2v.github.io/)]
 [[Code](https://github.com/ali-vilab/i2vgen-xl)]
 
-**FlowVid: Taming Imperfect Optical Flows for Consistent Video-to-Video Synthesis** \
-[[Website](https://arxiv.org/abs/2312.17681)]
-[[Project](https://jeff-liangf.github.io/projects/flowvid/)]
-[[Code](https://github.com/Jeff-LiangF/FlowVid)]
+**Go-with-the-Flow: Motion-Controllable Video Diffusion Models Using Real-Time Warped Noise** \
+[[Website](https://arxiv.org/abs/2501.08331)]
+[[Project](https://vgenai-netflix-eyeline-research.github.io/Go-with-the-Flow/)]
+[[Code](https://github.com/GoWithTheFlowPaper/gowiththeflowpaper.github.io)]
+
+**GameFactory: Creating New Games with Generative Interactive Videos** \
+[[Website](https://arxiv.org/abs/2501.08325)]
+[[Project](https://vvictoryuki.github.io/gamefactory/)]
+[[Code](https://github.com/KwaiVGI/GameFactory)]
 
 **Moonshot: Towards Controllable Video Generation and Editing with Multimodal Conditions** \
 [[Website](https://arxiv.org/abs/2401.01827)]
@@ -6372,6 +8459,11 @@
 [[Project](https://showlab.github.io/T2VScore/)]
 [[Code](https://github.com/showlab/T2VScore)] 
 
+**SkyReels-A1: Expressive Portrait Animation in Video Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2502.10841)]
+[[Project](https://skyworkai.github.io/skyreels-a1.github.io/)]
+[[Code](https://github.com/SkyworkAI/SkyReels-A1)] 
+
 **HelloMeme: Integrating Spatial Knitting Attentions to Embed High-Level and Fidelity-Rich Conditions in Diffusion Models** \
 [[Website](https://arxiv.org/abs/2410.22901)]
 [[Project](https://songkey.github.io/hellomeme/)]
@@ -6392,61 +8484,45 @@
 [[Project](https://unified-attention-control.github.io/)]
 [[Code](https://github.com/XuweiyiChen/UniCtrl)] 
 
-**VideoElevator: Elevating Video Generation Quality with Versatile Text-to-Image Diffusion Models** \
-[[Website](https://arxiv.org/abs/2403.05438)]
-[[Project](https://videoelevator.github.io/)]
-[[Code](https://github.com/YBYBZhang/VideoElevator)] 
-
 **ID-Animator: Zero-Shot Identity-Preserving Human Video Generation** \
 [[Website](https://arxiv.org/abs/2404.15275)]
 [[Project](https://id-animator.github.io/)]
 [[Code](https://github.com/ID-Animator/ID-Animator)] 
 
-**Optical-Flow Guided Prompt Optimization for Coherent Video Generation** \
-[[Website](https://arxiv.org/abs/2411.16199)]
-[[Project](https://motionprompt.github.io/)]
-[[Code](https://github.com/HyelinNAM/MotionPrompt)] 
-
+**Large Motion Video Autoencoding with Cross-modal Video VAE** \
+[[Website](https://arxiv.org/abs/2412.17805)]
+[[Project](https://yzxing87.github.io/vae/)]
+[[Code](https://github.com/VideoVerses/VideoVAEPlus)] 
 
 **FlexiFilm: Long Video Generation with Flexible Conditions** \
 [[Website](https://arxiv.org/abs/2404.18620)]
 [[Project](https://y-ichen.github.io/FlexiFilm-Page/)]
 [[Code](https://github.com/Y-ichen/FlexiFilm)] 
 
-**FIFO-Diffusion: Generating Infinite Videos from Text without Training** \
-[[Website](https://arxiv.org/abs/2405.11473)]
-[[Project](https://jjihwan.github.io/projects/FIFO-Diffusion)]
-[[Code](https://github.com/jjihwan/FIFO-Diffusion_public)] 
+**ReCamMaster: Camera-Controlled Generative Rendering from A Single Video** \
+[[Website](https://arxiv.org/abs/2503.11647)]
+[[Project](https://jianhongbai.github.io/ReCamMaster/)]
+[[Code](https://github.com/KwaiVGI/ReCamMaster)] 
 
 **TALC: Time-Aligned Captions for Multi-Scene Text-to-Video Generation** \
 [[Website](https://arxiv.org/abs/2405.04682)]
 [[Project](https://talc-mst2v.github.io/)]
 [[Code](https://github.com/Hritikbansal/talc)] 
 
-**CV-VAE: A Compatible Video VAE for Latent Generative Video Models** \
-[[Website](https://arxiv.org/abs/2405.20279)]
-[[Project](https://ailab-cvc.github.io/cvvae/index.html)]
-[[Code](https://github.com/AILab-CVC/CV-VAE)] 
-
 **MVOC: a training-free multiple video object composition method with diffusion models** \
 [[Website](https://arxiv.org/abs/2406.15829)]
 [[Project](https://sobeymil.github.io/mvoc.com/)]
 [[Code](https://github.com/SobeyMIL/MVOC)] 
 
-**Identifying and Solving Conditional Image Leakage in Image-to-Video Diffusion Model** \
-[[Website](https://arxiv.org/abs/2406.15735)]
-[[Project](https://cond-image-leak.github.io/)]
-[[Code](https://github.com/thu-ml/cond-image-leakage/)] 
-
-**Identifying and Solving Conditional Image Leakage in Image-to-Video Diffusion Model** \
+**FreeTraj: Tuning-Free Trajectory Control in Video Diffusion Models** \
 [[Website](https://arxiv.org/abs/2406.16863)]
 [[Project](http://haonanqiu.com/projects/FreeTraj.html)]
 [[Code](https://github.com/arthur-qiu/FreeTraj)] 
 
-**Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation** \
-[[Website](https://arxiv.org/abs/2408.15239)]
-[[Project](https://svd-keyframe-interpolation.github.io/)]
-[[Code](https://github.com/jeanne-wang/svd_keyframe_interpolation)] 
+**VideoDPO: Omni-Preference Alignment for Video Diffusion Generation** \
+[[Website](https://arxiv.org/abs/2412.14167)]
+[[Project](https://videodpo.github.io/)]
+[[Code](https://github.com/CIntellifusion/VideoDPO)] 
 
 **Efficient Long Video Tokenization via Coordinated-based Patch Reconstruction** \
 [[Website](https://arxiv.org/abs/2411.14762)]
@@ -6463,22 +8539,158 @@
 [[Project](https://liautoad.github.io/DIVE/)]
 [[Code](https://github.com/LiAutoAD/DIVE)] 
 
-**MegActor-Σ: Unlocking Flexible Mixed-Modal Control in Portrait Animation with Diffusion Transformer** \
-[[Website](https://arxiv.org/abs/2408.14975)]
-[[Project](https://megactor-ops.github.io/)]
-[[Code](https://github.com/megvii-research/MegActor)] 
+**HunyuanPortrait: Implicit Condition Control for Enhanced Portrait Animation** \
+[[Website](https://arxiv.org/abs/2503.18860)]
+[[Project](https://kkakkkka.github.io/HunyuanPortrait/)]
+[[Code](https://github.com/kkakkkka/HunyuanPortrait)] 
+
+**FlashVideo:Flowing Fidelity to Detail for Efficient High-Resolution Video Generation** \
+[[Website](https://arxiv.org/abs/2502.05179)]
+[[Project](https://jshilong.github.io/flashvideo-page/)]
+[[Code](https://github.com/FoundationVision/FlashVideo)] 
+
+**MotionMatcher: Motion Customization of Text-to-Video Diffusion Models via Motion Feature Matching** \
+[[Website](https://arxiv.org/abs/2502.13234)]
+[[Project](https://www.csie.ntu.edu.tw/~b09902097/motionmatcher/)]
+[[Code](https://github.com/b09902097/motionmatcher)] 
+
+**RIFLEx: A Free Lunch for Length Extrapolation in Video Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2502.15894)]
+[[Project](https://riflex-video.github.io/)]
+[[Code](https://github.com/thu-ml/RIFLEx)] 
+
+**WISA: World Simulator Assistant for Physics-Aware Text-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2503.08153)]
+[[Project](https://360cvgroup.github.io/WISA/)]
+[[Code](https://github.com/360CVGroup/WISA)] 
+
+**Tuning-Free Multi-Event Long Video Generation via Synchronized Coupled Sampling** \
+[[Website](https://arxiv.org/abs/2503.08605)]
+[[Project](https://syncos2025.github.io/)]
+[[Code](https://github.com/subin-kim-cv/SynCoS)] 
+
+**VideoMaker: Zero-shot Customized Video Generation with the Inherent Force of Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2412.19645)]
+[[Project](https://wutao-cs.github.io/VideoMaker/)]
+[[Code](https://github.com/WuTao-CS/VideoMaker)]
+
+**History-Guided Video Diffusion** \
+[[Website](https://arxiv.org/abs/2502.06764)]
+[[Project](https://boyuan.space/history-guidance/)]
+[[Code](https://github.com/kwsong0113/diffusion-forcing-transformer)]
+
+**VFX Creator: Animated Visual Effect Generation with Controllable Diffusion Transformer** \
+[[Website](https://arxiv.org/abs/2502.05979)]
+[[Project](https://vfx-creator0.github.io/)]
+[[Code](https://github.com/vfx-creator0/VFXCreator/)]
+
+**RealCam-I2V: Real-World Image-to-Video Generation with Interactive Complex Camera Control** \
+[[Website](https://arxiv.org/abs/2502.10059)]
+[[Project](https://zgctroy.github.io/RealCam-I2V/)]
+[[Code](https://github.com/ZGCTroy/RealCam-I2V)]
+
+**I4VGen: Image as Stepping Stone for Text-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2406.02230)]
+[[Project](https://xiefan-guo.github.io/i4vgen/)]
+[[Code](https://github.com/xiefan-guo/i4vgen)]
+
+**AID: Adapting Image2Video Diffusion Models for Instruction-guided Video Prediction** \
+[[Website](https://arxiv.org/abs/2406.06465)]
+[[Project](https://chenhsing.github.io/AID/)]
+[[Code](https://github.com/ChenHsing/AID)]
+
+**Boosting Camera Motion Control for Video Diffusion Transformers** \
+[[Website](https://arxiv.org/abs/2410.10802)]
+[[Project](https://soon-yau.github.io/CameraMotionGuidance/)]
+[[Code](https://github.com/soon-yau/CameraMotionGuidance)]
+
+**UniAnimate: Taming Unified Video Diffusion Models for Consistent Human Image Animation** \
+[[Website](https://arxiv.org/abs/2406.01188)]
+[[Project](https://unianimate.github.io/)]
+[[Code](https://github.com/ali-vilab/UniAnimate)]
+
+**Collaborative Video Diffusion: Consistent Multi-video Generation with Camera Control** \
+[[Website](https://arxiv.org/abs/2405.17414)]
+[[Project](https://collaborativevideodiffusion.github.io/)]
+[[Code](https://github.com/CollaborativeVideoDiffusion/CVD)]
+
+**VIRES: Video Instance Repainting with Sketch and Text Guidance** \
+[[Website](https://arxiv.org/abs/2411.16199)]
+[[Project](https://suimuc.github.io/suimu.github.io/projects/VIRES/)]
+[[Code](https://github.com/suimuc/VIRES/)]
+
+**Motion Dreamer: Realizing Physically Coherent Video Generation through Scene-Aware Motion Reasoning** \
+[[Website](https://arxiv.org/abs/2412.00547)]
+[[Project](https://envision-research.github.io/MotionDreamer/)]
+[[Code](https://github.com/EnVision-Research/MotionDreamer)]
+
+**VividFace: A Diffusion-Based Hybrid Framework for High-Fidelity Video Face Swapping** \
+[[Website](https://arxiv.org/abs/2412.11279)]
+[[Project](https://hao-shao.com/projects/vividface.html)]
+[[Code](https://github.com/deepcs233/VividFace)]
+
+**Large Motion Video Autoencoding with Cross-modal Video VAE** \
+[[Website](https://arxiv.org/abs/2412.17805)]
+[[Project](https://yzxing87.github.io/vae/)]
+[[Code](https://github.com/VideoVerses/VideoVAEPlus)]
+
+**Free-viewpoint Human Animation with Pose-correlated Reference Selection** \
+[[Website](https://arxiv.org/abs/2412.17290)]
+[[Project](https://harlanhong.github.io/publications/fvhuman/index.html)]
+[[Code](https://github.com/harlanhong/FVHuman)]
+
+**Vivid-ZOO: Multi-View Video Generation with Diffusion Model** \
+[[Website](https://arxiv.org/abs/2406.08659)]
+[[Project](https://hi-zhengcheng.github.io/vividzoo/)]
+[[Code](https://github.com/hi-zhengcheng/vividzoo)]
+
+**MagicComp: Training-free Dual-Phase Refinement for Compositional Video Generation** \
+[[Website](https://arxiv.org/abs/2503.14428)]
+[[Project](https://hong-yu-zhang.github.io/MagicComp-Page/)]
+[[Code](https://github.com/Hong-yu-Zhang/MagicComp)]
+
+**MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance** \
+[[Website](https://arxiv.org/abs/2503.16421)]
+[[Project](https://quanhaol.github.io/magicmotion-site/)]
+[[Code](https://github.com/quanhaol/MagicMotion)]
+
+**DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation** \
+[[Website](https://arxiv.org/abs/2503.21246)]
+[[Project](https://gulucaptain.github.io/DynamiCtrl/)]
+[[Code](https://github.com/gulucaptain/DynamiCtrl)]
+
+
+**FreqPrior: Improving Video Diffusion Models with Frequency Filtering Gaussian Noise** \
+[[ICLR 2025](https://arxiv.org/abs/2502.03496)]
+[[Code](https://github.com/fudan-zvg/FreqPrior)]
 
 **CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers** \
 [[ICLR 2023](https://arxiv.org/abs/2205.15868)]
 [[Code](https://github.com/THUDM/CogVideo)]
 
-**MoTrans: Customized Motion Transfer with Text-driven Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2412.01343)]
-[[Code](https://github.com/XiaominLi1997/MoTrans)]
-
 **CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer** \
 [[Website](https://arxiv.org/abs/2408.06072)]
 [[Code](https://github.com/THUDM/CogVideo)]
+
+**UFO: Enhancing Diffusion-Based Video Generation with a Uniform Frame Organizer** \
+[[AAAI 2025](https://arxiv.org/abs/2412.09389)]
+[[Code](https://github.com/Delong-liu-bupt/UFO)]
+
+**AKiRa: Augmentation Kit on Rays for optical video generation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.14158)]
+[[Code](https://github.com/Triocrossing/AKiRa)]
+
+**InstanceCap: Improving Text-to-Video Generation via Instance-aware Structured Caption** \
+[[CVPR 2025](https://arxiv.org/abs/2412.09283)]
+[[Code](https://github.com/NJU-PCALab/InstanceCap)]
+
+**MoTrans: Customized Motion Transfer with Text-driven Video Diffusion Models** \
+[[ACM MM 2024](https://arxiv.org/abs/2412.01343)]
+[[Code](https://github.com/XiaominLi1997/MoTrans)]
+
+**Make-It-4D: Synthesizing a Consistent Long-Term Dynamic Scene Video from a Single Image** \
+[[ACM MM 2024](https://arxiv.org/abs/2308.10257)]
+[[Code](https://github.com/leoShen917/Make-It-4D]
 
 **Cross-Modal Contextualized Diffusion Models for Text-Guided Visual Generation and Editing** \
 [[ICLR 2024](https://arxiv.org/abs/2402.16627)]
@@ -6488,25 +8700,109 @@
 [[ICLR 2024](https://arxiv.org/abs/2403.07711)]
 [[Code](https://github.com/shim0114/SSM-Meets-Video-Diffusion-Models)]
 
+**PhyT2V: LLM-Guided Iterative Self-Refinement for Physics-Grounded Text-to-Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.00596)]
+[[Code](https://github.com/pittisl/PhyT2V)]
+
+**MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion** \
+[[ICLR 2025](https://arxiv.org/abs/2410.07659)]
+[[Code](https://github.com/CandleLabAI/MotionAura-ICLR-2025)]
+
+**Autoregressive Video Generation without Vector Quantization** \
+[[ICLR 2025](https://arxiv.org/abs/2412.14169)]
+[[Code](https://github.com/baaivision/NOVA)]
+
+**Disentangled Motion Modeling for Video Frame Interpolation** \
+[[AAAI 2025](https://arxiv.org/abs/2406.17256)]
+[[Code](https://github.com/jhlew/momo)]
+
+**STDiff: Spatio-temporal Diffusion for Continuous Stochastic Video Prediction** \
+[[AAAI 2024](https://arxiv.org/abs/2312.06486)]
+[[Code](https://github.com/xiye20/stdiffproject)]
+
+**Vlogger: Make Your Dream A Vlog** \
+[[CVPR 2024](https://arxiv.org/abs/2401.09414)]
+[[Code](https://github.com/zhuangshaobin/Vlogger)]
+
+**VidProM: A Million-scale Real Prompt-Gallery Dataset for Text-to-Video Diffusion Models** \
+[[NeurIPS 2024](https://arxiv.org/abs/2403.06098)]
+[[Code](https://github.com/WangWenhao0716/VidProM)]
+
+**WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model** \
+[[CVPR 2025](https://arxiv.org/abs/2411.17459)]
+[[Code](https://github.com/PKU-YuanGroup/WF-VAE)]
+
+**AR-Diffusion: Asynchronous Video Generation with Auto-Regressive Diffusion** \
+[[CVPR 2025](https://arxiv.org/abs/2503.07418)]
+[[Code](https://github.com/iva-mzsun/AR-Diffusion)]
+
+**StreamingT2V: Consistent, Dynamic, and Extendable Long Video Generation from Text** \
+[[CVPR 2025](https://arxiv.org/abs/2403.14773)]
+[[Code](https://github.com/Picsart-AI-Research/StreamingT2V)]
+
+**Divot: Diffusion Powers Video Tokenizer for Comprehension and Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.04432)]
+[[Code](https://github.com/TencentARC/Divot)]
+
+**EDEN: Enhanced Diffusion for High-quality Large-motion Video Frame Interpolation** \
+[[CVPR 2025](https://arxiv.org/abs/2503.15831)]
+[[Code](https://github.com/bbldCVer/EDEN)]
+
+**IV-Mixed Sampler: Leveraging Image Diffusion Models for Enhanced Video Synthesis** \
+[[ICLR 2025](https://arxiv.org/abs/2410.04171)]
+[[Code](https://github.com/xie-lab-ml/IV-mixed-Sampler)]
+
+**ConditionVideo: Training-Free Condition-Guided Text-to-Video Generation** \
+[[AAAI 2024](https://arxiv.org/abs/2310.07697)]
+[[Code](https://github.com/pengbo807/ConditionVideo)]
+
+**WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model** \
+[[CVPR 2025](https://arxiv.org/abs/2411.17459)]
+[[Code](https://github.com/PKU-YuanGroup/WF-VAE)]
+
+**VideoFactory: Swap Attention in Spatiotemporal Diffusions for Text-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2305.10874)]
+[[Code](https://github.com/daooshee/hd-vg-130m)]
+
+**Mobius: An High Efficient Spatial-Temporal Parallel Training Paradigm for Text-to-Video Generation Task** \
+[[Website](https://arxiv.org/abs/2407.06617)]
+[[Code](https://github.com/youngfly/Mobius)]
+
+**Contrastive Sequential-Diffusion Learning: An approach to Multi-Scene Instructional Video Synthesis** \
+[[Website](https://arxiv.org/abs/2407.11814)]
+[[Code](https://github.com/novasearch/cosed)]
+
+**Factorized-Dreamer: Training A High-Quality Video Generator with Limited and Low-Quality Data** \
+[[Website](https://arxiv.org/abs/2408.10119)]
+[[Code](https://github.com/yangxy/Factorized-Dreamer/)]
+
+**Open-Sora: Democratizing Efficient Video Production for All** \
+[[Website](https://arxiv.org/abs/2412.20404)]
+[[Code](https://github.com/hpcaitech/Open-Sora)]
+
+**CascadeV: An Implementation of Wurstchen Architecture for Video Generation** \
+[[Website](https://arxiv.org/abs/2501.16612)]
+[[Code](https://github.com/bytedance/CascadeV)]
+
 **Ca2-VDM: Efficient Autoregressive Video Diffusion Model with Causal Generation and Cache Sharing** \
 [[Website](https://arxiv.org/abs/2411.16375)]
 [[Code](https://github.com/Dawn-LX/CausalCache-VDM)]
+
+**A Physical Coherence Benchmark for Evaluating Video Generation Models via Optical Flow-guided Frame Prediction** \
+[[Website](https://www.arxiv.org/abs/2502.05503)]
+[[Code](https://github.com/Jeckinchen/PhyCoBench)]
+
+**AIGV-Assessor: Benchmarking and Evaluating the Perceptual Quality of Text-to-Video Generation with LMM** \
+[[Website](https://arxiv.org/abs/2411.17221)]
+[[Code](https://github.com/wangjiarui153/AIGV-Assessor)]
 
 **Redefining Temporal Modeling in Video Diffusion: The Vectorized Timestep Approach** \
 [[Website](https://arxiv.org/abs/2410.03160)]
 [[Code](https://github.com/Yaofang-Liu/FVDM)]
 
-**PhyT2V: LLM-Guided Iterative Self-Refinement for Physics-Grounded Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2412.00596)]
-[[Code](https://github.com/pittisl/PhyT2V)]
-
 **Real-Time Video Generation with Pyramid Attention Broadcast** \
 [[Website](https://arxiv.org/abs/2408.12588)]
 [[Code](https://github.com/NUS-HPC-AI-Lab/VideoSyso)]
-
-**Co-Speech Gesture Video Generation via Motion-Decoupled Diffusion Model** \
-[[Website](https://arxiv.org/abs/2404.01862)]
-[[Code](https://github.com/thuhcsi/S2G-MDDiffusion)]
 
 **Diffusion Probabilistic Modeling for Video Generation** \
 [[Website](https://arxiv.org/abs/2203.09481)]
@@ -6520,63 +8816,112 @@
 [[Website](https://arxiv.org/abs/2303.08320)]
 [[Code](https://github.com/modelscope/modelscope)]
 
-**STDiff: Spatio-temporal Diffusion for Continuous Stochastic Video Prediction** \
-[[Website](https://arxiv.org/abs/2312.06486)]
-[[Code](https://github.com/xiye20/stdiffproject)]
+**ConMo: Controllable Motion Disentanglement and Recomposition for Zero-Shot Motion Transfer** \
+[[Website](https://arxiv.org/abs/2504.02451)]
+[[Code](https://github.com/Andyplus1/ConMo)]
 
-**Vlogger: Make Your Dream A Vlog** \
-[[Website](https://arxiv.org/abs/2401.09414)]
-[[Code](https://github.com/zhuangshaobin/Vlogger)]
+**CustomTTT: Motion and Appearance Customized Video Generation via Test-Time Training** \
+[[Website](https://arxiv.org/abs/2412.15646)]
+[[Code](https://github.com/RongPiKing/CustomTTT)]
+
+**LTX-Video: Realtime Video Latent Diffusion** \
+[[Website](https://arxiv.org/abs/2501.00103)]
+[[Code](https://github.com/Lightricks/LTX-Video)]
+
+**Real-Time Video Generation with Pyramid Attention Broadcast** \
+[[Website](https://arxiv.org/abs/2408.12588)]
+[[Code](https://github.com/NUS-HPC-AI-Lab/VideoSys)]
+
+**CamContextI2V: Context-aware Controllable Video Generation** \
+[[Website](https://arxiv.org/abs/2504.06022)]
+[[Code](https://github.com/LDenninger/CamContextI2V)]
 
 **Magic-Me: Identity-Specific Video Customized Diffusion** \
 [[Website](https://arxiv.org/abs/2402.09368)]
 [[Code](https://github.com/Zhen-Dong/Magic-Me)]
 
-**VidProM: A Million-scale Real Prompt-Gallery Dataset for Text-to-Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2403.06098)]
-[[Code](https://github.com/WangWenhao0716/VidProM)]
-
 **EchoReel: Enhancing Action Generation of Existing Video Diffusion Models** \
 [[Website](https://arxiv.org/abs/2403.11535)]
 [[Code](https://github.com/liujianzhi/echoreel)]
-
-**StreamingT2V: Consistent, Dynamic, and Extendable Long Video Generation from Text** \
-[[Website](https://arxiv.org/abs/2403.14773)]
-[[Code](https://github.com/Picsart-AI-Research/StreamingT2V)]
 
 **TAVGBench: Benchmarking Text to Audible-Video Generation** \
 [[Website](https://arxiv.org/abs/2404.14381)]
 [[Code](https://github.com/OpenNLPLab/TAVGBench)]
 
+**Wan: Open and Advanced Large-Scale Video Generative Models** \
+[[Website](https://arxiv.org/abs/2503.20314)]
+[[Code](https://github.com/Wan-Video/Wan2.1)]
+
+**RAGME: Retrieval Augmented Video Generation for Enhanced Motion Realism** \
+[[Website](https://arxiv.org/abs/2504.06672)]
+[[Code](https://github.com/helia95/ragme)]
+
+
+**On-device Sora: Enabling Training-Free Diffusion-based Text-to-Video Generation for Mobile Devices** \
+[[Website](https://arxiv.org/abs/2503.23796)]
+[[Code](https://github.com/eai-lab/On-device-Sora)]
+
+**EGVD: Event-Guided Video Diffusion Model for Physically Realistic Large-Motion Frame Interpolation** \
+[[Website](https://arxiv.org/abs/2503.20268)]
+[[Code](https://github.com/OpenImagingLab/EGVD)]
+
 **OD-VAE: An Omni-dimensional Video Compressor for Improving Latent Video Diffusion Model** \
 [[Website](https://arxiv.org/abs/2409.01199)]
 [[Code](https://github.com/PKU-YuanGroup/Open-Sora-Plan)]
 
-**Divot: Diffusion Powers Video Tokenizer for Comprehension and Generation** \
-[[Website](https://arxiv.org/abs/2412.04432)]
-[[Code](https://github.com/TencentARC/Divot)]
+**On-device Sora: Enabling Diffusion-Based Text-to-Video Generation for Mobile Devices** \
+[[Website](https://arxiv.org/abs/2502.04363)]
+[[Code](https://github.com/eai-lab/On-device-Sora)]
 
 **FlipSketch: Flipping Static Drawings to Text-Guided Sketch Animations** \
 [[Website](https://arxiv.org/abs/2411.10818)]
 [[Code](https://github.com/hmrishavbandy/FlipSketch)]
 
-**IV-Mixed Sampler: Leveraging Image Diffusion Models for Enhanced Video Synthesis** \
-[[Website](https://arxiv.org/abs/2410.04171)]
-[[Code](https://github.com/xie-lab-ml/IV-mixed-Sampler)]
+**ImmersePro: End-to-End Stereo Video Synthesis Via Implicit Disparity Learning** \
+[[Website](https://arxiv.org/abs/2410.00262)]
+[[Code](https://github.com/shijianjian/ImmersePro)]
+
+**OnlyFlow: Optical Flow based Motion Conditioning for Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2411.10501)]
+[[Code](https://github.com/obvious-research/OnlyFlow)]
+
+**StereoCrafter-Zero: Zero-Shot Stereo Video Generation with Noisy Restart** \
+[[Website](https://arxiv.org/abs/2411.14295)]
+[[Code](https://github.com/shijianjian/StereoCrafter-Zero)]
+
+**C-Drag: Chain-of-Thought Driven Motion Controller for Video Generation** \
+[[Website](https://arxiv.org/abs/2502.19868)]
+[[Code](https://github.com/WesLee88524/C-Drag-Official-Repo)]
 
 **REDUCIO! Generating 1024×1024 Video within 16 Seconds using Extremely Compressed Motion Latents** \
 [[Website](https://arxiv.org/abs/2411.13552)]
 [[Code](https://github.com/microsoft/Reducio-VAE)]
 
+**EfficientMT: Efficient Temporal Adaptation for Motion Transfer in Text-to-Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.19369)]
+[[Code](https://github.com/PrototypeNx/EfficientMT)]
+
+**GRID: Visual Layout Generation** \
+[[Website](https://arxiv.org/abs/2412.10718)]
+[[Code](https://github.com/Should-AI-Lab/GRID)]
+
+**Lumina-Video: Efficient and Flexible Video Generation with Multi-scale Next-DiT** \
+[[Website](https://arxiv.org/abs/2502.06782)]
+[[Code](https://github.com/Alpha-VLLM/Lumina-Video)]
+
 **MAVIN: Multi-Action Video Generation with Diffusion Models via Transition Video Infilling** \
 [[Website](https://arxiv.org/abs/2405.18003)]
 [[Code](https://github.com/18445864529/MAVIN)]
 
-**WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model** \
-[[Website](https://arxiv.org/abs/2411.17459)]
-[[Code](https://github.com/PKU-YuanGroup/WF-VAE)]
+**MegActor: Harness the Power of Raw Video for Vivid Portrait Animation** \
+[[Website](https://arxiv.org/abs/2405.20851)]
+[[Code](https://github.com/megvii-research/megactor)]
 
-**HARIVO: Harnessing Text-to-Image Models for Video Generation**
+**LeanVAE: An Ultra-Efficient Reconstruction VAE for Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.14325)]
+[[Code](https://github.com/westlake-repl/LeanVAE)]
+
+**HARIVO: Harnessing Text-to-Image Models for Video Generation** \
 [[ECCV 2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06938.pdf)]
 [[Project](https://kwonminki.github.io/HARIVO/)]
 
@@ -6592,21 +8937,89 @@
 [[ICLR 2024](https://arxiv.org/abs/2403.14148)]
 [[Project](https://sihyun.me/CMD/)] 
 
+**Hierarchical Patch Diffusion Models for High-Resolution Video Generation** \
+[[CVPR 2024](https://arxiv.org/abs/2406.07792)]
+[[Project](https://snap-research.github.io/hpdm/)]
+
+**Motion Prompting: Controlling Video Generation with Motion Trajectories** \
+[[CVPR 2025](https://arxiv.org/abs/2412.02700)]
+[[Project](https://motion-prompting.github.io/)]
+
 **TRIP: Temporal Residual Learning with Image Noise Prior for Image-to-Video Diffusion Models** \
 [[CVPR 2024](https://arxiv.org/abs/2403.17005)]
 [[Project](https://trip-i2v.github.io/TRIP/)]
+
+**MicroCinema: A Divide-and-Conquer Approach for Text-to-Video Generation** \
+[[CVPR 2024 Highlight](https://arxiv.org/abs/2311.18829)]
+[[Project](https://wangyanhui666.github.io/MicroCinema.github.io/)] 
+
+**Generative Rendering: Controllable 4D-Guided Video Generation with 2D Diffusion Models** \
+[[CVPR 2024](https://arxiv.org/abs/2312.01409)]
+[[Project](https://primecai.github.io/generative_rendering/)] 
+
+**GenTron: Delving Deep into Diffusion Transformers for Image and Video Generation** \
+[[CVPR 2024](https://arxiv.org/abs/2312.04557)]
+[[Project](https://www.shoufachen.com/gentron_website/)] 
+
+**Preserve Your Own Correlation: A Noise Prior for Video Diffusion Models** \
+[[ICCV 2023](https://arxiv.org/abs/2305.10474)]
+[[Project](https://research.nvidia.com/labs/dir/pyoco/)] 
+
+**ActAnywhere: Subject-Aware Video Background Generation** \
+[[NeurIPS 2024](https://arxiv.org/abs/2401.10822)]
+[[Project](https://actanywhere.github.io/)] 
+
+**Mind the Time: Temporally-Controlled Multi-Event Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.05263)] 
+[[Project](https://mint-video.github.io/)]
 
 **ZoLA: Zero-Shot Creative Long Animation Generation with Short Video Model** \
 [[ECCV 2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06174.pdf)]
 [[Project](https://gen-l-2.github.io/)]
 
-**TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models** \
-[[ECCV 2024](https://arxiv.org/abs/2407.09012)]
-[[Project](https://eccv2024tcan.github.io/)] 
+**From Slow Bidirectional to Fast Causal Video Generators** \
+[[CVPR 2025](https://arxiv.org/abs/2412.07772)]
+[[Project](https://causvid.github.io/)]
 
-**Motion Prompting: Controlling Video Generation with Motion Trajectories** \
-[[Website](https://arxiv.org/abs/2412.02700)]
-[[Project](https://motion-prompting.github.io/)]
+**BlobGEN-Vid: Compositional Text-to-Video Generation with Blob Video Representations** \
+[[CVPR 2025](https://arxiv.org/abs/2501.07647)]
+[[Project](https://blobgen-vid2.github.io/)] 
+
+**Track4Gen: Teaching Video Diffusion Models to Track Points Improves Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.06016)]
+[[Project](https://hyeonho99.github.io/track4gen/)]
+
+**Through-The-Mask: Mask-based Motion Trajectories for Image-to-Video Generation** \
+[[CVPR 2025](https://arxiv.org/abs/2501.03059)]
+[[Project](https://guyyariv.github.io/TTM/)]
+
+**MoVideo: Motion-Aware Video Generation with Diffusion Models** \
+[[ECCV 2024](https://arxiv.org/abs/2311.11325)]
+[[Project](https://jingyunliang.github.io/MoVideo/)] 
+
+**High-Resolution Frame Interpolation with Patch-based Cascaded Diffusion** \
+[[AAAI 2025](https://arxiv.org/abs/2410.11838)]
+[[Project](https://hifi-diffusion.github.io/)] 
+
+**Human4DiT: Free-view Human Video Generation with 4D Diffusion Transformer** \
+[[SIGGRAPH Asia 2024](https://arxiv.org/abs/2405.17405)]
+[[Project](https://human4dit.github.io/)] 
+
+**Repurposing Pre-trained Video Diffusion Models for Event-based Video Interpolation** \
+[[CVPR 2025](https://arxiv.org/abs/2412.07761)]
+[[Project](https://vdm-evfi.github.io/)]
+
+**OmniHuman-1: Rethinking the Scaling-Up of One-Stage Conditioned Human Animation Models** \
+[[Website](https://arxiv.org/abs/2502.01061)]
+[[Project](https://omnihuman-lab.github.io/)]
+
+**InterDyn: Controllable Interactive Dynamics with Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2412.11785)]
+[[Project](https://interdyn.is.tue.mpg.de/)]
+
+**Mojito: Motion Trajectory and Intensity Control for Video Generation** \
+[[Website](https://arxiv.org/abs/2412.08948)]
+[[Project](https://sites.google.com/view/mojito-video)]
 
 **OmniCreator: Self-Supervised Unified Generation with Universal Editing** \
 [[Website](https://arxiv.org/abs/2412.02114)]
@@ -6616,13 +9029,37 @@
 [[Website](https://arxiv.org/abs/2412.04446)]
 [[Project](https://liyizhuo.com/DiCoDe/)]
 
+**The Best of Both Worlds: Integrating Language Models and Diffusion Models for Video Generation** \
+[[Website](https://arxiv.org/abs/2503.04606)]
+[[Project](https://landiff.github.io/)]
+
+**CineMaster: A 3D-Aware and Controllable Framework for Cinematic Text-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2502.08639)]
+[[Project](https://cinemaster-dev.github.io/)]
+
 **VideoGen-of-Thought: A Collaborative Framework for Multi-Shot Video Generation** \
 [[Website](https://arxiv.org/abs/2412.02259)]
 [[Project](https://cheliosoops.github.io/VGoT/)]
 
+**Fine-gained Zero-shot Video Sampling** \
+[[Website](https://arxiv.org/abs/2407.21475)]
+[[Project](https://densechen.github.io/zss/)]
+
+**Snap Video: Scaled Spatiotemporal Transformers for Text-to-Video Synthesis** \
+[[Website](https://arxiv.org/abs/2402.14797v1)]
+[[Project](https://snap-research.github.io/snapvideo/)]
+
 **Scene Co-pilot: Procedural Text to Video Generation with Human in the Loop** \
 [[Website](https://arxiv.org/abs/2411.18644)]
 [[Project](https://abolfazl-sh.github.io/Scene_co-pilot_site/)]
+
+**DynamicScaler: Seamless and Scalable Video Generation for Panoramic Scenes** \
+[[Website](https://arxiv.org/abs/2412.11100)]
+[[Project](https://dynamic-scaler.pages.dev/)]
+
+**LinGen: Towards High-Resolution Minute-Length Text-to-Video Generation with Linear Computational Complexity** \
+[[Website](https://arxiv.org/abs/2412.09856)]
+[[Project](https://lineargen.github.io/)]
 
 **Training-free Long Video Generation with Chain of Diffusion Model Experts** \
 [[Website](https://arxiv.org/abs/2408.13423)]
@@ -6632,35 +9069,37 @@
 [[Website](https://arxiv.org/abs/2411.17041)]
 [[Project](https://kjm981995.github.io/free2guide/)]
 
-**FreeLong: Training-Free Long Video Generation with SpectralBlend Temporal Attention** \
-[[Website](https://arxiv.org/abs/2407.19918)]
-[[Project](https://freelongvideo.github.io/)]
+**Any2Caption:Interpreting Any Condition to Caption for Controllable Video Generation** \
+[[Website](https://arxiv.org/abs/2503.24379)]
+[[Project](https://sqwu.top/Any2Cap/)]
+
+**Towards Physically Plausible Video Generation via VLM Planning** \
+[[Website](https://arxiv.org/abs/2503.23368)]
+[[Project](https://madaoer.github.io/projects/physically_plausible_video_generation/)]
+
+**Video Motion Graphs** \
+[[Website](https://arxiv.org/abs/2503.20218)]
+[[Project](https://h-liu1997.github.io/Video-Motion-Graphs/)]
 
 **CamCo: Camera-Controllable 3D-Consistent Image-to-Video Generation** \
 [[Website](https://arxiv.org/abs/2406.02509)]
 [[Project](https://ir1d.github.io/CamCo/)]
 
-**Hierarchical Patch Diffusion Models for High-Resolution Video Generation** \
-[[Website](https://arxiv.org/abs/2406.07792)]
-[[Project](https://snap-research.github.io/hpdm/)]
-
 **Mimir: Improving Video Diffusion Models for Precise Text Understanding** \
 [[Website](https://arxiv.org/abs/2412.03085)]
 [[Project](https://lucaria-academy.github.io/Mimir/)]
 
-**From Slow Bidirectional to Fast Causal Video Generators** \
-[[Website](https://arxiv.org/abs/2412.07772)]
-[[Project](https://causvid.github.io/)]
+**Continuous Video Process: Modeling Videos as Continuous Multi-Dimensional Processes for Video Prediction** \
+[[Website](https://arxiv.org/abs/2412.04929)]
+[[Project](https://www.cs.umd.edu/~gauravsh/cvp/supp/website.html)]
 
-
-**I4VGen: Image as Stepping Stone for Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2406.02230)]
-[[Project](https://xiefan-guo.github.io/i4vgen/)]
+**ModelGrow: Continual Text-to-Video Pre-training with Model Expansion and Language Understanding Enhancement** \
+[[Website](https://arxiv.org/abs/2412.18966)]
+[[Project](https://modelgrow.github.io/)]
 
 **Improving Dynamic Object Interactions in Text-to-Video Generation with AI Feedback** \
 [[Website](https://arxiv.org/abs/2412.02617)]
 [[Project](https://sites.google.com/view/aif-dynamic-t2v/)]
-
 
 **FrameBridge: Improving Image-to-Video Generation with Bridge Models** \
 [[Website](https://arxiv.org/abs/2410.15371)]
@@ -6670,77 +9109,41 @@
 [[Website](https://arxiv.org/abs/2410.20280)]
 [[Project](https://mardini-vidgen.github.io/)]
 
-**Boosting Camera Motion Control for Video Diffusion Transformers** \
-[[Website](https://arxiv.org/abs/2410.10802)]
-[[Project](https://soon-yau.github.io/CameraMotionGuidance/)]
-
-**UniAnimate: Taming Unified Video Diffusion Models for Consistent Human Image Animation** \
-[[Website](https://arxiv.org/abs/2406.01188)]
-[[Project](https://unianimate.github.io/)]
-
-**Collaborative Video Diffusion: Consistent Multi-video Generation with Camera Control** \
-[[Website](https://arxiv.org/abs/2405.17414)]
-[[Project](https://collaborativevideodiffusion.github.io/)]
-
 **Controllable Longer Image Animation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2405.17306)]
 [[Project](https://wangqiang9.github.io/Controllable.github.io/)]
 
-**AniClipart: Clipart Animation with Text-to-Video Priors** \
-[[Website](https://arxiv.org/abs/2404.12347)]
-[[Project](https://aniclipart.github.io/)]
+**Inference-Time Text-to-Video Alignment with Diffusion Latent Beam Search** \
+[[Website](https://arxiv.org/abs/2501.19252)]
+[[Project](https://sites.google.com/view/t2v-dlbs)]
 
-**Spectral Motion Alignment for Video Motion Transfer using Diffusion Models** \
-[[Website](https://arxiv.org/abs/2403.15249)]
-[[Project](https://geonyeong-park.github.io/spectral-motion-alignment/)]
-
-**TimeRewind: Rewinding Time with Image-and-Events Video Diffusion** \
-[[Website](https://arxiv.org/abs/2403.13800)]
-[[Project](https://timerewind.github.io/)]
+**HuViDPO:Enhancing Video Generation through Direct Preference Optimization for Human-Centric Alignment** \
+[[Website](https://arxiv.org/abs/2502.01690)]
+[[Project](https://tankowa.github.io/HuViDPO.github.io/)]
 
 **VideoPoet: A Large Language Model for Zero-Shot Video Generation** \
 [[Website](https://storage.googleapis.com/videopoet/paper.pdf)]
 [[Project](https://sites.research.google/videopoet/)]
 
-**PEEKABOO: Interactive Video Generation via Masked-Diffusion**\
-[[Website](https://arxiv.org/abs/2312.07509)]
-[[Project](https://jinga-lala.github.io/projects/Peekaboo/)]
+**MotionCanvas: Cinematic Shot Design with Controllable Image-to-Video Generation** \
+[[Website](https://arxiv.org/abs/2502.04299)]
+[[Project](https://motion-canvas25.github.io/)] 
 
 **Searching Priors Makes Text-to-Video Synthesis Better** \
 [[Website](https://arxiv.org/abs/2406.03215)]
 [[Project](https://hrcheng98.github.io/Search_T2V/)] 
 
-**Reuse and Diffuse: Iterative Denoising for Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2309.03549)]
-[[Project](https://anonymous0x233.github.io/ReuseAndDiffuse/)] 
-
 **Emu Video: Factorizing Text-to-Video Generation by Explicit Image Conditioning** \
 [[Website](https://arxiv.org/abs/2311.10709)]
 [[Project](https://emu-video.metademolab.com/)] 
-
-**BIVDiff: A Training-Free Framework for General-Purpose Video Synthesis via Bridging Image and Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2312.02813)]
-[[Project](https://bivdiff.github.io/)] 
-
-**SlowFast-VGen: Slow-Fast Learning for Action-Driven Long Video Generation** \
-[[Website](https://arxiv.org/abs/2410.23277)]
-[[Project](https://slowfast-vgen.github.io/)] 
 
 **Imagen Video: High Definition Video Generation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2210.02303)]
 [[Project](https://imagen.research.google/video/)] 
 
-**MoVideo: Motion-Aware Video Generation with Diffusion Models** \
-[[Website](https://arxiv.org/abs/2311.11325)]
-[[Project](https://jingyunliang.github.io/MoVideo/)] 
-
 **Latent-Reframe: Enabling Camera Control for Video Diffusion Model without Training** \
 [[Website](https://arxiv.org/abs/2412.06029)]
 [[Project](https://latent-reframe.github.io/)] 
-
-**Space-Time Diffusion Features for Zero-Shot Text-Driven Motion Transfer** \
-[[Website](https://arxiv.org/abs/2311.17009)]
-[[Project](https://diffusion-motion-transfer.github.io/)] 
 
 **Smooth Video Synthesis with Noise Constraints on Diffusion Models for One-shot Video Tuning** \
 [[Website](https://arxiv.org/abs/2311.17536)]
@@ -6750,81 +9153,25 @@
 [[Website](https://arxiv.org/abs/2311.17338)]
 [[Project](https://videoassembler.github.io/videoassembler/)] 
 
-**MicroCinema: A Divide-and-Conquer Approach for Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2311.18829)]
-[[Project](https://wangyanhui666.github.io/MicroCinema.github.io/)] 
-
-**Generative Rendering: Controllable 4D-Guided Video Generation with 2D Diffusion Models** \
-[[Website](https://arxiv.org/abs/2312.01409)]
-[[Project](https://primecai.github.io/generative_rendering/)] 
-
-**GenTron: Delving Deep into Diffusion Transformers for Image and Video Generation** \
-[[Website](https://arxiv.org/abs/2312.04557)]
-[[Project](https://www.shoufachen.com/gentron_website/)] 
-
-**Customizing Motion in Text-to-Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2312.04966)]
-[[Project](https://joaanna.github.io/customizing_motion/)] 
-
 **Photorealistic Video Generation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2312.06662)] 
 [[Project](https://walt-video-diffusion.github.io/)] 
-
-**DreamVideo-2: Zero-Shot Subject-Driven Video Customization with Precise Motion Control** \
-[[Website](https://arxiv.org/abs/2410.13830)] 
-[[Project](https://dreamvideo2.github.io/)] 
 
 **VideoDrafter: Content-Consistent Multi-Scene Video Generation with LLM** \
 [[Website](https://arxiv.org/abs/2401.01256)] 
 [[Project](https://videodrafter.github.io/)] 
 
-**Preserve Your Own Correlation: A Noise Prior for Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2305.10474)]
-[[Project](https://research.nvidia.com/labs/dir/pyoco/)] 
-
-**ActAnywhere: Subject-Aware Video Background Generation** \
-[[Website](https://arxiv.org/abs/2401.10822)]
-[[Project](https://actanywhere.github.io/)] 
-
 **Lumiere: A Space-Time Diffusion Model for Video Generation** \
 [[Website](https://arxiv.org/abs/2401.12945)]
 [[Project](https://lumiere-video.github.io/)] 
-
-**InstructVideo: Instructing Video Diffusion Models with Human Feedback** \
-[[Website](https://arxiv.org/abs/2312.12490)]
-[[Project](https://instructvideo.github.io/)] 
 
 **Boximator: Generating Rich and Controllable Motions for Video Synthesis** \
 [[Website](https://arxiv.org/abs/2402.01566)]
 [[Project](https://boximator.github.io/)] 
 
-**Direct-a-Video: Customized Video Generation with User-Directed Camera Movement and Object Motion** \
-[[Website](https://arxiv.org/abs/2402.03162)]
-[[Project](https://direct-a-video.github.io/)] 
-
-**ConsistI2V: Enhancing Visual Consistency for Image-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2402.04324)]
-[[Project](https://tiger-ai-lab.github.io/ConsistI2V/)] 
-
-**Tuning-Free Noise Rectification for High Fidelity Image-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2403.02827)]
-[[Project](https://noise-rectification.github.io/)] 
-
-**Audio-Synchronized Visual Animation** \
-[[Website](https://arxiv.org/abs/2403.05659)]
-[[Project](https://lzhangbj.github.io/projects/asva/asva.html)] 
-
 **I2VControl: Disentangled and Unified Video Motion Synthesis Control** \
 [[Website](https://arxiv.org/abs/2411.17765)]
 [[Project](https://wanquanf.github.io/I2VControl)] 
-
-**Mind the Time: Temporally-Controlled Multi-Event Video Generation** \
-[[Website](https://arxiv.org/abs/2412.05263)] 
-[[Project](https://mint-video.github.io/)]
-
-**VSTAR: Generative Temporal Nursing for Longer Dynamic Video Synthesis** \
-[[Website](https://arxiv.org/abs/2403.13501)]
-[[Project](https://yumengli007.github.io/VSTAR/)] 
 
 **S2DM: Sector-Shaped Diffusion Models for Video Generation** \
 [[Website](https://arxiv.org/abs/2403.13408)]
@@ -6834,10 +9181,6 @@
 [[Website](https://arxiv.org/abs/2412.05275)]
 [[Project](https://motionflow-diffusion.github.io/)] 
 
-**AnimateZoo: Zero-shot Video Generation of Cross-Species Animation via Subject Alignment** \
-[[Website](https://arxiv.org/abs/2404.04946)]
-[[Project](https://justinxu0.github.io/AnimateZoo/)] 
-
 **Disentangling Foreground and Background Motion for Enhanced Realism in Human Video Generation** \
 [[Website](https://arxiv.org/abs/2405.16393)]
 [[Project](https://liujl09.github.io/humanvideo_movingbackground/)] 
@@ -6846,29 +9189,25 @@
 [[Website](https://arxiv.org/abs/2405.09266)]
 [[Project](https://dabfusion.github.io/)] 
 
+**Training-Free Motion-Guided Video Generation with Enhanced Temporal Consistency Using Motion Consistency Loss** \
+[[Website](https://arxiv.org/abs/2501.07563)]
+[[Project](https://zhangxinyu-xyz.github.io/SimulateMotion.github.io/)] 
+
 **PoseCrafter: One-Shot Personalized Video Synthesis Following Flexible Pose Control** \
 [[Website](https://arxiv.org/abs/2405.14582)]
 [[Project](https://ml-gsai.github.io/PoseCrafter-demo/)] 
-
-**Human4DiT: Free-view Human Video Generation with 4D Diffusion Transformer** \
-[[Website](https://arxiv.org/abs/2405.17405)]
-[[Project](https://human4dit.github.io/)] 
-
-**Follow-Your-Emoji: Fine-Controllable and Expressive Freestyle Portrait Animation** \
-[[Website](https://arxiv.org/abs/2406.01900)]
-[[Project](https://follow-your-emoji.github.io/)] 
 
 **FancyVideo: Towards Dynamic and Consistent Video Generation via Cross-frame Textual Guidance** \
 [[Website](https://arxiv.org/abs/2408.08189)]
 [[Project](https://fancyvideo.github.io/)] 
 
-**CustomCrafter: Customized Video Generation with Preserving Motion and Concept Composition Abilities** \
-[[Website](https://arxiv.org/abs/2408.13239)]
-[[Project](https://customcrafter.github.io/)] 
-
 **Cavia: Camera-controllable Multi-view Video Diffusion with View-Integrated Attention** \
 [[Website](https://arxiv.org/abs/2410.10774)]
 [[Project](https://ir1d.github.io/Cavia/)] 
+
+**DOLLAR: Few-Step Video Generation via Distillation and Latent Reward Optimization** \
+[[Website](https://arxiv.org/abs/2412.15689)]
+[[Project](https://quantumiracle.github.io/dollar/)] 
 
 **VideoGuide: Improving Video Diffusion Models without Training Through a Teacher's Guide** \
 [[Website](https://arxiv.org/abs/2410.04364)]
@@ -6882,26 +9221,110 @@
 [[Website](https://arxiv.org/abs/2410.20502)]
 [[Project](https://arlont2v.github.io/)]
 
-**Improved Video VAE for Latent Video Diffusion Model** \
-[[Website](https://arxiv.org/abs/2411.06449)]
-[[Project](https://wpy1999.github.io/IV-VAE/)]
+**HumanDiT: Pose-Guided Diffusion Transformer for Long-form Human Motion Video Generation** \
+[[Website](https://arxiv.org/abs/2502.04847)]
+[[Project](https://agnjason.github.io/HumanDiT-page/)]
 
-**Track4Gen: Teaching Video Diffusion Models to Track Points Improves Video Generation** \
-[[Website](https://arxiv.org/abs/2412.06016)]
-[[Project](https://hyeonho99.github.io/track4gen/)]
+**OnlineVPO: Align Video Diffusion Model with Online Video-Centric Preference Optimization** \
+[[Website](https://arxiv.org/abs/2412.15159)]
+[[Project](https://onlinevpo.github.io/)]
 
+**CustomVideo: Customizing Text-to-Video Generation with Multiple Subjects** \
+[[Website](https://arxiv.org/abs/2401.09962)]
+[[Project](https://kyfafyd.wang/projects/customvideo/)]
+
+**Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling** \
+[[Website](https://arxiv.org/abs/2401.15977)]
+[[Project](https://xiaoyushi97.github.io/Motion-I2V/)]
+
+**Diffutoon: High-Resolution Editable Toon Shading via Diffusion Models** \
+[[Website](https://arxiv.org/abs/2401.16224)]
+[[Project](https://ecnu-cilab.github.io/DiffutoonProjectPage/)]
+
+**Long Context Tuning for Video Generation** \
+[[Website](https://arxiv.org/abs/2503.10589)]
+[[Project](https://guoyww.github.io/projects/long-context-video/)]
+
+**REGEN: Learning Compact Video Embedding with (Re-)Generative Decoder** \
+[[Website](https://arxiv.org/abs/2503.08665)]
+[[Project](https://bespontaneous.github.io/REGEN/)]
+
+**FlexiClip: Locality-Preserving Free-Form Character Animation** \
+[[Website](https://arxiv.org/abs/2501.08676)]
+[[Project](https://creative-gen.github.io/flexiclip.github.io/)]
+
+**Video Creation by Demonstration** \
+[[Website](https://arxiv.org/abs/2412.09551)]
+[[Project](https://delta-diffusion.github.io/)]
+
+**I2V3D: Controllable image-to-video generation with 3D guidance** \
+[[Website](https://arxiv.org/abs/2503.09733)]
+[[Project](https://bestzzhang.github.io/I2V3D/)]
+
+**CameraCtrl II: Dynamic Scene Exploration via Camera-controlled Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.10592)]
+[[Project](https://hehao13.github.io/Projects-CameraCtrl-II/)]
+
+**MotionBridge: Dynamic Video Inbetweening with Flexible Controls** \
+[[Website](https://arxiv.org/abs/2412.13190)]
+[[Project](https://motionbridge.github.io/)]
+
+**Target-Aware Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2503.18950)]
+[[Project](https://taeksuu.github.io/tavid/)]
+
+**DreamActor-M1: Holistic, Expressive and Robust Human Image Animation with Hybrid Guidance** \
+[[Website](https://arxiv.org/abs/2504.01724)]
+[[Project](https://grisoon.github.io/DreamActor-M1/)]
+
+**EvAnimate: Event-conditioned Image-to-Video Generation for Human Animation** \
+[[Website](https://arxiv.org/abs/2503.18552)]
+[[Project](https://potentialming.github.io/projects/EvAnimate/)]
+
+**Motion-Conditioned Diffusion Model for Controllable Video Synthesis** \
+[[Website](https://arxiv.org/abs/2304.14404)]
+[[Project](https://tsaishien-chen.github.io/MCDiff/)]
+
+**Probabilistic Adaptation of Text-to-Video Models** \
+[[Website](https://arxiv.org/abs/2306.01872)]
+[[Project](https://video-adapter.github.io/video-adapter/)]
+
+**Decouple and Track: Benchmarking and Improving Video Diffusion Transformers for Motion Transfer** \
+[[Website](https://arxiv.org/abs/2503.17350)]
+[[Project](https://shi-qingyu.github.io/DeT.github.io/)]
+
+**TPC: Test-time Procrustes Calibration for Diffusion-based Human Image Animation** \
+[[NeurIPS 2024](https://arxiv.org/abs/2410.24037)]
 
 **DragEntity: Trajectory Guided Video Generation using Entity and Positional Relationships** \
 [[ACM MM 2024 Oral](https://arxiv.org/abs/2410.10751)]
+
+**TIV-Diffusion: Towards Object-Centric Movement for Text-driven Image to Video Generation** \
+[[AAAI 2025](https://arxiv.org/abs/2412.10275)]
+
+**Hierarchical Flow Diffusion for Efficient Frame Interpolation** \
+[[CVPR 2025](https://arxiv.org/abs/2504.00380)]
+
+**X-Portrait: Expressive Portrait Animation with Hierarchical Motion Attention** \
+[[SIGGRAPH 2024](https://arxiv.org/abs/2403.15931)]
+
+**MTVG : Multi-text Video Generation with Text-to-Video Models** \
+[[ECCV 2024](https://arxiv.org/abs/2312.04086)]
+
+**SNED: Superposition Network Architecture Search for Efficient Video Diffusion Model** \
+[[CVPR 2024](https://arxiv.org/abs/2406.00195)]
+
+**Extrapolating and Decoupling Image-to-Video Generation Models: Motion Modeling is Easier Than You Think** \
+[[CVPR 2025](https://arxiv.org/abs/2503.00948)]
+
+**Ouroboros-Diffusion: Exploring Consistent Content Generation in Tuning-free Long Video Diffusion** \
+[[Website](https://arxiv.org/abs/2501.09019)]
 
 **Four-Plane Factorized Video Autoencoders** \
 [[Website](https://arxiv.org/abs/2412.04452)]
 
 **Grid Diffusion Models for Text-to-Video Generation** \
 [[Website](https://arxiv.org/abs/2404.00234)]
-
-**SEINE: Short-to-Long Video Diffusion Model for Generative Transition and Prediction** \
-[[Website](https://arxiv.org/abs/2310.20700)]
 
 **GenRec: Unifying Video Generation and Recognition with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2408.15241)]
@@ -6918,15 +9341,6 @@
 **SimDA: Simple Diffusion Adapter for Efficient Video Generation** \
 [[Website](https://arxiv.org/abs/2308.09710)]
 
-**VideoFactory: Swap Attention in Spatiotemporal Diffusions for Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2305.10874)]
-
-**Empowering Dynamics-aware Text-to-Video Diffusion with Large Language Models** \
-[[Website](https://arxiv.org/abs/2308.13812)]
-
-**ConditionVideo: Training-Free Condition-Guided Text-to-Video Generation** \
-[[Website](https://arxiv.org/abs/2310.07697)]
-
 **LatentWarp: Consistent Diffusion Latents for Zero-Shot Video-to-Video Translation** \
 [[Website](https://arxiv.org/abs/2311.00353)]
 
@@ -6935,6 +9349,9 @@
 
 **Make Pixels Dance: High-Dynamic Video Generation** \
 [[Website](https://arxiv.org/abs/2311.10982)]
+
+**Fast Video Generation with Sliding Tile Attention** \
+[[Website](https://arxiv.org/abs/2502.04507)]
 
 **Video-Infinity: Distributed Long Video Generation** \
 [[Website](https://arxiv.org/abs/2406.16260)]
@@ -6948,35 +9365,14 @@
 **Decouple Content and Motion for Conditional Image-to-Video Generation** \
 [[Website](https://arxiv.org/abs/2311.14294)]
 
-**X-Portrait: Expressive Portrait Animation with Hierarchical Motion Attention** \
-[[Website](https://arxiv.org/abs/2403.15931)]
-
 **F3-Pruning: A Training-Free and Generalized Pruning Strategy towards Faster and Finer Text-to-Video Synthesis** \
 [[Website](https://arxiv.org/abs/2312.03459)]
-
-**MTVG : Multi-text Video Generation with Text-to-Video Models** \
-[[Website](https://arxiv.org/abs/2312.04086)]
 
 **VideoLCM: Video Latent Consistency Model** \
 [[Website](https://arxiv.org/abs/2312.09109)]
 
-**MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion** \
-[[Website](https://arxiv.org/abs/2410.07659)]
-
 **MagicVideo-V2: Multi-Stage High-Aesthetic Video Generation** \
 [[Website](https://arxiv.org/abs/2401.04468)]
-
-**I2V-Adapter: A General Image-to-Video Adapter for Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2312.16693)]
-
-**360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model** \
-[[Website](https://arxiv.org/abs/2401.06578)]
-
-**CustomVideo: Customizing Text-to-Video Generation with Multiple Subjects** \
-[[Website](https://arxiv.org/abs/2401.09962)]
-
-**Motion-Zero: Zero-Shot Moving Object Control Framework for Diffusion-Based Video Generation** \
-[[Website](https://arxiv.org/abs/2401.10150)]
 
 **Training-Free Semantic Video Composition via Pre-trained Diffusion Model** \
 [[Website](https://arxiv.org/abs/2401.09195)]
@@ -6984,26 +9380,11 @@
 **STIV: Scalable Text and Image Conditioned Video Generation** \
 [[Website](https://arxiv.org/abs/2412.07730)]
 
-**Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling** \
-[[Website](https://arxiv.org/abs/2401.15977)]
-
-**Diffutoon: High-Resolution Editable Toon Shading via Diffusion Models** \
-[[Website](https://arxiv.org/abs/2401.16224)]
-
 **Human Video Translation via Query Warping** \
 [[Website](https://arxiv.org/abs/2402.12099)]
 
-**Hybrid Video Diffusion Models with 2D Triplane and 3D Wavelet Representation** \
-[[Website](https://arxiv.org/abs/2402.13729)]
-
-**Snap Video: Scaled Spatiotemporal Transformers for Text-to-Video Synthesis** \
-[[Website](https://arxiv.org/abs/2402.14797v1)]
-
 **Context-aware Talking Face Video Generation** \
 [[Website](https://arxiv.org/abs/2402.18092)]
-
-**Pix2Gif: Motion-Guided Diffusion for GIF Generation** \
-[[Website](https://arxiv.org/abs/2403.04634)]
 
 **Intention-driven Ego-to-Exo Video Generation** \
 [[Website](https://arxiv.org/abs/2403.09194)]
@@ -7023,29 +9404,17 @@
 **ReVideo: Remake a Video with Motion and Content Control** \
 [[Website](https://arxiv.org/abs/2405.13865)]
 
+**Harness Local Rewards for Global Benefits: Effective Text-to-Video Generation Alignment with Patch-level Reward Models** \
+[[Website](https://arxiv.org/abs/2502.06812)]
+
 **VividPose: Advancing Stable Video Diffusion for Realistic Human Image Animation** \
 [[Website](https://arxiv.org/abs/2405.18156)]
-
-**SNED: Superposition Network Architecture Search for Efficient Video Diffusion Model** \
-[[Website](https://arxiv.org/abs/2406.00195)]
 
 **GVDIFF: Grounded Text-to-Video Generation with Diffusion Models** \
 [[Website](https://arxiv.org/abs/2407.01921)]
 
-**Mobius: An High Efficient Spatial-Temporal Parallel Training Paradigm for Text-to-Video Generation Task** \
-[[Website](https://arxiv.org/abs/2407.06617)]
-
-**Contrastive Sequential-Diffusion Learning: An approach to Multi-Scene Instructional Video Synthesis** \
-[[Website](https://arxiv.org/abs/2407.11814)]
-
 **Multi-sentence Video Grounding for Long Video Generation** \
 [[Website](https://arxiv.org/abs/2407.13219)]
-
-**Fine-gained Zero-shot Video Sampling** \
-[[Website](https://arxiv.org/abs/2407.21475)]
-
-**Factorized-Dreamer: Training A High-Quality Video Generator with Limited and Low-Quality Data** \
-[[Website](https://arxiv.org/abs/2408.10119)]
 
 **xGen-VideoSyn-1: High-fidelity Text-to-Video Synthesis with Compressed Representations** \
 [[Website](https://arxiv.org/abs/2408.12590)]
@@ -7068,14 +9437,17 @@
 **JVID: Joint Video-Image Diffusion for Visual-Quality and Temporal-Consistency in Video Generation** \
 [[Website](https://arxiv.org/abs/2409.14149)]
 
-**ImmersePro: End-to-End Stereo Video Synthesis Via Implicit Disparity Learning** \
-[[Website](https://arxiv.org/abs/2410.00262)]
-
 **COMUNI: Decomposing Common and Unique Video Signals for Diffusion-based Video Generation** \
 [[Website](https://arxiv.org/abs/2410.01718)]
 
 **Noise Crystallization and Liquid Noise: Zero-shot Video Generation using Image Diffusion Models** \
 [[Website](https://arxiv.org/abs/2410.05322)]
+
+**Separate Motion from Appearance: Customizing Motion via Customizing Text-to-Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2501.16714)]
+
+**PhysAnimator: Physics-Guided Generative Cartoon Animation** \
+[[Website](https://arxiv.org/abs/2501.16550)]
 
 **BroadWay: Boost Your Text-to-Video Generation Model in a Training-free Way** \
 [[Website](https://arxiv.org/abs/2410.06241)]
@@ -7083,23 +9455,12 @@
 **LumiSculpt: A Consistency Lighting Control Network for Video Generation** \
 [[Website](https://arxiv.org/abs/2410.22979)]
 
-**TPC: Test-time Procrustes Calibration for Diffusion-based Human Image Animation** \
-[[Website](https://arxiv.org/abs/2410.24037)]
-
-**OnlyFlow: Optical Flow based Motion Conditioning for Video Diffusion Models** \
-[[Website](https://arxiv.org/abs/2411.10501)]
 
 **Teaching Video Diffusion Model with Latent Physical Phenomenon Knowledge** \
 [[Website](https://arxiv.org/abs/2411.11343)]
 
 **SpatialDreamer: Self-supervised Stereo Video Synthesis from Monocular Input** \
 [[Website](https://arxiv.org/abs/2411.11934)]
-
-**StereoCrafter-Zero: Zero-Shot Stereo Video Generation with Noisy Restart** \
-[[Website](https://arxiv.org/abs/2411.14295)]
-
-**VIRES: Video Instance Repainting with Sketch and Text Guidance** \
-[[Website](https://arxiv.org/abs/2411.16199)]
 
 **MotionCharacter: Identity-Preserving and Motion Controllable Human Video Generation** \
 [[Website](https://arxiv.org/abs/2411.18281)]
@@ -7116,9 +9477,6 @@
 **Towards Chunk-Wise Generation for Long Videos** \
 [[Website](https://arxiv.org/abs/2411.18668)]
 
-**Motion Dreamer: Realizing Physically Coherent Video Generation through Scene-Aware Motion Reasoning** \
-[[Website](https://arxiv.org/abs/2412.00547)]
-
 **CPA: Camera-pose-awareness Diffusion Transformer for Video Generation** \
 [[Website](https://arxiv.org/abs/2412.01429)]
 
@@ -7131,9 +9489,86 @@
 **Mobile Video Diffusion** \
 [[Website](https://arxiv.org/abs/2412.07583)]
 
+**Can video generation replace cinematographers? Research on the cinematic language of generated video** \
+[[Website](https://arxiv.org/abs/2412.12223)]
+
+**Enhancing Multi-Text Long Video Generation Consistency without Tuning: Time-Frequency Analysis, Prompt Alignment, and Theory** \
+[[Website](https://arxiv.org/abs/2412.17254)]
+
+**Tuning-Free Long Video Generation via Global-Local Collaborative Diffusion** \
+[[Website](https://arxiv.org/abs/2501.05484)]
+
+**EchoVideo: Identity-Preserving Human Video Generation by Multimodal Feature Fusion** \
+[[Website](https://arxiv.org/abs/2501.13452)]
+
+**Efficient-vDiT: Efficient Video Diffusion Transformers With Attention Tile** \
+[[Website](https://arxiv.org/abs/2502.06155)]
+
+**Long-Term TalkingFace Generation via Motion-Prior Conditional Diffusion Model** \
+[[Website](https://arxiv.org/abs/2502.09533)]
+
+**MALT Diffusion: Memory-Augmented Latent Transformers for Any-Length Video Generation** \
+[[Website](https://arxiv.org/abs/2502.12632)]
+
+**Raccoon: Multi-stage Diffusion Training with Coarse-to-Fine Curating Videos** \
+[[Website](https://arxiv.org/abs/2502.21314)]
+
+**Training-free and Adaptive Sparse Attention for Efficient Long Video Generation** \
+[[Website](https://arxiv.org/abs/2502.21079)]
+
+**Generative Video Bi-flow** \
+[[Website](https://arxiv.org/abs/2503.06364)]
+
+**CINEMA: Coherent Multi-Subject Video Generation via MLLM-Based Guidance** \
+[[Website](https://arxiv.org/abs/2503.10391)]
+
+**VideoMerge: Towards Training-free Long Video Generation** \
+[[Website](https://arxiv.org/abs/2503.09926)]
+
+**Anchored Diffusion for Video Face Reenactment** \
+[[Website](https://arxiv.org/abs/2407.15153)]
+
+**APLA: Additional Perturbation for Latent Noise with Adversarial Training Enables Consistency** \
+[[Website](https://arxiv.org/abs/2308.12605)]
+
+**Rethinking Video Tokenization: A Conditioned Diffusion-based Approach** \
+[[Website](https://arxiv.org/abs/2503.03708)]
+
+**MotionAgent: Fine-grained Controllable Video Generation via Motion Field Agent** \
+[[Website](https://arxiv.org/abs/2502.03207)]
+
+**High Quality Human Image Animation using Regional Supervision and Motion Blur Condition** \
+[[Website](https://arxiv.org/abs/2409.19580)]
+
+**Instructional Video Generation** \
+[[Website](https://arxiv.org/abs/2412.04189)]
+
+**Individual Content and Motion Dynamics Preserved Pruning for Video Diffusion Models** \
+[[Website](https://arxiv.org/abs/2411.18375)]
+
+**Frame-wise Conditioning Adaptation for Fine-Tuning Diffusion Models in Text-to-Video Prediction** \
+[[Website](https://arxiv.org/abs/2503.12953)]
+
+**TransAnimate: Taming Layer Diffusion to Generate RGBA Video** \
+[[Website](https://arxiv.org/abs/2503.17934)]
+
+**LongDiff: Training-Free Long Video Generation in One Go** \
+[[Website](https://arxiv.org/abs/2503.18150)]
+
+**Generating, Fast and Slow: Scalable Parallel Video Generation with Video Interface Networks** \
+[[Website](https://arxiv.org/abs/2503.17539)]
+
+**OmniCam: Unified Multimodal Video Generation via Camera Control** \
+[[Website](https://arxiv.org/abs/2504.02312)]
+
+**MG-Gen: Single Image to Motion Graphics Generation with Layer Decomposition** \
+[[Website](https://arxiv.org/abs/2504.02361)]
+
+**Multi-identity Human Image Animation with Structural Video Diffusion** \
+[[Website](https://arxiv.org/abs/2504.04126)]
 
 
-## Video Editing 
+# Video Editing 
 
 **FateZero: Fusing Attentions for Zero-shot Text-based Video Editing** \
 [[ICCV 2023 Oral](https://openaccess.thecvf.com/content/ICCV2023/html/QI_FateZero_Fusing_Attentions_for_Zero-shot_Text-based_Video_Editing_ICCV_2023_paper.html
@@ -7147,12 +9582,20 @@
 [[Project](https://text2live.github.io/)] 
 [[code](https://github.com/omerbt/Text2LIVE)]
 
+**VideoGrain: Modulating Space-Time Attention for Multi-grained Video Editing** \
+[[ICLR 2025](https://arxiv.org/abs/2502.17258)]
+[[Project](https://knightyxp.github.io/VideoGrain_project_page/)] 
+[[Code](https://github.com/knightyxp/VideoGrain)] 
 
 **Diffusion Video Autoencoders: Toward Temporally Consistent Face Video Editing via Disentangled Video Encoding** \
 [[CVPR 2023](https://arxiv.org/abs/2212.02802)]
 [[Project](https://diff-video-ae.github.io/)] 
 [[Code](https://github.com/man805/Diffusion-Video-Autoencoders)] 
 
+**SketchVideo: Sketch-based Video Generation and Editing** \
+[[CVPR 2025](https://arxiv.org/abs/2503.23284)]
+[[Project](http://geometrylearning.com/SketchVideo/)] 
+[[Code](https://github.com/IGLICT/SketchVideo)] 
 
 **Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation** \
 [[ICCV 2023](https://arxiv.org/abs/2212.11565)]
@@ -7179,6 +9622,10 @@
 [[Project](https://video-p2p.github.io/)] 
 [[Code](https://github.com/ShaoTengLiu/Video-P2P)]
 
+**VACE: All-in-One Video Creation and Editing** \
+[[Website](https://arxiv.org/abs/2503.07598)]
+[[Project](https://ali-vilab.github.io/VACE-Page/)]
+[[Code](https://github.com/ali-vilab/VACE)]
 
 **CoDeF: Content Deformation Fields for Temporally Consistent Video Processing** \
 [[Website](https://arxiv.org/abs/2308.07926)]
@@ -7190,7 +9637,10 @@
 [[Project](https://magic-edit.github.io/)] 
 [[Code](https://github.com/magic-research/magic-edit)] 
 
-
+**Light-A-Video: Training-free Video Relighting via Progressive Light Fusion** \
+[[Website](https://arxiv.org/abs/2502.08590)]
+[[Project](https://bujiazi.github.io/light-a-video.github.io/)] 
+[[Code](https://github.com/bcmi/Light-A-Video/)] 
 
 **TokenFlow: Consistent Diffusion Features for Consistent Video Editing** \
 [[Website](https://arxiv.org/abs/2307.10373)]
@@ -7250,6 +9700,10 @@
 [[Project](https://vidtome-diffusion.github.io/)]
 [[Code](https://github.com/lixirui142/VidToMe)] 
 
+**VEGGIE: Instructional Editing and Reasoning Video Concepts with Grounded Generation** \
+[[Website](https://arxiv.org/abs/2503.14350)]
+[[Project](https://veggie-gen.github.io/)]
+[[Code](https://github.com/Yui010206/VEGGIE-VidEdit/)] 
 
 **VASE: Object-Centric Appearance and Shape Manipulation of Real Videos** \
 [[Website](https://arxiv.org/abs/2401.02473)]
@@ -7276,10 +9730,17 @@
 [[Website](https://arxiv.org/abs/2303.17599)]
 [[Code](https://github.com/baaivision/vid2vid-zero)]
 
+**Re-Attentional Controllable Video Diffusion Editing** \
+[[Website](https://arxiv.org/abs/2412.11710)]
+[[Code](https://github.com/mdswyz/ReAtCo)]
 
 **DiffSLVA: Harnessing Diffusion Models for Sign Language Video Anonymization** \
 [[Website](https://arxiv.org/abs/2311.16060)]
 [[Code](https://github.com/Jeffery9707/DiffSLVA)] 
+
+**SST-EM: Advanced Metrics for Evaluating Semantic, Spatial and Temporal Aspects in Video Editing** \
+[[Website](https://arxiv.org/abs/2501.07554)]
+[[Code](https://github.com/custommetrics-sst/SST_CustomEvaluationMetrics)] 
 
 **LOVECon: Text-driven Training-Free Long Video Editing with ControlNet** \
 [[Website](https://arxiv.org/abs/2310.09711)]
@@ -7313,11 +9774,25 @@
 [[Website](https://arxiv.org/abs/2406.08850)]
 [[Code](https://github.com/wangjiangshan0725/COVE)]
 
+**AdaFlow: Efficient Long Video Editing via Adaptive Attention Slimming And Keyframe Selection** \
+[[Website](https://arxiv.org/abs/2502.05433)]
+[[Code](https://github.com/jidantang55/AdaFlow)]
+
+
 **Shape-Aware Text-Driven Layered Video Editing** \
 [[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Lee_Shape-Aware_Text-Driven_Layered_Video_Editing_CVPR_2023_paper.html
 )]
 [[Website](https://arxiv.org/abs/2301.13173)]
 [[Project](https://text-video-edit.github.io/#)] 
+
+
+**How I Warped Your Noise: a Temporally-Correlated Noise Prior for Diffusion Models** \
+[[ICLR 2024 Oral](https://arxiv.org/abs/2504.03072)]
+[[Project](https://warpyournoise.github.io/)]
+
+**WAVE: Warping DDIM Inversion Features for Zero-shot Text-to-Video Editing** \
+[[ECCV 2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09682.pdf)]
+[[Project](https://ree1s.github.io/wave/)]
 
 **VideoDirector: Precise Video Editing via Text-to-Video Models** \
 [[Website](https://arxiv.org/abs/2411.17592)]
@@ -7363,13 +9838,17 @@
 [[Website](https://arxiv.org/abs/2411.05003)]
 [[Project](https://generative-video-camera-controls.github.io/)] 
 
-**WAVE: Warping DDIM Inversion Features for Zero-shot Text-to-Video Editing** \
-[[ECCV 2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09682.pdf)]
-[[Project](https://ree1s.github.io/wave/)]
+**FiVE: A Fine-grained Video Editing Benchmark for Evaluating Emerging Diffusion and Rectified Flow Models** \
+[[Website](https://arxiv.org/abs/2503.13684)]
+[[Project](https://sites.google.com/view/five-benchmark)]
 
 **MeDM: Mediating Image Diffusion Models for Video-to-Video Translation with Temporal Correspondence Guidance** \
 [[Website](https://arxiv.org/abs/2308.10079)]
 [[Project](https://medm2023.github.io)]
+
+**DynVFX: Augmenting Real Videos with Dynamic Content** \
+[[Website](https://arxiv.org/abs/2502.03621)]
+[[Project](https://dynvfx.github.io/)]
 
 **Customize-A-Video: One-Shot Motion Customization of Text-to-Video Diffusion Models** \
 [[Website](https://arxiv.org/abs/2402.14780)]
@@ -7378,6 +9857,10 @@
 **DreamMotion: Space-Time Self-Similarity Score Distillation for Zero-Shot Video Editing** \
 [[Website](https://arxiv.org/abs/2403.12002)]
 [[Project](https://hyeonho99.github.io/dreammotion/)]
+
+**MIVE: New Design and Benchmark for Multi-Instance Video Editing** \
+[[Website](https://arxiv.org/abs/2412.12877)]
+[[Project](https://kaist-viclab.github.io/mive-site/)]
 
 **VIVID-10M: A Dataset and Baseline for Versatile and Interactive Video Local Editing** \
 [[Website](https://arxiv.org/abs/2411.15260)]
@@ -7431,6 +9914,9 @@
 **Video Editing via Factorized Diffusion Distillation** \
 [[Website](https://arxiv.org/abs/2403.06269)]
 
+**MAKIMA: Tuning-free Multi-Attribute Open-domain Video Editing via Mask-Guided Attention Modulation** \
+[[Website](https://arxiv.org/abs/2412.19978)]
+
 **EffiVED:Efficient Video Editing via Text-instruction Diffusion Models** \
 [[Website](https://arxiv.org/abs/2403.11568)]
 
@@ -7482,3 +9968,15 @@
 
 **MoViE: Mobile Diffusion for Video Editing** \
 [[Website](https://arxiv.org/abs/2412.06578)]
+
+**Edit as You See: Image-guided Video Editing via Masked Motion Modeling** \
+[[Website](https://arxiv.org/abs/2501.04325)]
+
+**IP-FaceDiff: Identity-Preserving Facial Video Editing with Diffusion** \
+[[Website](https://arxiv.org/abs/2501.07530)]
+
+**Qffusion: Controllable Portrait Video Editing via Quadrant-Grid Attention Learning** \
+[[Website](https://arxiv.org/abs/2501.06438)]
+
+**DreamInsert: Zero-Shot Image-to-Video Object Insertion from A Single Image** \
+[[Website](https://arxiv.org/abs/2503.10342)]
